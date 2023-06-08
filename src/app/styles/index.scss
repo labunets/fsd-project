@@ -17,3 +17,12 @@ html {
 
     min-height: 100vh;
 }
+
+.content-page {
+    display: flex;
+}
+
+.page-wrapper {
+    flex-grow: 1;
+    padding: var(--vspace) var(--vspace-3);
+}

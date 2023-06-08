@@ -3,14 +3,27 @@
     height: var(--navbar-height);
     background: var(--inverted-bg-color);
     display: flex;
-    align-items: center;
-    padding: 20px;
+    align-items: end;
+    //padding: var(--vspace) var(--vspace-3);
+    padding: 64px 24px 12px;
 }
 
 .links {
     margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0.5em;
+    gap: 1em;
 }
 
-.mainLink {
-    margin-right: 15px;
+.links a {
+    font-size: var(--font-size-sm);
+    line-height: 1;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
 }
+
+

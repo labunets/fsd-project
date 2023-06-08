@@ -1,8 +1,13 @@
 @import "reset";
+@import "fonts";
 @import "./variables/global";
 @import "./themes/light";
 @import "./themes/dark";
 
+html {
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+}
 
 .app {
     font: var(--font-m);

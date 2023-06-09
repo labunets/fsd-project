@@ -17,9 +17,9 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
                 loader: 'css-loader',
                 options: {
                     modules: {
-                        auto: (resPath: string) => resPath.endsWith('.module.scss'),
+                        auto: (resPath: string) => Boolean(resPath.endsWith('.module.scss')),
                         localIdentName: isDev
-                            ? '[path][name]__[local]'
+                            ? '[path][name]__[local]--[hash:base64:5]'
                             : '[hash:base64:8]',
                     },
                 },

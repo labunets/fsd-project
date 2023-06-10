@@ -1,22 +1,21 @@
 .Sidebar {
-  height: calc(100vh - var(--navbar-height));
-  width: var(--sidebar-width);
-  background: var(--inverted-bg-color);
-
-  position: relative;
-  transition: width 0.3s ease-in-out;
+    height: calc(100vh - var(--navbar-height));
+    width: var(--sidebar-width);
+    background: var(--inverted-bg-color);
+    position: relative;
+    transition: width 0.3s ease-in-out;
 }
 
 .collapsed {
-  width: var(--sidebar-width-collapsed);
+    width: var(--sidebar-width-collapsed);
 }
 
 .switchers {
-  position: absolute;
-  bottom: var(--vspace-3);
-  display: flex;
-  justify-content: center;
-  width: 100%;
+    position: absolute;
+    bottom: var(--vspace-3);
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .lang {

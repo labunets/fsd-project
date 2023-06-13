@@ -1,7 +1,15 @@
 {
   "About": "About",
+  "Home": "Home",
   "Language": "Language",
+  "Loading": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Main": "Main",
-  "toggle": "toggle",
-  "Home": "Home"
+  "Page not found": "Page not found",
+  "toggle": "toggle"
 }

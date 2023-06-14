@@ -21,6 +21,9 @@ export default (env: BuildEnv) => {
         paths,
         isDev,
         port: PORT,
+        client: {
+            overlay: false,
+        },
     });
 
     return config;

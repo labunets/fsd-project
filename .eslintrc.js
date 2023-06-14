@@ -32,7 +32,9 @@ module.exports = {
         'no-unused-vars': 'warn',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
-        'react/jsx-props-no-spreading': 'warn',
+        'react/jsx-props-no-spreading': ['warn', {
+            html: 'ignore',
+        }],
         'react/function-component-definition': 'off',
         'no-shadow': 'off',
         'import/extensions': 'off',
@@ -41,11 +43,19 @@ module.exports = {
         'react/button-has-type': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            onlyAttribute: [''],
+            ignoreAttribute: ['data-testid'],
         }],
         'max-len': ['error', { ignoreComments: true, code: 120 }],
     },
     globals: {
         __IS_DEV__: true,
     },
+    overrides: [
+        {
+            files: ['*.test.ts', '*.test.tsx'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
 };

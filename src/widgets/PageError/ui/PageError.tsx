@@ -21,6 +21,7 @@ export const PageError = ({ className }: PageErrorProps) => {
             <Button onClick={reloadPage}>
                 {t('Reload page')}
             </Button>
+
         </div>
     );
 };

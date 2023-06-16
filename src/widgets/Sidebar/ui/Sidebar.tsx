@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import React, { useState } from 'react';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import { ThemeSwitcher } from 'features/ThemeSwitcher';
 import { LangSwitcher } from 'features/LangSwitcher';
 import { useTranslation } from 'react-i18next';
@@ -25,10 +25,13 @@ export const Sidebar = ({ className }: SidebarProps) => {
         >
             <Button
                 data-testid="sidebar-toggle"
-                theme={ThemeButton.CLEAR}
+                theme={ButtonTheme.BACKGROUND}
                 onClick={onToggle}
+                className={cls.сollapseBtn}
+                square
+                size={ButtonSize.L}
             >
-                {t('toggle')}
+                {collapsed ? t('sidebar.open') : t('sidebar.close')}
             </Button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />

@@ -14,5 +14,12 @@
   "Reload page": "Reload page",
   "Something went wrong": "Something went wrong",
   "Throw error": "Throw error",
+  "lang": {
+    "full": "full"
+  },
+  "sidebar": {
+    "close": "close",
+    "open": "open"
+  },
   "toggle": "toggle"
 }

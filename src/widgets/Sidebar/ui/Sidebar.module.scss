@@ -21,3 +21,9 @@
 .lang {
     margin-left: var(--vspace-3);
 }
+
+.сollapseBtn {
+    position: absolute;
+    right: calc(-1.4792 * var(--vspace));
+    bottom: 0;
+}

@@ -1,3 +1,4 @@
+import { Theme } from 'app/providers/ThemeProvider';
 import React, { ErrorInfo, ReactNode, Suspense } from 'react';
 import { PageError } from 'widgets/PageError';
 
@@ -26,12 +27,13 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     render() {
         const { hasError } = this.state;
         const { children } = this.props;
+        const theme = localStorage.getItem('theme') as Theme || Theme.DARK;
 
         if (hasError) {
             // any custom fallback UI
             return (
                 <Suspense fallback="">
-                    <PageError />
+                    <PageError className={`app ${theme}`} />
                 </Suspense>
             );
         }

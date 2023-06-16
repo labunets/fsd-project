@@ -7,5 +7,12 @@
   "Home": "Головна",
   "Page not found": "Сторінку не знайдено",
   "Something went wrong": "Щось пішло не так",
-  "Reload page": "Перезавантажити сторінку"
+  "Reload page": "Перезавантажити сторінку",
+  "sidebar": {
+    "open": ">",
+    "close": "<"
+  },
+  "lang": {
+    "full": "Мова"
+  }
 }

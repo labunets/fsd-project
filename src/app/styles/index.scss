@@ -5,7 +5,7 @@
 @import "./themes/dark";
 
 html {
-    font-size: 16px;
+    font-size: var(--font-size);
     font-family: "Open Sans", sans-serif;
 }
 

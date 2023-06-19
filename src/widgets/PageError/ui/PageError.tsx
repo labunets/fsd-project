@@ -22,7 +22,7 @@ export const PageError = ({ className }: PageErrorProps) => {
             <Button
                 onClick={reloadPage}
                 size={ButtonSize.S}
-                theme={ButtonTheme.OUTLINE}
+                theme={ButtonTheme.BASE}
             >
                 {t('Reload page')}
             </Button>

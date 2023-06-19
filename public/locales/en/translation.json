@@ -13,6 +13,7 @@
     "close": "<"
   },
   "lang": {
-    "full": "Language"
+    "full": "Language",
+    "short": "EN"
   }
 }

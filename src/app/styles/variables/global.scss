@@ -1,33 +1,80 @@
 :root {
+    // Colors
+    // Primary
+    --color-primary-yellow: #ffe202;
+    --color-primary-yellow-20: #fff9cc;
 
+    // Secondary
+    --color-secondary-blue: #5fa1d5;
+    --color-secondary-blue-20: #ecf6ff;
+    --color-secondary-green: #51b960;
+    --color-secondary-green-20: #eaf8ec;
+
+    // Accents
+    --color-accents-red: #fe8668;
+    --color-accents-orange: #fdbc1f;
+    --color-accents-teal: #30d6b0;
+    --color-accents-indigo: #4269f2;
+
+    // UI
+    --color-ui-gray-100: #000;
+    --color-ui-gray-85: #262626;
+    --color-ui-gray-80: #3a3a3a;
+    --color-ui-gray-60: #a6a6aa;
+    --color-ui-gray-40: #cbcbd4;
+    --color-ui-gray-20: #f8f7fa;
+    --color-ui-white: #fff;
+
+    // Background
+    --color-background-white: #fff;
+    --color-background-gray-20: #f8f7fa;
+
+    // Text
+    --color-text-gray-100: #000;
+    --color-text-gray-80: #3a3a3a;
+    --color-text-gray-60: #a6a6aa;
+    --color-text-gray-40: #cbcbd4;
+    --color-text-white: #fff;
+    --color-text-yellow: #ffe202;
+    --color-text-blue: #5fa1d5;
+    --color-text-green: #51b960;
+    --color-text-red: #fe8668;
+
+    // Fonts
+    --font-size: 16px;
     --space: 1.62;
-
     --vspace: calc(var(--space) * 1rem);
     --vspace-0: calc(3 * var(--space) * 1rem);
     --vspace-1: calc(2 * var(--space) * 1rem);
     --vspace-2: calc(1.5 * var(--space) * 1rem);
     --vspace-3: calc(0.5 * var(--space) * 1rem);
-
     --font-family-main: "Open Sans", arial, helvetica, sans-serif;
-
     --font-size-s: 0.75rem;
-    --font-line-s: calc(var(--font-size-s) * var(--space));
-    --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
-
     --font-size-m: 1rem;
-    --font-line-m: calc(var(--font-size-m) * var(--space));
-    --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
-
     --font-size-l: 1.4792rem;
-    --font-line-l: calc(var(--font-size-l) * var(--space));
-    --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
-
     --font-size-xl: 1.9792rem;
+    --font-line-s: calc(var(--font-size-s) * var(--space));
+    --font-line-m: calc(var(--font-size-m) * var(--space));
+    --font-line-l: calc(var(--font-size-l) * var(--space));
     --font-line-xl: calc(var(--font-size-xl) * var(--space));
+    --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
+    --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+    --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
     --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
 
     // Sizes
     --navbar-height: 104px;
-    --sidebar-width: 220px;
-    --sidebar-width-collapsed: 80px;
+    --sidebar-width: 15rem;
+    --sidebar-width-collapsed: 6rem;
+
+    // Shadows
+    --button-shadow:
+            0 2px 4px rgba(0, 0, 0, 0.02),
+            0 4px 8px rgba(0, 0, 0, 0.04),
+            0 5px 15px rgba(0, 0, 0, 0.1)
+    ;
+    --button-shadow-active:
+            0 1px 5px rgba(0, 0, 0, 0.01),
+            0 3px 15px rgba(0, 0, 0, 0.05)
+;
 }

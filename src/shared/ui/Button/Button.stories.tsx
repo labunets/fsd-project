@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import HeartIcon from 'shared/assets/icons/outline-heart.svg';
+import ChevronRightIcon from 'shared/assets/icons/chevron-right.svg';
 import { Button, ButtonSize, ButtonTheme } from './Button';
 
 type Story = StoryObj<typeof Button>;
@@ -13,106 +15,156 @@ const meta: Meta<typeof Button> = {
 
 export default meta;
 
+export const Base: Story = {
+    args: {
+        children: 'Button',
+    },
+};
+
+export const BaseActive: Story = {
+    args: {
+        children: 'Button',
+        active: true,
+    },
+};
+
+export const BaseDark: Story = {
+    args: {
+        children: 'Button',
+    },
+};
+BaseDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const BaseIconsSmall: Story = {
+    args: {
+        children: 'Button',
+        size: ButtonSize.S,
+        beforeIcon: <HeartIcon />,
+        afterIcon: <ChevronRightIcon />,
+    },
+};
+
+export const BaseIcons: Story = {
+    args: {
+        children: 'Button',
+        size: ButtonSize.M,
+        beforeIcon: <HeartIcon />,
+        afterIcon: <ChevronRightIcon />,
+    },
+};
+
+export const BaseIconsLarge: Story = {
+    args: {
+        children: 'Button',
+        size: ButtonSize.L,
+        beforeIcon: <HeartIcon />,
+        afterIcon: <ChevronRightIcon />,
+    },
+};
+
 export const Primary: Story = {
     args: {
         children: 'Button',
+        theme: ButtonTheme.PRIMARY,
+        beforeIcon: <HeartIcon />,
+        afterIcon: <ChevronRightIcon />,
     },
 };
 
-export const Clear: Story = {
+export const PrimaryActive: Story = {
     args: {
         children: 'Button',
-        theme: ButtonTheme.CLEAR,
+        theme: ButtonTheme.PRIMARY,
+        beforeIcon: <HeartIcon />,
+        afterIcon: <ChevronRightIcon />,
+        active: true,
     },
 };
 
-export const Outline: Story = {
+export const PrimaryDisabled: Story = {
     args: {
         children: 'Button',
-        theme: ButtonTheme.OUTLINE,
+        theme: ButtonTheme.PRIMARY,
+        beforeIcon: <HeartIcon />,
+        afterIcon: <ChevronRightIcon />,
+        disabled: true,
     },
 };
 
-export const OutlineS: Story = {
+export const PrimaryDark: Story = {
     args: {
         children: 'Button',
-        theme: ButtonTheme.OUTLINE,
-        size: ButtonSize.S,
+        theme: ButtonTheme.PRIMARY,
+        beforeIcon: <HeartIcon />,
+        afterIcon: <ChevronRightIcon />,
     },
 };
-export const OutlineM: Story = {
+PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const Secondary: Story = {
     args: {
         children: 'Button',
-        theme: ButtonTheme.OUTLINE,
-        size: ButtonSize.M,
-    },
-};
-export const OutlineL: Story = {
-    args: {
-        children: 'Button',
-        theme: ButtonTheme.OUTLINE,
-        size: ButtonSize.L,
-    },
-};
-export const OutlineXL: Story = {
-    args: {
-        children: 'Button',
-        theme: ButtonTheme.OUTLINE,
-        size: ButtonSize.XL,
+        theme: ButtonTheme.SECONDARY,
+        beforeIcon: <HeartIcon />,
+        afterIcon: <ChevronRightIcon />,
     },
 };
 
-export const OutlineDark: Story = {
+export const SecondaryActive: Story = {
     args: {
         children: 'Button',
-        theme: ButtonTheme.OUTLINE,
-    },
-};
-OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const Background: Story = {
-    args: {
-        children: 'Button',
-        theme: ButtonTheme.BACKGROUND,
+        theme: ButtonTheme.SECONDARY,
+        beforeIcon: <HeartIcon />,
+        afterIcon: <ChevronRightIcon />,
+        active: true,
     },
 };
 
-export const BackgroundDark: Story = {
+export const SecondaryDisabled: Story = {
     args: {
         children: 'Button',
-        theme: ButtonTheme.BACKGROUND,
-    },
-};
-BackgroundDark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const BackgroundInverted: Story = {
-    args: {
-        children: 'Button',
-        theme: ButtonTheme.BACKGROUND_INVERTED,
+        theme: ButtonTheme.SECONDARY,
+        beforeIcon: <HeartIcon />,
+        afterIcon: <ChevronRightIcon />,
+        disabled: true,
     },
 };
 
-export const BackgroundInvertedDark: Story = {
+export const SecondaryDark: Story = {
     args: {
         children: 'Button',
-        theme: ButtonTheme.BACKGROUND_INVERTED,
+        theme: ButtonTheme.SECONDARY,
+        beforeIcon: <HeartIcon />,
+        afterIcon: <ChevronRightIcon />,
     },
 };
-BackgroundInvertedDark.decorators = [ThemeDecorator(Theme.DARK)];
+SecondaryDark.decorators = [ThemeDecorator(Theme.DARK)];
 
-export const SquareBackgroundInverted: Story = {
+export const Tertiary: Story = {
     args: {
         children: 'Button',
-        theme: ButtonTheme.BACKGROUND_INVERTED,
-        square: true,
+        theme: ButtonTheme.TERTIARY,
+        beforeIcon: <HeartIcon />,
+        afterIcon: <ChevronRightIcon />,
     },
 };
 
-export const SquareBackgroundInvertedDark: Story = {
+export const TertiaryActive: Story = {
     args: {
         children: 'Button',
-        theme: ButtonTheme.BACKGROUND_INVERTED,
-        square: true,
+        theme: ButtonTheme.TERTIARY,
+        beforeIcon: <HeartIcon />,
+        afterIcon: <ChevronRightIcon />,
+        active: true,
     },
 };
-SquareBackgroundInvertedDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const TertiaryDark: Story = {
+    args: {
+        children: 'Button',
+        theme: ButtonTheme.TERTIARY,
+        beforeIcon: <HeartIcon />,
+        afterIcon: <ChevronRightIcon />,
+    },
+};
+TertiaryDark.decorators = [ThemeDecorator(Theme.DARK)];

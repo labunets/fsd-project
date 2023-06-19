@@ -1,33 +1,54 @@
 .Button {
     cursor: pointer;
     color: inherit;
-    padding: 1em calc(var(--space) * 1rem);
+    padding: 1em calc(1.5 * 1em);
     border-radius: 1em;
+    line-height: calc(1.25 * 1em) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    svg {
+        fill: var(--color-text-gray-80);
+    }
 }
 
-.clear {
+.base {
+    background: var(--color-ui-gray-100);
+    border: none;
+    color: var(--color-text-white);
+    svg {
+        fill: var(--color-text-white);
+    }
+}
+
+.primary {
+    background: var(--color-primary-yellow);
+    border: none;
+    color: var(--color-text-gray-80);
+}
+
+.secondary {
+    background: var(--color-ui-white);
+    border:none;
+    color: var(--color-text-gray-80);
+    box-shadow: var(--button-shadow);
+}
+
+.secondary.active {
+    box-shadow: var(--button-shadow-active);
+}
+
+.tertiary {
     background: none;
+    color: var(--primary-color);
     border: none;
     outline: none;
-    padding: 0;
-}
-
-.outline {
-    background: none;
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-}
-
-.background {
-    background: var(--inverted-bg-color);
-    border: none;
-    color: var(--primary-color);
-}
-
-.backgroundInverted {
-    background: var(--primary-color);
-    border: none;
-    color: var(--bg-color);
+    padding-left: 0;
+    padding-right: 0;
+    svg {
+        fill: var(--primary-color);
+    }
 }
 
 .square {
@@ -50,20 +71,41 @@
     width: var(--font-line-l);
     height: var(--font-line-l);
 }
-.square.size_xl {
-    width: var(--font-line-xl);
-    height: var(--font-line-xl);
-}
 
 .size_s {
     font: var(--font-s);
+    text-transform: uppercase;
+    svg {
+        width: var(--font-size-s);
+        height: var(--font-size-s);
+    }
 }
 .size_m {
     font: var(--font-m);
+    svg {
+        width: var(--font-size-m);
+        height: var(--font-size-m);
+    }
 }
 .size_l {
     font: var(--font-l);
+    svg {
+        width: var(--font-size-l);
+        height: var(--font-size-l);
+    }
 }
-.size_xl {
-    font: var(--font-xl);
+
+.active {
+    opacity: 0.8;
+}
+
+.disabled {
+    cursor: not-allowed;
+    background: var(--color-ui-gray-20);
+    color: var(--color-text-gray-60);
+    border: none;
+    svg {
+        fill: var(--color-text-gray-60);
+    }
+    box-shadow: none;
 }

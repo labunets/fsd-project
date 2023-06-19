@@ -1,7 +1,6 @@
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Theme } from 'app/providers/ThemeProvider';
 
 export const BugButton = () => {
     const [error, setError] = useState(false);
@@ -17,8 +16,9 @@ export const BugButton = () => {
 
     return (
         <Button
-            theme={ButtonTheme.OUTLINE}
+            theme={ButtonTheme.BASE}
             onClick={toggleError}
+            size={ButtonSize.S}
         >
             {t('Throw error')}
         </Button>

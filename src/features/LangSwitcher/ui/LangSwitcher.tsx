@@ -1,8 +1,7 @@
-import {classNames} from 'shared/lib/classNames/classNames';
-import {useTranslation} from 'react-i18next';
-import {Button, ButtonSize, ButtonTheme} from 'shared/ui/Button/Button';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { useTranslation } from 'react-i18next';
+import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import GlobeIcon from 'shared/assets/icons/filled-globe.svg';
-
 
 interface LangSwitcherProps {
     className?: string;

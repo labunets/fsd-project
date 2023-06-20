@@ -21,7 +21,7 @@
 .content {
     padding: var(--vspace-2);
     border-radius: 1em;
-    background: var(--color-ui-white);
+    background: var(--bg-color);
     transition: all 0.3s ease-in-out;
     transform: scale(0.5);
     max-width: 60%;
@@ -42,4 +42,3 @@
         transform: scale(0.2);
     }
 }
-

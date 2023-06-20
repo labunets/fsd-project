@@ -16,5 +16,7 @@
     "full": "Language",
     "short": "EN"
   },
-  "Login": "Login"
+  "Login": "Login",
+  "increment": "increment",
+  "decrement": "decrement"
 }

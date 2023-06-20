@@ -9,13 +9,10 @@ html {
     font-family: "Open Sans", sans-serif;
 }
 
-body {
-    font: var(--font-m);
-    color: var(--primary-color);
-}
-
 .app {
     background-color: var(--bg-color);
+    font: var(--font-m);
+    color: var(--primary-color);
 }
 
 .content-page {

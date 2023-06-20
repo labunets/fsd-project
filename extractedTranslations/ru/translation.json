@@ -15,6 +15,8 @@
   "Reload page": "Reload page",
   "Something went wrong": "Something went wrong",
   "Throw error": "Throw error",
+  "decrement": "decrement",
+  "increment": "increment",
   "lang": {
     "full": "full"
   },

@@ -4,6 +4,9 @@
  */
 
 export default {
+    globals: {
+        __IS_DEV__: true,
+    },
     clearMocks: true,
     testEnvironment: 'jsdom',
     coveragePathIgnorePatterns: [
@@ -30,6 +33,7 @@ export default {
         '\\.s?css$': 'identity-obj-proxy',
         '\\.svg': '<rootDir>/config/jest/mocks/jestEmptyComponent.tsx',
     },
+
     // All imported modules in your tests should be mocked automatically
     // automock: false,
 

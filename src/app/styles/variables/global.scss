@@ -28,6 +28,7 @@
     // Background
     --color-background-white: #fff;
     --color-background-gray-20: #f8f7fa;
+    --color-overlay: rgba(0 0 0 / 60%);
 
     // Text
     --color-text-gray-100: #000;
@@ -75,4 +76,7 @@
     --button-shadow-active:
         0 1px 5px rgb(0 0 0 / 1%),
         0 3px 15px rgb(0 0 0 / 5%);
+
+    // Indexes
+    --modal-z-index: 10;
 }

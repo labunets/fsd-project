@@ -12,3 +12,6 @@ npm-debug.log*
 
 /.vscode
 /.idea
+
+/.loki/report.html
+/.loki/report.json

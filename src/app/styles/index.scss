@@ -1,5 +1,4 @@
 @import "reset";
-@import "fonts";
 @import "./variables/global";
 @import "./themes/light";
 @import "./themes/dark";
@@ -21,5 +20,5 @@ html {
 
 .page-wrapper {
     flex-grow: 1;
-    padding: var(--vspace) var(--vspace-3);
+    padding: var(--vspace);
 }

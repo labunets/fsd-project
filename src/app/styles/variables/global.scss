@@ -49,7 +49,7 @@
     --vspace-1: calc(2 * var(--space) * 1rem);
     --vspace-2: calc(1.5 * var(--space) * 1rem);
     --vspace-3: calc(0.5 * var(--space) * 1rem);
-    --font-family-main: "Open Sans", arial, helvetica, sans-serif;
+    --font-family-main: arial, helvetica, sans-serif;
     --font-size-s: 0.75rem;
     --font-size-m: 1rem;
     --font-size-l: 1.4792rem;
@@ -66,7 +66,7 @@
     // Sizes
     --navbar-height: 104px;
     --sidebar-width: 15rem;
-    --sidebar-width-collapsed: 6rem;
+    --sidebar-width-collapsed: 3rem;
 
     // Shadows
     --button-shadow:

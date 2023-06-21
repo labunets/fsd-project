@@ -44,6 +44,10 @@
 
     .items {
         margin-left: 0;
+
+        .item {
+            margin-top: 1.5em;
+        }
     }
 
     .switchers,
@@ -55,6 +59,6 @@
     .link {
         opacity: 0;
         transition: opacity, width 0.3s ease-in-out;
-        width: 0;
+        display: none;
     }
 }

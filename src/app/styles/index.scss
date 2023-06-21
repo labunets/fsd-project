@@ -4,10 +4,10 @@
 @import "./themes/dark";
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     font: var(--font-m);
     color: var(--primary-color);
 }
+
 .app {
     background-color: var(--bg-color);
     min-height: 100vh;

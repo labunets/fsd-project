@@ -1,6 +1,9 @@
 {
   "About": "About",
+  "Bogdan": "Bogdan",
   "Home": "Home",
+  "Input": "Input",
+  "John": "John",
   "Language": "Language",
   "Loading": {
     "": {
@@ -11,15 +14,19 @@
   },
   "Login": "Login",
   "Main": "Main",
+  "Name": "Name",
   "Page not found": "Page not found",
+  "Password": "Password",
   "Reload page": "Reload page",
   "Something went wrong": "Something went wrong",
   "Throw error": "Throw error",
+  "Username": "Username",
   "decrement": "decrement",
   "increment": "increment",
   "lang": {
     "full": "full"
   },
+  "sample": "sample",
   "sidebar": {
     "close": "close",
     "open": "open"

@@ -18,5 +18,7 @@
   },
   "Login": "Войти",
   "increment": "увеличить",
-  "decrement": "уменьшить"
+  "decrement": "уменьшить",
+  "Username": "Имя пользователя",
+  "Password": "Пароль"
 }

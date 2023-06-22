@@ -37,6 +37,3 @@ jobs:
       - name: screenshot testing
         run: npm run test:ui:ci
         if: always()
-Name: Name
-Bogdan: Bogdan
-John: John

@@ -1,6 +1,6 @@
 {
   "name": "fsd-project",
-  "version": "1.0.30",
+  "version": "1.0.34",
   "description": "FSD practice",
   "main": "index.js",
   "scripts": {
@@ -93,6 +93,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",
+    "axios": "^0.26.1",
     "i18next": "^21.6.11",
     "i18next-browser-languagedetector": "^6.1.3",
     "i18next-http-backend": "^1.3.2",

@@ -7,6 +7,7 @@
     min-width: 16em;
     margin: 0 auto;
     padding: 20px;
+    text-align: left;
 }
 
 .input {
@@ -15,5 +16,9 @@
 }
 
 .loginBtn {
+    margin-top: var(--vspace-3);
+}
+
+p {
     margin-top: var(--vspace-3);
 }

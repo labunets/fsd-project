@@ -3,6 +3,7 @@
   "Bogdan": "Bogdan",
   "Home": "Home",
   "Input": "Input",
+  "Invalid username or password": "Invalid username or password",
   "John": "John",
   "Language": "Language",
   "Loading": {
@@ -13,6 +14,8 @@
     }
   },
   "Login": "Login",
+  "Login by username": "Login by username",
+  "Logout": "Logout",
   "Main": "Main",
   "Name": "Name",
   "Page not found": "Page not found",

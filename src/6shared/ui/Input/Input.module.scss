@@ -12,28 +12,29 @@
     text-transform: capitalize;
     margin-bottom: 0.5rem;
     font-weight: bold;
+    color: var(--primary-color);
 }
 
 input {
     border-radius: var(--input-border-radius);
     border: var(--input-border);
     padding: var(--input-padding);
-    color: var(--input-color);
-    background: var(--input-background);
+    color: var(--primary-color);
+    background: var(--bg-color);
 
     &:focus {
         border: var(--input-border);
-        background: var(--input-background-focus);
+        background: var(--bg-color-focus);
         box-shadow: var(--input-default-selected-shadow);
     }
 
     &::placeholder {
-        color: var(--input-placeholder-color);
+        color: var(--primary-color);
         opacity: var(--input-placeholder-opacity);
     }
 
     &:disabled {
-        background: var(--input-background);
-        color: var(--input-placeholder-color);
+        background: var(--bg-color);
+        color: var(--primary-color);
     }
 }

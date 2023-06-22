@@ -1,7 +1,7 @@
 @import "reset";
-@import "./variables/global";
 @import "./themes/light";
 @import "./themes/dark";
+@import "./variables/global";
 
 body {
     font: var(--font-m);
@@ -10,6 +10,7 @@ body {
 
 .app {
     background-color: var(--bg-color);
+    color: var(--primary-color);
 }
 
 .content-page {
@@ -19,4 +20,7 @@ body {
 .page-wrapper {
     flex-grow: 1;
     padding: var(--vspace);
+}
+
+h1, h2, h3, h4, h5, h6 {
 }

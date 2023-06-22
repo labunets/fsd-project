@@ -1,0 +1,27 @@
+.title {
+    font: var(--font-l);
+}
+
+.text {
+    font: var(--font-m);
+}
+
+.primary {
+    color: var(--primary-color);
+}
+
+.error {
+    color: var(--color-text-red);
+}
+
+.success {
+    color: var(--color-text-green);
+}
+
+.warning {
+    color: var(--color-text-yellow);
+}
+
+.info {
+    color: var(--color-text-blue);
+}

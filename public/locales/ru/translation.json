@@ -24,5 +24,6 @@
   "Login by username": "Войти по имени пользователя",
   "Invalid username or password": "Неверное имя пользователя или пароль",
   "John": "Джон",
-  "Logout": "Выйти"
+  "Logout": "Выйти",
+  "Profile": "Профиль"
 }

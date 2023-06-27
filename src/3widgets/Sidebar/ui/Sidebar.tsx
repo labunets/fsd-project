@@ -10,6 +10,7 @@ import ChevronLeftIcon from '6shared/assets/icons/chevron-left.svg';
 import ChevronRightIcon from '6shared/assets/icons/chevron-right.svg';
 import HomeIcon from '6shared/assets/icons/outline-home.svg';
 import InfoIcon from '6shared/assets/icons/outline-info.svg';
+import UserIcon from '6shared/assets/icons/outline-user.svg';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -51,7 +52,19 @@ export const Sidebar = ({ className }: SidebarProps) => {
                         {t('About')}
                     </span>
                 </AppLink>
+
+                <AppLink
+                    to={RoutePath.profile}
+                    theme={AppLinkTheme.PRIMARY}
+                    className={cls.item}
+                >
+                    <UserIcon className={cls.icon} />
+                    <span className={cls.link}>
+                        {t('Profile')}
+                    </span>
+                </AppLink>
             </div>
+
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher

@@ -42,7 +42,7 @@ module.exports = {
         'react/button-has-type': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            ignoreAttribute: ['data-testid', 'to'],
+            ignoreAttribute: ['data-testid', 'to', 'name'],
         }],
         'max-len': ['error', {
             ignoreComments: true,

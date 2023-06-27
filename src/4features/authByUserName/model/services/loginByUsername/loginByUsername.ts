@@ -1,7 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { User, userActions } from '5entities/User';
-import i18n from 'i18next';
 import { USER_LOCALSTORAGE_KEY } from '6shared/const/localstorage';
 
 interface LoginByUserNameProps {
@@ -9,8 +8,8 @@ interface LoginByUserNameProps {
     password: string;
 }
 
-export const loginByUserName = createAsyncThunk<User, LoginByUserNameProps>(
-    'login/loginByUserName',
+export const loginByUsername = createAsyncThunk<User, LoginByUserNameProps>(
+    'login/loginByUsername',
     async (authData: LoginByUserNameProps, thunkAPI) => {
         try {
             const response = await axios.post<User>('http://Kuzma.local:8000/login', authData);
@@ -24,7 +23,6 @@ export const loginByUserName = createAsyncThunk<User, LoginByUserNameProps>(
 
             return response.data;
         } catch (e) {
-            console.log(e);
             return thunkAPI.rejectWithValue('error');
         }
     },

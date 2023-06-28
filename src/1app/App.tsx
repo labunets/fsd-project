@@ -7,6 +7,7 @@ import '1app/styles/index.scss';
 import { useTheme } from '1app/providers/ThemeProvider';
 import { useDispatch } from 'react-redux';
 import { userActions } from '5entities/User';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
     const { theme } = useTheme();

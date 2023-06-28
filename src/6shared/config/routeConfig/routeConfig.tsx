@@ -2,7 +2,7 @@ import { MainPage } from '2pages/MainPage';
 import { AboutPage } from '2pages/AboutPage';
 import { RouteProps } from 'react-router-dom';
 import { NotFoundPage } from '2pages/NotFoundPage';
-import ProfilePage from '2pages/ProfilePage/ui/ProfilePage';
+import { ProfilePage } from '2pages/ProfilePage';
 
 export enum AppRoutes {
     MAIN = 'main',

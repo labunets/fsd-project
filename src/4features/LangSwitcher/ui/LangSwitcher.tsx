@@ -1,15 +1,15 @@
 import { classNames } from '6shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Button, ButtonSize, ButtonTheme } from '6shared/ui/Button/Button';
+import { Button, ButtonTheme } from '6shared/ui/Button/Button';
 import GlobeIcon from '6shared/assets/icons/filled-globe.svg';
+import { memo } from 'react';
 
 interface LangSwitcherProps {
     className?: string;
-    short?: boolean;
 }
 
-export const LangSwitcher = ({ className, short }: LangSwitcherProps) => {
-    const { t, i18n } = useTranslation();
+export const LangSwitcher = memo(({ className }: LangSwitcherProps) => {
+    const { i18n } = useTranslation();
 
     const toggleLanguage = () => {
         i18n.changeLanguage(i18n.language === 'en' ? 'uk' : 'en');
@@ -24,4 +24,4 @@ export const LangSwitcher = ({ className, short }: LangSwitcherProps) => {
             <GlobeIcon />
         </Button>
     );
-};
+});

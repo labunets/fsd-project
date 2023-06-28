@@ -1,0 +1,32 @@
+.item {
+    margin-top: var(--vspace-3);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.link {
+    margin-left: var(--vspace-3);
+    font-size: var(--font-size-sm);
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity, width, height 0.5s ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.icon {
+    fill: var(--primary-color);
+    height: var(--vspace);
+    transition: none;
+    min-width: 1em;
+}
+
+.collapsed {
+    .link {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        transition: opacity, width, height 0.2s ease-in-out;
+    }
+}

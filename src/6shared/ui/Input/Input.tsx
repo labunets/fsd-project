@@ -1,6 +1,6 @@
 import { classNames } from '6shared/lib/classNames/classNames';
 import React, {
-    ChangeEvent, InputHTMLAttributes, memo, useEffect, useRef, useState,
+    ChangeEvent, InputHTMLAttributes, memo, useEffect, useRef,
 } from 'react';
 import cls from './Input.module.scss';
 

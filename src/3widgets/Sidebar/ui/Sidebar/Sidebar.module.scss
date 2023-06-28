@@ -1,0 +1,38 @@
+.Sidebar {
+    height: calc(100vh - var(--navbar-height));
+    width: var(--sidebar-width);
+    background: var(--inverted-bg-color);
+    position: relative;
+    transition: width 0.3s ease-in-out;
+}
+
+.switchers {
+    position: absolute;
+    bottom: var(--vspace-3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.items {
+    margin-top: var(--vspace-2);
+    margin-left: var(--vspace-2);
+    display: flex;
+    flex-direction: column;
+}
+
+.collapsed {
+    width: var(--sidebar-width-collapsed);
+
+    .items {
+        margin-left: 0;
+    }
+
+    .switchers,
+    .items {
+        flex-direction: column;
+        align-items: center;
+    }
+}

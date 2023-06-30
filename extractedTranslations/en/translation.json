@@ -1,11 +1,14 @@
 {
   "About": "About",
   "Bogdan": "Bogdan",
+  "Edit": "Edit",
+  "Firstname": "Firstname",
   "Home": "Home",
   "Input": "Input",
   "Invalid username or password": "",
   "John": "John",
   "Language": "Language",
+  "Lastname": "Lastname",
   "Loading": {
     "": {
       "": {

@@ -64,7 +64,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                     value={username}
                 />
                 <Input
-                    type="password"
+                    type="text"
                     className={cls.input}
                     label={t('Password')}
                     placeholder="123"

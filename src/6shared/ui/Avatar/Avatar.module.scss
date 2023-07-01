@@ -1,0 +1,31 @@
+.Avatar {
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    background-color: var(--primary-color);
+
+    img {
+        border-radius: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-color: var(--bg-color);
+    }
+}
+
+.small {
+    width: var(--avatar-small);
+    height: var(--avatar-small);
+}
+
+.medium {
+    width: var(--avatar-medium);
+    height: var(--avatar-medium);
+}
+
+.large {
+    width: var(--avatar-large);
+    height: var(--avatar-large);
+}

@@ -1,18 +1,19 @@
-import { classNames } from '6shared/lib/classNames/classNames';
+import { Mods, classNames } from '6shared/lib/classNames/classNames';
 import React, {
     ChangeEvent, InputHTMLAttributes, memo, useEffect, useRef,
 } from 'react';
 import cls from './Input.module.scss';
 
-type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>;
+type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'>;
 
 interface InputProps extends HTMLInputProps {
     className?: string;
-    value?: string;
+    value?: string | number;
     onChange?: (value: string) => void;
     label?: string;
     placeholder?: string;
     autoFocus?: boolean;
+    readonly?: boolean;
 }
 
 export const Input = memo((props: InputProps) => {
@@ -24,6 +25,7 @@ export const Input = memo((props: InputProps) => {
         label,
         placeholder,
         autoFocus,
+        readonly,
         ...otherProps
     } = props;
     const ref = useRef<HTMLInputElement>(null);
@@ -38,8 +40,12 @@ export const Input = memo((props: InputProps) => {
         onChange?.(e.target.value);
     };
 
+    const mods: Mods = {
+        [cls.readonly]: readonly,
+    };
+
     return (
-        <div className={classNames(cls.InputWrapper, {}, [className])}>
+        <div className={classNames(cls.InputWrapper, mods, [className])}>
             <label className={cls.label} htmlFor={label}>
                 {label}
             </label>
@@ -50,6 +56,7 @@ export const Input = memo((props: InputProps) => {
                 name={label}
                 placeholder={placeholder}
                 onChange={onChangeHandler}
+                readOnly={readonly}
                 {...otherProps}
             />
         </div>

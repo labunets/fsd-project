@@ -2,5 +2,13 @@
   "Profile": "Profile",
   "Edit": "Edit",
   "Firstname": "First name",
-  "Lastname": "Last name"
+  "Lastname": "Last name",
+  "Error": "Error",
+  "Cannot load profile data": "Cannot load profile data",
+  "Cancel": "Cancel",
+  "Save": "Save",
+  "Age": "Age",
+  "City": "City",
+  "Username": "Username",
+  "Avatar": "Avatar"
 }

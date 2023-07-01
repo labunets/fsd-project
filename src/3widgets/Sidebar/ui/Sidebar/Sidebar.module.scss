@@ -1,6 +1,6 @@
 .Sidebar {
-    height: calc(100vh - var(--navbar-height));
     width: var(--sidebar-width);
+    height: calc(100vh - var(--navbar-height));
     background: var(--inverted-bg-color);
     position: relative;
     transition: width 0.3s ease-in-out;
@@ -10,8 +10,8 @@
     position: absolute;
     bottom: var(--vspace-3);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     width: 100%;
     align-items: center;
 }

@@ -25,5 +25,8 @@
   "Invalid username or password": "Невірне ім'я користувача або пароль",
   "John": "Іван",
   "Logout": "Вийти",
-  "Profile": "Профіль"
+  "Profile": "Профіль",
+  "Edit": "Редагувати",
+  "Currency": "Валюта",
+  "Country": "Країна"
 }

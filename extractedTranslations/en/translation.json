@@ -1,21 +1,18 @@
 {
   "About": "About",
-  "Bogdan": "Bogdan",
+  "Age": "Age",
+  "Avatar": "Avatar",
+  "Cancel": "Cancel",
+  "Cannot load profile data": "Cannot load profile data",
+  "City": "City",
+  "Country": "",
+  "Currency": "Currency",
   "Edit": "Edit",
+  "Error": "Error",
   "Firstname": "Firstname",
-  "Home": "Home",
-  "Input": "Input",
-  "Invalid username or password": "",
+  "Invalid username or password": "Invalid username or password",
   "John": "John",
-  "Language": "Language",
   "Lastname": "Lastname",
-  "Loading": {
-    "": {
-      "": {
-        "": ""
-      }
-    }
-  },
   "Login": "Login",
   "Login by username": "Login by username",
   "Logout": "Logout",
@@ -25,18 +22,10 @@
   "Password": "Password",
   "Profile": "Profile",
   "Reload page": "Reload page",
+  "Save": "Save",
   "Something went wrong": "Something went wrong",
   "Throw error": "Throw error",
   "Username": "Username",
   "decrement": "decrement",
-  "increment": "increment",
-  "lang": {
-    "full": "full"
-  },
-  "sample": "sample",
-  "sidebar": {
-    "close": "close",
-    "open": "open"
-  },
-  "toggle": "toggle"
+  "increment": "increment"
 }

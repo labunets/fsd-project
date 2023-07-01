@@ -25,5 +25,9 @@
   "Invalid username or password": "Invalid username or password",
   "John": "John",
   "Logout": "Logout",
-  "Profile": "Profile"
+  "Profile": "Profile",
+  "Edit": "Edit",
+  "Cancel": "Cancel",
+  "Currency": "Currency",
+  "Country": "Country"
 }

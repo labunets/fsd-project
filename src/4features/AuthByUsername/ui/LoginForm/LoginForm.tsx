@@ -1,6 +1,6 @@
 import { classNames } from '6shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Button } from '6shared/ui/Button/Button';
+import { Button, ButtonTheme } from '6shared/ui/Button/Button';
 import { Input } from '6shared/ui/Input/Input';
 import { useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
@@ -75,6 +75,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                     className={cls.loginBtn}
                     onClick={onLoginClick}
                     disabled={isLoading}
+                    theme={ButtonTheme.PRIMARY}
                 >
                     {t('Login')}
                 </Button>

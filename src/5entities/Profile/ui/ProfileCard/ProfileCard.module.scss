@@ -1,24 +1,24 @@
 .ProfileCard {
-    padding: var(--vspace-3);
+    padding: var(--vspace-3) var(--vspace-2);
+    margin-top: var(--vspace-3);
     border: 2px solid var(--primary-color);
 }
 
-.header {
-    display: flex;
-
-    p {
-        margin: 0;
-    }
-}
-
-.editBtn {
-    margin-left: auto;
-}
-
 .data {
-    margin-top: var(--vspace);
+    margin-top: var(--vspace-3);
 }
 
 .input {
     margin-top: var(--vspace-3);
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.avatar {
+    margin: var(--vspace) auto;
 }

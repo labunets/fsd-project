@@ -10,5 +10,10 @@
   "Age": "Вік",
   "City": "Місто",
   "Username": "Ім'я користувача",
-  "Avatar": "Аватар"
+  "Avatar": "Аватар",
+  "No data provided": "Дані не надані",
+  "Server error": "Помилка сервера",
+  "Invalid username or password": "Невірне ім'я користувача або пароль",
+  "Incorrect age": "Невірний вік",
+  "Invalid country": "Невірна країна"
 }

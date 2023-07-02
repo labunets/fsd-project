@@ -11,5 +11,9 @@
   "Lastname": "",
   "Profile": "",
   "Save": "",
-  "Username": ""
+  "Username": "",
+  "Server error": "Server error",
+  "Invalid username or password": "Invalid username or password",
+  "Incorrect age": "Incorrect age",
+  "Invalid country": "Invalid country"
 }

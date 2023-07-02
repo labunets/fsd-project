@@ -4,8 +4,9 @@ import {
     getProfileForm,
     getProfileIsLoading,
     getProfileReadonly,
+    getProfileValidateErrors,
     profileActions,
-    profileReducer,
+    profileReducer, ValidateProfileError,
 } from '5entities/Profile';
 import { ProfileCard } from '5entities/Profile/ui/ProfileCard/ProfileCard';
 import { classNames } from '6shared/lib/classNames/classNames';
@@ -16,6 +17,7 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { Currency } from '5entities/Currency';
 import { Country } from '5entities/Country';
+import { Text, TextTheme } from '6shared/ui/Text/Text';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers: ReducersList = {
@@ -33,6 +35,15 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     const isLoading = useSelector(getProfileIsLoading);
     const error = useSelector(getProfileError);
     const readonly = useSelector(getProfileReadonly);
+    const validateErrors = useSelector(getProfileValidateErrors);
+
+    const validateErrorTranslations = {
+        [ValidateProfileError.NO_DATA]: t('No data provided'),
+        [ValidateProfileError.SERVER_ERROR]: t('Server error'),
+        [ValidateProfileError.INCORRECT_USER_DATA]: t('Invalid username or password'),
+        [ValidateProfileError.INCORRECT_AGE]: t('Incorrect age'),
+        [ValidateProfileError.INCORRECT_COUNTRY]: t('Invalid country'),
+    };
 
     useEffect(() => {
         dispatch(fetchProfileData());
@@ -78,6 +89,13 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
             <ProfilePageHeader
                 data={formData}
             />
+            {validateErrors?.length && validateErrors.map((err) => (
+                <Text
+                    theme={TextTheme.ERROR}
+                    text={validateErrorTranslations[err]}
+                    key={err}
+                />
+            ))}
             <ProfileCard
                 data={formData}
                 isLoading={isLoading}

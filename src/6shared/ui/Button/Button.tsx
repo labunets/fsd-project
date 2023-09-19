@@ -9,6 +9,7 @@ export enum ButtonTheme {
     PRIMARY = 'primary',
     SECONDARY = 'secondary',
     TERTIARY = 'tertiary',
+    TERTIARY_INVERTED = 'tertiary-inverted',
 }
 
 export enum ButtonSize {

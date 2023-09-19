@@ -49,7 +49,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                 />
                 <Button
                     data-testid="sidebar-toggle"
-                    theme={ButtonTheme.TERTIARY}
+                    theme={ButtonTheme.TERTIARY_INVERTED}
                     onClick={onToggle}
                 >
                     {collapsed ? <ChevronRightIcon /> : <ChevronLeftIcon />}

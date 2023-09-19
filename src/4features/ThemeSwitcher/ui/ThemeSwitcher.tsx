@@ -14,7 +14,7 @@ export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
 
     return (
         <Button
-            theme={ButtonTheme.TERTIARY}
+            theme={ButtonTheme.TERTIARY_INVERTED}
             className={classNames(cls.ThemeSwitcher, {}, [className])}
             onClick={toggleTheme}
         >

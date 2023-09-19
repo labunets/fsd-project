@@ -26,6 +26,7 @@ export default (env: BuildEnv) => {
             overlay: false,
         },
         apiUrl,
+        project: 'frontend',
     });
 
     return config;

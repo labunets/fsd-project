@@ -22,4 +22,5 @@ export interface BuildOptions {
         overlay: boolean,
     },
     apiUrl: string;
+    project: 'storybook' | 'frontend' | 'jest';
 }

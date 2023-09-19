@@ -8,12 +8,13 @@
   "Edit": "",
   "Error": "",
   "Firstname": "",
+  "Incorrect age": "Incorrect age",
+  "Invalid country": "Invalid country",
+  "Invalid username or password": "Invalid username or password",
   "Lastname": "",
+  "No data provided": "",
   "Profile": "",
   "Save": "",
-  "Username": "",
   "Server error": "Server error",
-  "Invalid username or password": "Invalid username or password",
-  "Incorrect age": "Incorrect age",
-  "Invalid country": "Invalid country"
+  "Username": ""
 }

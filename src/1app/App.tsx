@@ -5,13 +5,13 @@ import { Navbar } from '3widgets/Navbar';
 import { Sidebar } from '3widgets/Sidebar';
 import '1app/styles/index.scss';
 import { useTheme } from '1app/providers/ThemeProvider';
-import { useDispatch } from 'react-redux';
-import { userActions } from '5entities/User';
-import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUserInited, userActions } from '5entities/User';
 
 function App() {
     const { theme } = useTheme();
     const dispatch = useDispatch();
+    const inited = useSelector(getUserInited);
 
     useEffect(() => {
         dispatch(userActions.getAuthData());
@@ -23,7 +23,7 @@ function App() {
                 <Navbar />
                 <div className="content-page">
                     <Sidebar />
-                    <AppRouter />
+                    {inited && <AppRouter />}
                 </div>
             </Suspense>
         </div>

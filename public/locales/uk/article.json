@@ -1,4 +1,5 @@
 {
-  "Article details": "Сторинка статті",
-  "Articles page": "Сторінка статей"
+  "Articles page": "Сторінка статей",
+  "Article not found": "Статтю не знайдено",
+  "Error occurred while loading article": "Під час завантаження статті виникла помилка"
 }

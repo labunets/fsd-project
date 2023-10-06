@@ -71,8 +71,8 @@
         {
           "id": "8",
           "type": "IMAGE",
-          "src": "https://placehold.co/300x200",
-          "title": "Малюнок 1 - скріншот сайту"
+          "src": "https://placehold.co/2000x1000",
+          "title": "Малюнок 2 - велике зображення"
         },
         {
           "id": "9",

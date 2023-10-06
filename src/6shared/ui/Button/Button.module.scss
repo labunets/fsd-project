@@ -9,6 +9,10 @@
     justify-content: center;
     gap: 8px;
 
+    &:hover {
+        opacity: 0.75;
+    }
+
     svg {
         fill: var(--color-text-gray-80);
     }

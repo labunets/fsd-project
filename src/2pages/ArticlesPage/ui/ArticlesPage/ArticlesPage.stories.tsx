@@ -4,7 +4,7 @@ import ArticlesPage from './ArticlesPage';
 type Story = StoryObj<typeof ArticlesPage>;
 
 const meta: Meta<typeof ArticlesPage> = {
-    title: '6shared/ArticlesPage',
+    title: '2pages/ArticlesPage',
     component: ArticlesPage,
     tags: ['autodocs'],
 };

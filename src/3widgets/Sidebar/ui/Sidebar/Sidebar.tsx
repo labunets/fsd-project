@@ -1,5 +1,5 @@
 import { classNames } from '6shared/lib/classNames/classNames';
-import { FC, memo, useState } from 'react';
+import { memo, useState } from 'react';
 import { Button, ButtonTheme } from '6shared/ui/Button/Button';
 import { ThemeSwitcher } from '4features/ThemeSwitcher';
 import { LangSwitcher } from '4features/LangSwitcher';

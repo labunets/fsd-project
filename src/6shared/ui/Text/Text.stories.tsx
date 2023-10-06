@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from '6shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from '1app/providers/ThemeProvider';
-import { Text, TextTheme } from './Text';
+import { Text, TextSize, TextTheme } from './Text';
 
 type Story = StoryObj<typeof Text>;
 
@@ -19,6 +19,33 @@ export const PrimaryLight: Story = {
         title: 'Lorem ipsum',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         theme: TextTheme.PRIMARY,
+    },
+};
+
+export const S: Story = {
+    args: {
+        title: 'Lorem ipsum',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        theme: TextTheme.PRIMARY,
+        size: TextSize.S,
+    },
+};
+
+export const M: Story = {
+    args: {
+        title: 'Lorem ipsum',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        theme: TextTheme.PRIMARY,
+        size: TextSize.M,
+    },
+};
+
+export const L: Story = {
+    args: {
+        title: 'Lorem ipsum',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        theme: TextTheme.PRIMARY,
+        size: TextSize.L,
     },
 };
 

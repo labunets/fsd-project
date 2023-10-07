@@ -1,7 +1,7 @@
 import { TestAsyncThunk } from '6shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
 import { articleDetailsReducer } from './articleDetailsSlice';
-import { ArticleDetailsSchema } from '../../model/types/ArticleDetailsSchema';
+import { ArticleDetailsSchema } from '../types/articleDetailsSchema';
 import { Article, ArticleBlockType, ArticleType } from '../../model/types/article';
 
 const article: Article = {

@@ -10,6 +10,7 @@ import { NavigateOptions, To } from 'react-router';
 import { CombinedState } from 'redux';
 import { ArticleDetailsSchema } from '5entities/Article';
 import { ArticleDetailsCommentsSchema } from '2pages/ArticleDetailsPage';
+import { AddCommentFormSchema } from '4features/addCommentForm';
 
 export interface StateSchema {
     counter: CounterSchema;
@@ -20,6 +21,7 @@ export interface StateSchema {
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
     articleDetailsComments?: ArticleDetailsCommentsSchema;
+    addCommentForm?: AddCommentFormSchema;
 }
 
 export type StateSchemaKeys = keyof StateSchema;

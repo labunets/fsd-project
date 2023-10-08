@@ -1,10 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { ThemeDecorator } from '6shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from '1app/providers/ThemeProvider';
 import { CommentCard } from './CommentCard';
 
 type Story = StoryObj<typeof CommentCard>;
 
 const meta: Meta<typeof CommentCard> = {
-    title: '5entities/CommentCard',
+    title: '5entities/Comment/CommentCard',
     component: CommentCard,
     tags: ['autodocs'],
 };
@@ -33,3 +35,11 @@ export const Loading: Story = {
         isLoading: true,
     },
 };
+
+export const LoadingDark: Story = {
+    args: {
+        comment,
+        isLoading: true,
+    },
+};
+LoadingDark.decorators = [ThemeDecorator(Theme.DARK)];

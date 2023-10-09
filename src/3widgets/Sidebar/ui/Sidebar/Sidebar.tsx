@@ -1,13 +1,14 @@
+import { useSelector } from 'react-redux';
 import { classNames } from '6shared/lib/classNames/classNames';
-import { memo, useState } from 'react';
+import { memo, useMemo, useState } from 'react';
 import { Button, ButtonTheme } from '6shared/ui/Button/Button';
 import { ThemeSwitcher } from '4features/ThemeSwitcher';
 import { LangSwitcher } from '4features/LangSwitcher';
 import ChevronLeftIcon from '6shared/assets/icons/chevron-left.svg';
 import ChevronRightIcon from '6shared/assets/icons/chevron-right.svg';
-import cls from './Sidebar.module.scss';
-import { SidebarItemsList } from '../../model/items';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
+import { getSidebarItems } from '../../model/selectors/getSidebarItems';
+import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
     className?: string;
@@ -19,19 +20,20 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
         const collapsed = localStorage.getItem('collapsed');
         return collapsed === 'true';
     });
+    const sidebarItemsList = useSelector(getSidebarItems);
 
     const onToggle = async () => {
         setCollapsed((prev) => !prev);
         localStorage.setItem('collapsed', String(!collapsed));
     };
 
-    const itemsList = SidebarItemsList.map((item) => (
+    const itemsList = useMemo(() => sidebarItemsList.map((item) => (
         <SidebarItem
             item={item}
             collapsed={collapsed}
             key={item.path}
         />
-    ));
+    )), [sidebarItemsList, collapsed]);
 
     return (
         <div

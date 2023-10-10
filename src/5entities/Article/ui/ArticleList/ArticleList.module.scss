@@ -1,0 +1,19 @@
+.ArticleList {
+    padding-bottom: var(--vspace);
+}
+
+.LIST {
+    .card {
+        margin-bottom: var(--vspace);
+    }
+}
+
+.GRID {
+    display: flex;
+    flex-wrap: wrap;
+
+    .card {
+        margin-right: var(--vspace);
+        margin-bottom: var(--vspace);
+    }
+}

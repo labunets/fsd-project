@@ -67,16 +67,11 @@
     --navbar-height: 104px;
     --sidebar-width: 15rem;
     --sidebar-width-collapsed: 3rem;
-    --radius-1: 1em;
+    --radius-1: 10px;
 
     // Shadows
-    --button-shadow:
-        0 2px 4px rgb(0 0 0 / 2%),
-        0 4px 8px rgb(0 0 0 / 4%),
-        0 5px 15px rgb(0 0 0 / 10%);
-    --button-shadow-active:
-        0 1px 5px rgb(0 0 0 / 1%),
-        0 3px 15px rgb(0 0 0 / 5%);
+    --button-shadow: 0 2px 4px rgb(0 0 0 / 2%), 0 4px 8px rgb(0 0 0 / 4%), 0 5px 15px rgb(0 0 0 / 10%);
+    --button-shadow-active: 0 1px 5px rgb(0 0 0 / 1%), 0 3px 15px rgb(0 0 0 / 5%);
 
     // Indexes
     --modal-z-index: 10;
@@ -94,4 +89,7 @@
     --avatar-small: 2rem;
     --avatar-medium: 3rem;
     --avatar-large: 4rem;
+
+    // Cards
+    --card-shadow: 0 10px 20px rgb(0 0 0 / 4%), 0 2px 6px rgb(0 0 0 / 4%), 0 0 1px rgb(0 0 0 / 4%);
 }

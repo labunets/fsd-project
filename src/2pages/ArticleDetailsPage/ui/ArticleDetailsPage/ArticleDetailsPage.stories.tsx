@@ -21,6 +21,7 @@ const article: Article = {
     img: 'https://placehold.co/300x200',
     views: 1022,
     createdAt: '05.10.2023',
+    user: { id: '1', username: 'John Doe' },
     type: [
         ArticleType.IT,
         ArticleType.SCIENCE,

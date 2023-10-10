@@ -1,0 +1,123 @@
+.ArticleListItem {
+    position: relative;
+}
+
+.LIST {
+    .card {
+        max-height: 200px;
+        padding: 0;
+        transition: 0.3s;
+        cursor: pointer;
+        display: flex;
+        align-items: flex-start;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .imageWrapper {
+        height: 200px;
+        width: 300px;
+        min-width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--input-border-radius) 0 0 var(--input-border-radius);
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .detailsWrapper {
+        display: flex;
+        height: 200px;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: var(--vspace);
+    }
+
+    .infoWrapper {
+        opacity: 0.5;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .img {
+        width: 100%;
+    }
+
+    .title {
+        line-height: 1;
+    }
+
+    .username {
+        margin-left: 4px;
+        margin-right: 1em;
+    }
+
+    .date {
+        margin-right: 1em;
+    }
+
+    .types {
+        margin-right: 1em;
+    }
+
+    .viewsWrapper {
+        display: flex;
+        margin-right: 1em;
+    }
+
+    .icon {
+        width: 0.75em;
+        fill: var(--secondary-color);
+    }
+
+    .views {
+        margin-left: 8px;
+    }
+}
+
+.GRID {
+    .card {
+        padding: 0;
+        transition: 0.3s;
+        cursor: pointer;
+        width: 300px;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .imageWrapper {
+        height: 200px;
+        width: 100%;
+        background-position: center center;
+        background-size: cover;
+        border-radius: var(--input-border-radius) var(--input-border-radius) 0 0;
+    }
+
+    .title {
+        padding: var(--vspace-3);
+    }
+
+    .infoWrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0 var(--vspace-3) var(--vspace-3);
+    }
+
+    .viewsWrapper {
+        display: flex;
+    }
+
+    .icon {
+        width: 0.75em;
+    }
+
+    .views {
+        margin-left: 8px;
+    }
+}

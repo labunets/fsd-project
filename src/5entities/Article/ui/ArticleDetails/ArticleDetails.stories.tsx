@@ -7,7 +7,7 @@ import { ArticleDetails } from './ArticleDetails';
 type Story = StoryObj<typeof ArticleDetails>;
 
 const meta: Meta<typeof ArticleDetails> = {
-    title: '5entities/ArticleDetails',
+    title: '5entities/Article/ArticleDetails',
     component: ArticleDetails,
     tags: ['autodocs'],
 };
@@ -21,6 +21,7 @@ const article: Article = {
     img: 'https://placehold.co/300x200',
     views: 1022,
     createdAt: '05.10.2023',
+    user: { id: '1', username: 'John Doe' },
     type: [
         ArticleType.IT,
         ArticleType.SCIENCE,

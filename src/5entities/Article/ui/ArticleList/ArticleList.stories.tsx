@@ -92,8 +92,14 @@ export const NormalGrid: Story = {
     args: {
         isLoading: false,
         articles: [
-            article,
-            article,
+            {
+                ...article,
+                id: '1',
+            },
+            {
+                ...article,
+                id: '2',
+            },
         ],
         view: ArticleView.GRID,
     },
@@ -103,8 +109,14 @@ export const NormalList: Story = {
     args: {
         isLoading: false,
         articles: [
-            article,
-            article,
+            {
+                ...article,
+                id: '1',
+            },
+            {
+                ...article,
+                id: '2',
+            },
         ],
         view: ArticleView.LIST,
     },
@@ -130,8 +142,14 @@ export const NormalGridDark: Story = {
     args: {
         isLoading: false,
         articles: [
-            article,
-            article,
+            {
+                ...article,
+                id: '1',
+            },
+            {
+                ...article,
+                id: '2',
+            },
         ],
         view: ArticleView.GRID,
     },
@@ -142,8 +160,14 @@ export const NormalListDark: Story = {
     args: {
         isLoading: false,
         articles: [
-            article,
-            article,
+            {
+                ...article,
+                id: '1',
+            },
+            {
+                ...article,
+                id: '2',
+            },
         ],
         view: ArticleView.LIST,
     },

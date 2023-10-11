@@ -1,5 +1,4 @@
 import { classNames } from '6shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { ArticleListItemSkeleton } from '5entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
@@ -25,10 +24,9 @@ export const ArticleList = memo((props: ArticleListProps) => {
     const {
         className,
         articles,
-        view = ArticleView.LIST,
+        view = ArticleView.GRID,
         isLoading,
     } = props;
-    const { t } = useTranslation();
 
     if (isLoading) {
         return (

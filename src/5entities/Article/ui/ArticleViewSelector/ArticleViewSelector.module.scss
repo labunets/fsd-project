@@ -1,0 +1,9 @@
+.ArticleViewSelector {
+    display: flex;
+
+    svg {
+        height: 24px;
+        width: 24px;
+        margin-right: var(--vspace-3);
+    }
+}

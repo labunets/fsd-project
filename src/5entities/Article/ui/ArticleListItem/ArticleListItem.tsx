@@ -1,9 +1,8 @@
 import { classNames } from '6shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { memo, useCallback, useEffect } from 'react';
+import { memo, useCallback } from 'react';
 import { Text, TextSize } from '6shared/ui/Text/Text';
 import EyeIcon from '6shared/assets/icons/outline-eye.svg';
-import ChevronRightIcon from '6shared/assets/icons/chevron-right.svg';
 import { Card } from '6shared/ui/Card/Card';
 import { Avatar, AvatarSize } from '6shared/ui/Avatar/Avatar';
 import { useNavigate } from 'react-router-dom';
@@ -46,12 +45,13 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                 <Card className={cls.card} onClick={onOpenArticle}>
                     {image}
                     <div className={cls.detailsWrapper}>
+                        <div className={cls.title}>
+                            <Text title={article.title} size={TextSize.L} />
+                            <Text text={article.subtitle} />
+                        </div>
                         <div className={cls.infoWrapper}>
                             <Avatar size={AvatarSize.SMALL} src={article.user.avatar} />
                             <Text text={article.user.username} size={TextSize.M} className={cls.username} />
-                        </div>
-                        <Text title={article.title} size={TextSize.L} className={cls.title} />
-                        <div className={cls.infoWrapper}>
                             {views}
                             {types}
                             {date}
@@ -66,7 +66,10 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         <div className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
             <Card className={cls.card} onClick={onOpenArticle}>
                 {image}
-                <Text title={article.title} className={cls.title} />
+                <div className={cls.title}>
+                    <Text title={article.title} />
+                    <Text text={article.subtitle} />
+                </div>
                 <div className={cls.infoWrapper}>
                     {types}
                     {date}

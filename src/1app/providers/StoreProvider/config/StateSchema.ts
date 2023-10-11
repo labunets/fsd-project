@@ -11,6 +11,7 @@ import { CombinedState } from 'redux';
 import { ArticleDetailsSchema } from '5entities/Article';
 import { ArticleDetailsCommentsSchema } from '2pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from '4features/addCommentForm';
+import { ArticlesPageSchema } from '2pages/ArticlesPage';
 
 export interface StateSchema {
     counter: CounterSchema;
@@ -22,6 +23,7 @@ export interface StateSchema {
     articleDetails?: ArticleDetailsSchema;
     articleDetailsComments?: ArticleDetailsCommentsSchema;
     addCommentForm?: AddCommentFormSchema;
+    articlesPage?: ArticlesPageSchema;
 }
 
 export type StateSchemaKeys = keyof StateSchema;

@@ -1,6 +1,11 @@
 .AddCommentForm {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     margin: var(--vspace-3) 0;
+}
+
+button {
+    margin: var(--vspace-3) 0;
+    align-self: flex-end;
 }

@@ -5,6 +5,7 @@ import { Button, ButtonSize, ButtonTheme } from '6shared/ui/Button/Button';
 import { LoginModal } from '4features/AuthByUsername';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from '5entities/User';
+import { Text } from '6shared/ui/Text/Text';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -32,29 +33,27 @@ export const Navbar = memo(({ className }: NavbarProps) => {
 
     if (authData) {
         return (
-            <div className={classNames(cls.Navbar, {}, [className])}>
+            <header className={classNames(cls.Navbar, {}, [className])}>
                 <div className={cls.links}>
                     <Button
                         theme={ButtonTheme.TERTIARY_INVERTED}
-                        size={ButtonSize.S}
                         onClick={onLogout}
                     >
-                        {t('Logout')}
+                        <Text text={t('Logout')} />
                     </Button>
                 </div>
-            </div>
+            </header>
         );
     }
 
     return (
-        <div className={classNames(cls.Navbar, {}, [className])}>
+        <header className={classNames(cls.Navbar, {}, [className])}>
             <div className={cls.links}>
                 <Button
                     theme={ButtonTheme.TERTIARY_INVERTED}
-                    size={ButtonSize.S}
                     onClick={onShowModal}
                 >
-                    {t('Login')}
+                    <Text text={t('Login')} />
                 </Button>
                 {isAuthModal && (
                     <LoginModal
@@ -63,6 +62,6 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                     />
                 )}
             </div>
-        </div>
+        </header>
     );
 });

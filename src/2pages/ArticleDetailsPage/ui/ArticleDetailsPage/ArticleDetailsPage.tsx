@@ -12,6 +12,7 @@ import { AddCommentForm } from '4features/addCommentForm';
 import { Button, ButtonTheme } from '6shared/ui/Button/Button';
 import ChevronLeftIcon from '6shared/assets/icons/chevron-left.svg';
 import { RoutePath } from '6shared/config/routeConfig/routeConfig';
+import { Page } from '6shared/ui/Page/Page';
 import {
     addCommentForArticle,
 } from '../../model/services/addCommentForArticle/addCommentForArticle';
@@ -53,15 +54,15 @@ const ArticleDetailsPage = (props: ArticlesDetailsPageProps) => {
 
     if (!id) {
         return (
-            <div className={classNames('', {}, [className])}>
+            <Page className={classNames('', {}, [className])}>
                 {t('Article not found')}
-            </div>
+            </Page>
         );
     }
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 <Button
                     theme={ButtonTheme.TERTIARY}
                     beforeIcon={<ChevronLeftIcon />}
@@ -77,7 +78,7 @@ const ArticleDetailsPage = (props: ArticlesDetailsPageProps) => {
                     isLoading={commentsIsLoading}
                     comments={comments}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };

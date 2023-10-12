@@ -32,5 +32,6 @@
   "Articles": "Статті",
   "No comments": "Немає коментарів",
   "Enter your comment": "Введіть свій коментар",
-  "Send": "Відправити"
+  "Send": "Відправити",
+  "Error loading comment form": "Помилка завантаження форми коментаря"
 }

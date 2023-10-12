@@ -6,6 +6,7 @@ import { Button, ButtonTheme } from '6shared/ui/Button/Button';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from '6shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { DynamicModuleLoader, ReducersList } from '6shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { Text, TextTheme } from '6shared/ui/Text/Text';
 import { addCommentFormActions, addCommentFormReducer } from '../../model/slices/addCommentFormSlice';
 import { getAddCommentFormError, getAddCommentFormText } from '../../model/selectors/addCommentFormSelectors';
 import cls from './AddCommentForm.module.scss';
@@ -37,6 +38,17 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
         onSendComment(text || '');
         onCommentTextChange('');
     }, [onCommentTextChange, onSendComment, text]);
+
+    if (error) {
+        return (
+            <div className={classNames(cls.AddCommentForm, {}, [className])}>
+                <Text
+                    text={t('Error loading comment form')}
+                    theme={TextTheme.ERROR}
+                />
+            </div>
+        );
+    }
 
     return (
         <DynamicModuleLoader reducers={reducers}>

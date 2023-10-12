@@ -2,8 +2,8 @@ import { createEntityAdapter, createSlice, PayloadAction } from '@reduxjs/toolki
 import { Article, ArticleView } from '5entities/Article';
 import { StateSchema } from '1app/providers/StoreProvider';
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from '6shared/const/localstorage';
+import { fetchArticlesList } from '2pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList';
 import { ArticlesPageSchema } from '../types/articlesPageSchema';
-import { fetchArticlesList } from '../../services/fetchArticlesList/fetchArticlesList';
 
 const articlesAdapter = createEntityAdapter<Article>({
     selectId: (article) => article.id,
@@ -21,6 +21,8 @@ const ArticlesPageSlice = createSlice({
         ids: [],
         entities: {},
         view: ArticleView.GRID,
+        page: 1,
+        hasMore: true,
     }),
     reducers: {
         setView: (state, action: PayloadAction<ArticleView>) => {
@@ -28,8 +30,13 @@ const ArticlesPageSlice = createSlice({
             // save to local storage
             localStorage.setItem(ARTICLES_VIEW_LOCALSTORAGE_KEY, action.payload);
         },
+        setPage: (state, action: PayloadAction<number>) => {
+            state.page = action.payload;
+        },
         initState: (state) => {
-            state.view = localStorage.getItem(ARTICLES_VIEW_LOCALSTORAGE_KEY) as ArticleView;
+            const view = localStorage.getItem(ARTICLES_VIEW_LOCALSTORAGE_KEY) as ArticleView;
+            state.view = view;
+            state.limit = view === ArticleView.GRID ? 12 : 6;
         },
     },
     extraReducers: (builder) => {
@@ -43,7 +50,8 @@ const ArticlesPageSlice = createSlice({
                 action: PayloadAction<Article[]>,
             ) => {
                 state.isLoading = false;
-                articlesAdapter.setAll(state, action.payload);
+                articlesAdapter.addMany(state, action.payload);
+                state.hasMore = action.payload.length > 0;
             })
             .addCase(fetchArticlesList.rejected, (state, action) => {
                 state.isLoading = false;

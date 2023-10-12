@@ -20,6 +20,7 @@ import { Country } from '5entities/Country';
 import { Text, TextTheme } from '6shared/ui/Text/Text';
 import { useInitialEffect } from '6shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useParams } from 'react-router-dom';
+import { Page } from '6shared/ui/Page/Page';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers: ReducersList = {
@@ -88,33 +89,33 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeOnUnmount>
-            <div className={classNames('', {}, [className])}>
+            <Page className={classNames('', {}, [className])}>
                 <h1>{t('Profile')}</h1>
-            </div>
-            <ProfilePageHeader
-                data={formData}
-            />
-            {validateErrors?.length && validateErrors.map((err) => (
-                <Text
-                    theme={TextTheme.ERROR}
-                    text={validateErrorTranslations[err]}
-                    key={err}
+                <ProfilePageHeader
+                    data={formData}
                 />
-            ))}
-            <ProfileCard
-                data={formData}
-                isLoading={isLoading}
-                error={error}
-                readonly={readonly}
-                onChangeFirstname={onChangeFirstname}
-                onChangeLastname={onChangeFLastname}
-                onChangeAge={onChangeAge}
-                onChangeCity={onChangeCity}
-                onChangeUsername={onChangeUsername}
-                onChangeAvatar={onChangeAvatar}
-                onChangeCurrency={onChangeCurrency}
-                onChangeCountry={onChangeCountry}
-            />
+                {validateErrors?.length && validateErrors.map((err) => (
+                    <Text
+                        theme={TextTheme.ERROR}
+                        text={validateErrorTranslations[err]}
+                        key={err}
+                    />
+                ))}
+                <ProfileCard
+                    data={formData}
+                    isLoading={isLoading}
+                    error={error}
+                    readonly={readonly}
+                    onChangeFirstname={onChangeFirstname}
+                    onChangeLastname={onChangeFLastname}
+                    onChangeAge={onChangeAge}
+                    onChangeCity={onChangeCity}
+                    onChangeUsername={onChangeUsername}
+                    onChangeAvatar={onChangeAvatar}
+                    onChangeCurrency={onChangeCurrency}
+                    onChangeCountry={onChangeCountry}
+                />
+            </Page>
         </DynamicModuleLoader>
 
     );

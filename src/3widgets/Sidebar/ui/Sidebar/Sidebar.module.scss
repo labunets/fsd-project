@@ -1,19 +1,26 @@
 .Sidebar {
-    width: var(--sidebar-width);
+    min-width: var(--sidebar-width);
     height: calc(100vh - var(--navbar-height));
     background: var(--inverted-bg-color);
-    position: relative;
     transition: width 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+
+    svg {
+        width: var(--font-line-m);
+        min-width: var(--font-line-m);
+        height: var(--font-line-m);
+    }
 }
 
 .switchers {
-    position: absolute;
     bottom: var(--vspace-3);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
     align-items: center;
+    margin: var(--vspace-2) 0 0;
 }
 
 .items {
@@ -32,7 +39,15 @@
 
     .switchers,
     .items {
+        transition: width 2s ease-in-out;
+        display: flex;
         flex-direction: column;
         align-items: center;
+
+        button {
+            padding: 0;
+            margin: var(--vspace) 0 0 0;
+            align-self: center;
+        }
     }
 }

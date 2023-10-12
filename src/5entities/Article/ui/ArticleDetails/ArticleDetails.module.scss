@@ -8,6 +8,10 @@
 
 .image {
     margin: 0 0 var(--vspace-1);
+
+    img {
+        max-width: 100%;
+    }
 }
 
 .title {

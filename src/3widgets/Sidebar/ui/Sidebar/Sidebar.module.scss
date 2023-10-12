@@ -1,10 +1,11 @@
 .Sidebar {
-    min-width: var(--sidebar-width);
+    width: var(--sidebar-width);
     height: calc(100vh - var(--navbar-height));
     background: var(--inverted-bg-color);
     transition: width 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
 
     svg {
         width: var(--font-line-m);

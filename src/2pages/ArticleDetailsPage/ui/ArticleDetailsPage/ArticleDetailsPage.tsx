@@ -12,7 +12,7 @@ import { AddCommentForm } from '4features/addCommentForm';
 import { Button, ButtonTheme } from '6shared/ui/Button/Button';
 import ChevronLeftIcon from '6shared/assets/icons/chevron-left.svg';
 import { RoutePath } from '6shared/config/routeConfig/routeConfig';
-import { Page } from '6shared/ui/Page/Page';
+import { Page } from '3widgets/Page/Page';
 import {
     addCommentForArticle,
 } from '../../model/services/addCommentForArticle/addCommentForArticle';

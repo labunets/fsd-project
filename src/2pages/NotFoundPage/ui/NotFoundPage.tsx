@@ -1,6 +1,6 @@
 import { classNames } from '6shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Page } from '6shared/ui/Page/Page';
+import { Page } from '3widgets/Page/Page';
 import cls from './NotFoundPage.module.scss';
 
 interface NotFoundPageProps {

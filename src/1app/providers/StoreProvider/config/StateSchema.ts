@@ -10,9 +10,11 @@ import { ArticleDetailsSchema } from '5entities/Article';
 import { ArticleDetailsCommentsSchema } from '2pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from '4features/addCommentForm';
 import { ArticlesPageSchema } from '2pages/ArticlesPage';
+import { UISchema } from '4features/UI';
 
 export interface StateSchema {
     user: UserSchema;
+    ui: UISchema;
 
     // Async reducers
     loginForm?: LoginSchema;

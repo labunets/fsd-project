@@ -3,18 +3,24 @@
     height: var(--navbar-height);
     background: var(--inverted-bg-color);
     display: flex;
-    align-items: end;
-    padding: 64px 24px 12px;
+    justify-content: flex-end;
 }
 
 .links {
-    margin-left: auto;
+    height: 100%;
+    margin-right: var(--vspace);
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: center;
     padding: 0.5em;
     gap: 1em;
+    flex-wrap: wrap;
+
+    button {
+        margin: 0;
+        align-self: center;
+    }
 }
 
 .links a {

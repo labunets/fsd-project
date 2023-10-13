@@ -6,13 +6,14 @@ import {
     getProfileReadonly,
     getProfileValidateErrors,
     profileActions,
-    profileReducer, ValidateProfileError,
+    profileReducer,
+    ValidateProfileError,
 } from '5entities/Profile';
 import { ProfileCard } from '5entities/Profile/ui/ProfileCard/ProfileCard';
 import { classNames } from '6shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from '6shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '6shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { Currency } from '5entities/Currency';
@@ -20,7 +21,7 @@ import { Country } from '5entities/Country';
 import { Text, TextTheme } from '6shared/ui/Text/Text';
 import { useInitialEffect } from '6shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useParams } from 'react-router-dom';
-import { Page } from '6shared/ui/Page/Page';
+import { Page } from '3widgets/Page/Page';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers: ReducersList = {

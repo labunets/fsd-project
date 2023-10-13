@@ -64,7 +64,7 @@
     --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
 
     // Sizes
-    --navbar-height: 104px;
+    --navbar-height: calc(var(--font-line-m) + var(--vspace) * 2);
     --sidebar-width: 15rem;
     --sidebar-width-collapsed: 3rem;
     --radius-1: 10px;

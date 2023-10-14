@@ -20,7 +20,9 @@
       "views": 1022,
       "createdAt": "05.10.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -913,6 +915,30 @@
       "userId": "1",
       "text": "12345",
       "id": "XgG7VsU"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "123123123",
+      "id": "3g79TpT"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "23452345",
+      "id": "M04Wmsm"
+    },
+    {
+      "articleId": "10",
+      "userId": "1",
+      "text": "asdfasdf",
+      "id": "FVUcWcJ"
+    },
+    {
+      "articleId": "22",
+      "userId": "1",
+      "text": "dsftgsdfg",
+      "id": "g1uyJyh"
     }
   ],
   "users": [

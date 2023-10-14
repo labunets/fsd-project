@@ -7,10 +7,10 @@ import {
 import { AxiosInstance } from 'axios';
 import { CombinedState } from 'redux';
 import { ArticleDetailsSchema } from '5entities/Article';
-import { ArticleDetailsCommentsSchema } from '2pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from '4features/addCommentForm';
 import { ArticlesPageSchema } from '2pages/ArticlesPage';
 import { UISchema } from '4features/UI';
+import { ArticleDetailsPageSchema } from '2pages/ArticleDetailsPage';
 
 export interface StateSchema {
     user: UserSchema;
@@ -20,9 +20,9 @@ export interface StateSchema {
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
-    articleDetailsComments?: ArticleDetailsCommentsSchema;
     addCommentForm?: AddCommentFormSchema;
     articlesPage?: ArticlesPageSchema;
+    articleDetailsPage?: ArticleDetailsPageSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

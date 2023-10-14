@@ -1,6 +1,8 @@
 import { classNames } from '6shared/lib/classNames/classNames';
 import { memo } from 'react';
 import { ArticleListItemSkeleton } from '5entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
+import { Text, TextTheme } from '6shared/ui/Text/Text';
+import { useTranslation } from 'react-i18next';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import cls from './ArticleList.module.scss';
 import { Article, ArticleView } from '../../model/types/article';
@@ -27,6 +29,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
         view = ArticleView.GRID,
         isLoading,
     } = props;
+    const { t } = useTranslation('article');
 
     const renderArticle = (article: Article) => (
         <ArticleListItem
@@ -36,6 +39,17 @@ export const ArticleList = memo((props: ArticleListProps) => {
             className={cls.card}
         />
     );
+
+    if (!isLoading && !articles.length) {
+        return (
+            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+                <Text
+                    title={t('No articles found')}
+                    theme={TextTheme.ERROR}
+                />
+            </div>
+        );
+    }
 
     return (
         <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>

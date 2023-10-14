@@ -33,5 +33,17 @@
   "No comments": "Немає коментарів",
   "Enter your comment": "Введіть свій коментар",
   "Send": "Відправити",
-  "Error loading comment form": "Помилка завантаження форми коментаря"
+  "Error loading comment form": "Помилка завантаження форми коментаря",
+  "Sort by": "Сортувати за",
+  "Search": "Пошук",
+  "order": "порядок",
+  "ascending": "зростання",
+  "descending": "спадання",
+  "created": "створено",
+  "title": "назва",
+  "views": "перегляди",
+  "ALL": "ВСІ",
+  "IT": "ІТ",
+  "SCIENCE": "НАУКА",
+  "ECONOMICS": "ЕКОНОМІКА"
 }

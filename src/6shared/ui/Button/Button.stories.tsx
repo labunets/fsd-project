@@ -168,3 +168,12 @@ export const TertiaryDark: Story = {
     },
 };
 TertiaryDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const Outlined: Story = {
+    args: {
+        children: 'Button',
+        theme: ButtonTheme.OTLINED,
+        beforeIcon: <HeartIcon />,
+        afterIcon: <ChevronRightIcon />,
+    },
+};

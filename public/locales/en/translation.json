@@ -34,5 +34,17 @@
   "No comments": "No comments",
   "Enter your comment": "Enter your comment",
   "Send": "Send",
-  "Error loading comment form": "Error loading comment form"
+  "Error loading comment form": "Error loading comment form",
+  "Sort by": "Sort by",
+  "Search": "Search",
+  "order": "order",
+  "ascending": "ascending",
+  "descending": "descending",
+  "created": "created",
+  "title": "title",
+  "views": "views",
+  "ALL": "ALL",
+  "IT": "IT",
+  "SCIENCE": "SCIENCE",
+  "ECONOMICS": "ECONOMICS"
 }

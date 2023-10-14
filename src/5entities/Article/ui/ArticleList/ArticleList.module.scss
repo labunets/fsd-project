@@ -11,9 +11,5 @@
 .GRID {
     display: flex;
     flex-wrap: wrap;
-
-    .card {
-        margin-right: var(--vspace);
-        margin-bottom: var(--vspace);
-    }
+    gap: var(--vspace-2);
 }

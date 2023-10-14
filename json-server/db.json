@@ -14,16 +14,13 @@
   "articles": [
     {
       "id": "1",
-      "title": "Javascript news",
-      "subtitle": "Що нового у JS за 2022 рік?",
+      "title": "Javascript news 2022",
+      "subtitle": "Що нового у JS за 2022 рік? (IT)",
       "img": "https://placehold.co/300x200?text=JavaScript",
       "views": 1022,
-      "createdAt": "05.10.2023",
+      "createdAt": "05.10.2022",
       "userId": "1",
-      "type": [
-        "IT",
-        "SCIENCE"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -87,15 +84,14 @@
     },
     {
       "id": "2",
-      "title": "Python news",
+      "title": "Python news 2022",
       "subtitle": "Що нового у Python за 2022 рік?",
       "img": "https://placehold.co/800x500?text=Python",
       "views": 1022,
-      "createdAt": "05.10.2023",
+      "createdAt": "06.10.2022",
       "userId": "1",
       "type": [
-        "IT",
-        "SCIENCE"
+        "IT"
       ],
       "blocks": [
         {
@@ -112,14 +108,13 @@
     },
     {
       "id": "3",
-      "title": "Kotlin news",
-      "subtitle": "Що нового у Kotlin за 2022 рік?",
-      "img": "https://placehold.co/400x200?text=Kotlin",
-      "views": 1022,
-      "createdAt": "05.10.2023",
+      "title": "Наука 2022",
+      "subtitle": "Що нового у науці за 2022 рік?",
+      "img": "https://placehold.co/400x200?text=Science",
+      "views": 2222,
+      "createdAt": "07.10.2022",
       "userId": "1",
       "type": [
-        "IT",
         "SCIENCE"
       ],
       "blocks": [
@@ -138,7 +133,7 @@
     {
       "id": "4",
       "title": "Python news",
-      "subtitle": "Що нового у Python за 2022 рік?",
+      "subtitle": "Що нового у Python за 2023 рік?",
       "img": "https://placehold.co/800x500?text=Python",
       "views": 1022,
       "createdAt": "05.10.2023",
@@ -162,11 +157,11 @@
     },
     {
       "id": "5",
-      "title": "Kotlin news",
-      "subtitle": "Що нового у Kotlin за 2022 рік?",
+      "title": "Kotlin news 2023",
+      "subtitle": "Що нового у Kotlin за 2023 рік?",
       "img": "https://placehold.co/400x200?text=Kotlin",
       "views": 1022,
-      "createdAt": "05.10.2023",
+      "createdAt": "06.10.2023",
       "userId": "1",
       "type": [
         "IT",
@@ -187,15 +182,14 @@
     },
     {
       "id": "6",
-      "title": "Python news",
-      "subtitle": "Що нового у Python за 2022 рік?",
-      "img": "https://placehold.co/800x500?text=Python",
-      "views": 1022,
-      "createdAt": "05.10.2023",
+      "title": "Economics news",
+      "subtitle": "Що нового у Economics за 2023 рік?",
+      "img": "https://placehold.co/800x500?text=Economics",
+      "views": 111,
+      "createdAt": "07.10.2023",
       "userId": "1",
       "type": [
-        "IT",
-        "SCIENCE"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -213,10 +207,10 @@
     {
       "id": "7",
       "title": "Kotlin news",
-      "subtitle": "Що нового у Kotlin за 2022 рік?",
+      "subtitle": "Що нового у Kotlin за 2020 рік?",
       "img": "https://placehold.co/400x200?text=Kotlin",
       "views": 1022,
-      "createdAt": "05.10.2023",
+      "createdAt": "05.10.2020",
       "userId": "1",
       "type": [
         "IT",
@@ -238,10 +232,10 @@
     {
       "id": "8",
       "title": "Python news",
-      "subtitle": "Що нового у Python за 2022 рік?",
+      "subtitle": "Що нового у Python за 2020 рік?",
       "img": "https://placehold.co/800x500?text=Python",
       "views": 1022,
-      "createdAt": "05.10.2023",
+      "createdAt": "04.10.2020",
       "userId": "1",
       "type": [
         "IT",
@@ -263,10 +257,10 @@
     {
       "id": "9",
       "title": "Kotlin news",
-      "subtitle": "Що нового у Kotlin за 2022 рік?",
+      "subtitle": "Що нового у Kotlin за 2019 рік?",
       "img": "https://placehold.co/400x200?text=Kotlin",
       "views": 1022,
-      "createdAt": "05.10.2023",
+      "createdAt": "05.10.2019",
       "userId": "1",
       "type": [
         "IT",
@@ -288,10 +282,10 @@
     {
       "id": "10",
       "title": "Python news",
-      "subtitle": "Що нового у Python за 2022 рік?",
+      "subtitle": "Що нового у Python за 2009 рік?",
       "img": "https://placehold.co/800x500?text=Python",
       "views": 1022,
-      "createdAt": "05.10.2023",
+      "createdAt": "05.10.2009",
       "userId": "1",
       "type": [
         "IT",
@@ -315,7 +309,7 @@
       "title": "Kotlin news",
       "subtitle": "Що нового у Kotlin за 2022 рік?",
       "img": "https://placehold.co/400x200?text=Kotlin",
-      "views": 1022,
+      "views": 2222,
       "createdAt": "05.10.2023",
       "userId": "1",
       "type": [
@@ -340,7 +334,7 @@
       "title": "Python news",
       "subtitle": "Що нового у Python за 2022 рік?",
       "img": "https://placehold.co/800x500?text=Python",
-      "views": 1022,
+      "views": 3333,
       "createdAt": "05.10.2023",
       "userId": "1",
       "type": [
@@ -365,7 +359,7 @@
       "title": "Kotlin news",
       "subtitle": "Що нового у Kotlin за 2022 рік?",
       "img": "https://placehold.co/400x200?text=Kotlin",
-      "views": 1022,
+      "views": 4444,
       "createdAt": "05.10.2023",
       "userId": "1",
       "type": [
@@ -390,7 +384,7 @@
       "title": "Python news",
       "subtitle": "Що нового у Python за 2022 рік?",
       "img": "https://placehold.co/800x500?text=Python",
-      "views": 1022,
+      "views": 5555,
       "createdAt": "05.10.2023",
       "userId": "1",
       "type": [
@@ -415,7 +409,7 @@
       "title": "Kotlin news",
       "subtitle": "Що нового у Kotlin за 2022 рік?",
       "img": "https://placehold.co/400x200?text=Kotlin",
-      "views": 1022,
+      "views": 6666,
       "createdAt": "05.10.2023",
       "userId": "1",
       "type": [

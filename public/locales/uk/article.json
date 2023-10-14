@@ -4,5 +4,6 @@
   "Error occurred while loading article": "Під час завантаження статті виникла помилка",
   "Comments": "Коментарі",
   "Articles": "Статті",
-  "Back": "Назад"
+  "Back": "Назад",
+  "No articles found": "Статті не знайдено"
 }

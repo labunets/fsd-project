@@ -79,6 +79,9 @@
 }
 
 .GRID {
+    display: inline-flex;
+    gap: var(--vspace-2);
+
     .card {
         padding: 0;
         cursor: pointer;

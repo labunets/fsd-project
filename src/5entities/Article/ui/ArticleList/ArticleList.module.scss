@@ -1,6 +1,14 @@
-.ArticleList {
+.LIST {
     padding-bottom: var(--vspace);
     display: flex;
     flex-wrap: wrap;
     gap: var(--vspace-2);
+}
+
+.GRID {
+    .card {
+        display: inline-flex;
+        gap: 10px;
+        height: 360px;
+    }
 }

@@ -1,8 +1,10 @@
 import { classNames } from '6shared/lib/classNames/classNames';
 import { HTMLAttributeAnchorTarget, memo } from 'react';
-import { ArticleListItemSkeleton } from '5entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
 import { Text, TextTheme } from '6shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
+import { List, ListRowProps, WindowScroller } from 'react-virtualized';
+import { PAGE_ID } from '3widgets/Page/Page';
+import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import cls from './ArticleList.module.scss';
 import { Article, ArticleView } from '../../model/types/article';
@@ -33,15 +35,38 @@ export const ArticleList = memo((props: ArticleListProps) => {
     } = props;
     const { t } = useTranslation('article');
 
-    const renderArticle = (article: Article) => (
-        <ArticleListItem
-            article={article}
-            view={view}
-            key={article.id}
-            className={cls.card}
-            target={target}
-        />
-    );
+    const isGrid = view === ArticleView.GRID;
+
+    const itemsPerRow = isGrid ? 3 : 1;
+    const rowCount = isGrid
+        ? Math.ceil(articles.length / itemsPerRow)
+        : articles.length;
+
+    const rowRenderer = ({
+        index, key, style,
+    }: ListRowProps) => {
+        const items = [];
+        const fromIndex = index * itemsPerRow;
+        const toIndex = Math.min(fromIndex + itemsPerRow, articles.length);
+
+        for (let i = fromIndex; i < toIndex; i += 1) {
+            items.push(
+                <ArticleListItem
+                    article={articles[i]}
+                    view={view}
+                    className={cls.card}
+                    target={target}
+                    key={i}
+                />,
+            );
+        }
+
+        return (
+            <div key={key} style={style}>
+                {items}
+            </div>
+        );
+    };
 
     if (!isLoading && !articles.length) {
         return (
@@ -55,11 +80,35 @@ export const ArticleList = memo((props: ArticleListProps) => {
     }
 
     return (
-        <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-            {articles.length > 0
-                ? articles.map(renderArticle)
-                : null}
-            {isLoading && getSkeletons(view)}
-        </div>
+        <WindowScroller
+            scrollElement={document.getElementById(PAGE_ID) as Element}
+        >
+            {({
+                width,
+                height,
+                registerChild,
+                onChildScroll,
+                scrollTop,
+                isScrolling,
+            }) => (
+                <div
+                    ref={registerChild}
+                    className={classNames('', {}, [className, cls[view]])}
+                >
+                    <List
+                        height={height}
+                        rowCount={rowCount}
+                        rowHeight={isGrid ? 390 : 230}
+                        rowRenderer={rowRenderer}
+                        width={width}
+                        autoHeight
+                        onScroll={onChildScroll}
+                        isScrolling={isScrolling}
+                        scrollTop={scrollTop}
+                    />
+                    {isLoading && getSkeletons(view)}
+                </div>
+            )}
+        </WindowScroller>
     );
 });

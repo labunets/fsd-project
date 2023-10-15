@@ -6,6 +6,8 @@ import { LoginModal } from '4features/AuthByUsername';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from '5entities/User';
 import { Text } from '6shared/ui/Text/Text';
+import { AppLink } from '6shared/ui/AppLink/AppLink';
+import { RoutePath } from '6shared/config/routeConfig/routeConfig';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -35,6 +37,9 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         return (
             <header className={classNames(cls.Navbar, {}, [className])}>
                 <div className={cls.links}>
+                    <AppLink to={RoutePath.article_create}>
+                        {t('New article')}
+                    </AppLink>
                     <Button
                         theme={ButtonTheme.TERTIARY_INVERTED}
                         onClick={onLogout}

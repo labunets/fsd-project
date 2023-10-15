@@ -14,7 +14,7 @@
     justify-content: flex-end;
     align-items: center;
     padding: 0.5em;
-    gap: 1em;
+    gap: var(--vspace-1);
     flex-wrap: wrap;
 
     button {
@@ -24,8 +24,6 @@
 }
 
 .links a {
-    text-transform: uppercase;
     text-decoration: none;
-    font-weight: bold;
     color: var(--secondary-color);
 }

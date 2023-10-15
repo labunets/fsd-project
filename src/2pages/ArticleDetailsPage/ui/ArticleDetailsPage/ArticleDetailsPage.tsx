@@ -2,17 +2,15 @@ import { classNames } from '6shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { ArticleDetails, ArticleList } from '5entities/Article';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Text } from '6shared/ui/Text/Text';
 import { CommentList } from '5entities/Comment';
 import { DynamicModuleLoader, ReducersList } from '6shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useDispatch, useSelector } from 'react-redux';
 import { useInitialEffect } from '6shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { AddCommentForm } from '4features/addCommentForm';
-import { Button, ButtonTheme } from '6shared/ui/Button/Button';
-import ChevronLeftIcon from '6shared/assets/icons/chevron-left.svg';
-import { RoutePath } from '6shared/config/routeConfig/routeConfig';
 import { Page } from '3widgets/Page/Page';
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import { articleDetailsPageReducer } from '../../model/slices';
 import { getArticleRecommendationsIsLoading } from '../../model/selectors/recommendations';
 import { getArticleRecommendations } from '../../model/slices/articleDetailsPageRecommendationsSlice';
@@ -42,11 +40,6 @@ const ArticleDetailsPage = (props: ArticlesDetailsPageProps) => {
     const recommendations = useSelector(getArticleRecommendations.selectAll);
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
     const recommendationsIsLoading = useSelector(getArticleRecommendationsIsLoading);
-    const navigate = useNavigate();
-
-    const onBackToList = useCallback(() => {
-        navigate(RoutePath.articles);
-    }, [navigate]);
 
     const onSendComment = useCallback((text: string) => {
         dispatch(addCommentForArticle(text));
@@ -68,14 +61,7 @@ const ArticleDetailsPage = (props: ArticlesDetailsPageProps) => {
     return (
         <DynamicModuleLoader reducers={reducers}>
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                <Button
-                    theme={ButtonTheme.TERTIARY}
-                    beforeIcon={<ChevronLeftIcon />}
-                    className={cls.backButton}
-                    onClick={onBackToList}
-                >
-                    {t('Back')}
-                </Button>
+                <ArticleDetailsPageHeader />
                 <ArticleDetails id={id} />
                 <Text
                     title={t('Recommend')}

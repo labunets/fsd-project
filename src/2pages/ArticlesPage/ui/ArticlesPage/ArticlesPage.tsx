@@ -1,14 +1,14 @@
-import { classNames } from '6shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { ArticleList } from '5entities/Article';
-import { Text, TextSize } from '6shared/ui/Text/Text';
+import { Text, TextSize, TextTheme } from '6shared/ui/Text/Text';
 import { DynamicModuleLoader, ReducersList } from '6shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useInitialEffect } from '6shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from '6shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Page } from '3widgets/Page/Page';
 import { useSearchParams } from 'react-router-dom';
+import { VStack } from '6shared/ui/Stack';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import {
@@ -17,18 +17,16 @@ import {
     getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
 import { articlesPageReducer, getArticles } from '../../model/slices/ArticlesPageSlice';
-import cls from './ArticlesPage.module.scss';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 
 interface ArticlesPageProps {
-    className?: string;
 }
 
 const reducers: ReducersList = {
     articlesPage: articlesPageReducer,
 };
 
-const ArticlesPage = ({ className }: ArticlesPageProps) => {
+const ArticlesPage = (props: ArticlesPageProps) => {
     const { t } = useTranslation('article');
     const dispatch = useAppDispatch();
     const articles = useSelector(getArticles.selectAll);
@@ -47,27 +45,25 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
 
     if (error) {
         return (
-            <Page className={classNames(cls.ArticlesPage, {}, [className])}>
-                <Text title={t('Articles')} className={cls.title} size={TextSize.L} />
-                <Text text={t('Error')} className={cls.error} size={TextSize.L} />
+            <Page>
+                <Text title={t('Articles')} size={TextSize.L} />
+                <Text text={t('Error')} theme={TextTheme.ERROR} size={TextSize.L} />
             </Page>
         );
     }
 
     return (
         <DynamicModuleLoader reducers={reducers} removeOnUnmount={false}>
-            <Page
-                onScrollEnd={onLoadNextPart}
-                className={classNames(cls.ArticlesPage, {}, [className])}
-            >
-                <Text title={t('Articles')} className={cls.title} size={TextSize.L} />
-                <ArticlesPageFilters className={cls.filters} />
-                <ArticleList
-                    articles={articles}
-                    isLoading={isLoading}
-                    view={view}
-                    className={cls.list}
-                />
+            <Page onScrollEnd={onLoadNextPart}>
+                <VStack gap="2">
+                    <Text title={t('Articles')} size={TextSize.L} />
+                    <ArticlesPageFilters />
+                    <ArticleList
+                        articles={articles}
+                        isLoading={isLoading}
+                        view={view}
+                    />
+                </VStack>
             </Page>
         </DynamicModuleLoader>
     );

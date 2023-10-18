@@ -1,11 +1,10 @@
 import { classNames } from '6shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { HTMLAttributeAnchorTarget, memo, useCallback } from 'react';
+import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { Text, TextSize } from '6shared/ui/Text/Text';
 import EyeIcon from '6shared/assets/icons/outline-eye.svg';
 import { Card } from '6shared/ui/Card/Card';
 import { Avatar, AvatarSize } from '6shared/ui/Avatar/Avatar';
-import { useNavigate } from 'react-router-dom';
 import { RoutePath } from '6shared/config/routeConfig/routeConfig';
 import { AppLink } from '6shared/ui/AppLink/AppLink';
 import cls from './ArticleListItem.module.scss';

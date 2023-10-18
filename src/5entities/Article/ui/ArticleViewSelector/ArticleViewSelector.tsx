@@ -1,13 +1,12 @@
-import { classNames } from '6shared/lib/classNames/classNames';
 import { memo } from 'react';
 import GridIcon from '6shared/assets/icons/outline-grid.svg';
 import ListIcon from '6shared/assets/icons/outline-list.svg';
 import { Button, ButtonTheme } from '6shared/ui/Button/Button';
+import { HStack } from '6shared/ui/Stack';
 import cls from './ArticleViewSelector.module.scss';
 import { ArticleView } from '../../model/types/article';
 
 interface ArticleViewSelectorProps {
-    className?: string;
     view: ArticleView;
     onViewClick?: (view: ArticleView) => void;
 }
@@ -15,17 +14,16 @@ interface ArticleViewSelectorProps {
 const viewTypes = [
     {
         view: ArticleView.GRID,
-        icon: <GridIcon />,
+        icon: <GridIcon className={cls.svg} />,
     },
     {
         view: ArticleView.LIST,
-        icon: <ListIcon />,
+        icon: <ListIcon className={cls.svg} />,
     },
 ];
 
 export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
     const {
-        className,
         view,
         onViewClick,
     } = props;
@@ -34,17 +32,18 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
     };
 
     return (
-        <div className={classNames(cls.ArticleViewSelector, {}, [className])}>
+        <HStack justify="end">
             {viewTypes.map((viewType) => (
                 <Button
                     theme={ButtonTheme.TERTIARY}
                     onClick={onClick(viewType.view)}
                     active={viewType.view === view}
                     key={viewType.view}
+                    className={viewType.view === view ? cls.standard : cls.pointer}
                 >
                     {viewType.icon}
                 </Button>
             ))}
-        </div>
+        </HStack>
     );
 });

@@ -22,6 +22,7 @@ import { Text, TextTheme } from '6shared/ui/Text/Text';
 import { useInitialEffect } from '6shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useParams } from 'react-router-dom';
 import { Page } from '3widgets/Page/Page';
+import { VStack } from '6shared/ui/Stack';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers: ReducersList = {
@@ -91,17 +92,19 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     return (
         <DynamicModuleLoader reducers={reducers} removeOnUnmount>
             <Page className={classNames('', {}, [className])}>
-                <h1>{t('Profile')}</h1>
-                <ProfilePageHeader
-                    data={formData}
-                />
-                {validateErrors?.length && validateErrors.map((err) => (
-                    <Text
-                        theme={TextTheme.ERROR}
-                        text={validateErrorTranslations[err]}
-                        key={err}
+                <VStack>
+                    <h1>{t('Profile')}</h1>
+                    <ProfilePageHeader
+                        data={formData}
                     />
-                ))}
+                    {validateErrors?.length && validateErrors.map((err) => (
+                        <Text
+                            theme={TextTheme.ERROR}
+                            text={validateErrorTranslations[err]}
+                            key={err}
+                        />
+                    ))}
+                </VStack>
                 <ProfileCard
                     data={formData}
                     isLoading={isLoading}

@@ -11,6 +11,7 @@ import { Skeleton } from '6shared/ui/Skeleton/Skeleton';
 import { Image, ImageAlign } from '6shared/ui/Image/Image';
 import EyeIcon from '6shared/assets/icons/outline-eye.svg';
 import CalendarIcon from '6shared/assets/icons/outline-calendar.svg';
+import { HStack, VStack } from '6shared/ui/Stack';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
@@ -49,7 +50,6 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
         case ArticleBlockType.TEXT:
             return (
                 <ArticleTextBlockComponent
-                    className={cls.block}
                     block={block}
                     key={block.id}
                 />
@@ -57,7 +57,6 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
         case ArticleBlockType.IMAGE:
             return (
                 <ArticleImageBlockComponent
-                    className={cls.block}
                     block={block}
                     key={block.id}
                 />
@@ -65,7 +64,6 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
         case ArticleBlockType.CODE:
             return (
                 <ArticleCodeBlockComponent
-                    className={cls.block}
                     block={block}
                     key={block.id}
                 />
@@ -85,12 +83,12 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
     if (isLoading) {
         content = (
-            <>
+            <VStack>
                 <Skeleton className={cls.image} width={200} height={200} />
                 <Skeleton className={cls.title} width={300} height={32} />
                 <Skeleton className={cls.skeleton} width={600} height={24} />
                 <Skeleton className={cls.skeleton} width="100%" height={200} />
-            </>
+            </VStack>
         );
     } else if (error) {
         content = (
@@ -102,12 +100,11 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
         );
     } else {
         content = (
-            <>
+            <VStack gap="2">
                 <Image
                     src={article?.img}
                     alt={article?.title}
                     align={ImageAlign.LEFT}
-                    className={cls.image}
                 />
                 <Text
                     title={article?.title}
@@ -115,30 +112,31 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                     size={TextSize.L}
                     align={TextAlign.LEFT}
                     theme={TextTheme.PRIMARY}
-                    className={cls.title}
                 />
-                <div className={cls.articleInfo}>
-                    <EyeIcon className={cls.icon} />
-                    <Text
-                        title={String(article?.views)}
-                        align={TextAlign.LEFT}
-                        theme={TextTheme.PRIMARY}
-                        size={TextSize.S}
-                    />
-                </div>
-                <div className={cls.articleInfo}>
-                    <CalendarIcon className={cls.icon} />
-                    <Text
-                        title={article?.createdAt}
-                        align={TextAlign.LEFT}
-                        theme={TextTheme.PRIMARY}
-                        size={TextSize.S}
-                    />
-                </div>
-                <div className={cls.articleBody}>
+                <VStack gap="0">
+                    <HStack>
+                        <EyeIcon className={cls.icon} />
+                        <Text
+                            title={String(article?.views)}
+                            align={TextAlign.LEFT}
+                            theme={TextTheme.PRIMARY}
+                            size={TextSize.S}
+                        />
+                    </HStack>
+                    <HStack>
+                        <CalendarIcon className={cls.icon} />
+                        <Text
+                            title={article?.createdAt}
+                            align={TextAlign.LEFT}
+                            theme={TextTheme.PRIMARY}
+                            size={TextSize.S}
+                        />
+                    </HStack>
+                </VStack>
+                <VStack gap="2">
                     {article?.blocks.map(renderBlock)}
-                </div>
-            </>
+                </VStack>
+            </VStack>
         );
     }
 

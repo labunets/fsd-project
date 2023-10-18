@@ -1,6 +1,4 @@
-import { classNames } from '6shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Text } from '6shared/ui/Text/Text';
 import { Button, ButtonTheme } from '6shared/ui/Button/Button';
 import { Profile } from '5entities/Profile/model/types/profile';
 import { useSelector } from 'react-redux';
@@ -10,14 +8,13 @@ import {
 import { useAppDispatch } from '6shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useCallback } from 'react';
 import { getUserAuthData } from '5entities/User';
-import cls from './ProfilePageHeader.module.scss';
+import { HStack } from '6shared/ui/Stack';
 
 interface ProfilePageHeaderProps {
-    className?: string;
     data?: Profile;
 }
 
-export const ProfilePageHeader = ({ className, data }: ProfilePageHeaderProps) => {
+export const ProfilePageHeader = ({ data }: ProfilePageHeaderProps) => {
     const { t } = useTranslation('profile');
     const authData = useSelector(getUserAuthData);
     const profileData = useSelector(getProfileData);
@@ -38,38 +35,34 @@ export const ProfilePageHeader = ({ className, data }: ProfilePageHeaderProps) =
     }, [dispatch]);
 
     return (
-        <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
-            <Text title={data?.firstname && `${data?.firstname} ${data?.lastname}`} />
+        <HStack>
             {canEdit && (
-                <div className={cls.editBtns}>
-                    { readonly
-                        ? (
+                readonly
+                    ? (
+                        <Button
+                            theme={ButtonTheme.PRIMARY}
+                            onClick={onEdit}
+                        >
+                            {t('Edit')}
+                        </Button>
+                    )
+                    : (
+                        <>
                             <Button
                                 theme={ButtonTheme.PRIMARY}
-                                onClick={onEdit}
+                                onClick={onSave}
                             >
-                                {t('Edit')}
+                                {t('Save')}
                             </Button>
-                        )
-                        : (
-                            <>
-                                <Button
-                                    theme={ButtonTheme.PRIMARY}
-                                    onClick={onSave}
-                                >
-                                    {t('Save')}
-                                </Button>
-                                <Button
-                                    theme={ButtonTheme.SECONDARY}
-                                    onClick={onCancelEdit}
-                                >
-                                    {t('Cancel')}
-                                </Button>
-                            </>
-
-                        )}
-                </div>
+                            <Button
+                                theme={ButtonTheme.SECONDARY}
+                                onClick={onCancelEdit}
+                            >
+                                {t('Cancel')}
+                            </Button>
+                        </>
+                    )
             )}
-        </div>
+        </HStack>
     );
 };

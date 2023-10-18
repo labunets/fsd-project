@@ -6,6 +6,7 @@ import { ThemeSwitcher } from '4features/ThemeSwitcher';
 import { LangSwitcher } from '4features/LangSwitcher';
 import ChevronLeftIcon from '6shared/assets/icons/chevron-left.svg';
 import ChevronRightIcon from '6shared/assets/icons/chevron-right.svg';
+import { HStack, VStack } from '6shared/ui/Stack';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 import { getSidebarItems } from '../../model/selectors/getSidebarItems';
 import cls from './Sidebar.module.scss';
@@ -40,11 +41,11 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
             data-testid="sidebar"
             className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [])}
         >
-            <div className={cls.items}>
+            <VStack gap="2" align={collapsed ? 'center' : 'start'} className={cls.items}>
                 {itemsList}
-            </div>
+            </VStack>
 
-            <div className={cls.switchers}>
+            <HStack gap="0" justify="between" className={cls.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher
                     className={cls.lang}
@@ -56,7 +57,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                 >
                     {collapsed ? <ChevronRightIcon /> : <ChevronLeftIcon />}
                 </Button>
-            </div>
+            </HStack>
         </menu>
     );
 });

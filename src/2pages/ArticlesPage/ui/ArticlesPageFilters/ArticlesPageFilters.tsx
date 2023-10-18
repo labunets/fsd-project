@@ -11,6 +11,7 @@ import { SortOrder } from '6shared/types';
 import { useDebounce } from '6shared/lib/hooks/useDebounce/useDebounce';
 import { TabItem, Tabs } from '6shared/ui/Tabs/Tabs';
 import { ArticleType } from '5entities/Article/model/types/article';
+import { HStack, VStack } from '6shared/ui/Stack';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { articlesPageActions } from '../../model/slices/ArticlesPageSlice';
 import {
@@ -20,7 +21,6 @@ import {
     getArticlesPageType,
     getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
-import cls from './ArticlesPageFilters.module.scss';
 
 interface ArticlesPageFiltersProps {
     className?: string;
@@ -73,8 +73,8 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
     }, [dispatch, fetchData]);
 
     return (
-        <div className={classNames('', {}, [className])}>
-            <div className={cls.sortWrapper}>
+        <VStack>
+            <HStack justify="between">
                 <ArticleSortSelector
                     order={order}
                     sort={sort}
@@ -85,7 +85,7 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
                     view={view}
                     onViewClick={onChangeView}
                 />
-            </div>
+            </HStack>
             <Input
                 placeholder={t('Search')}
                 label={t('Search')}
@@ -95,8 +95,7 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
             <ArticleTypeTabs
                 value={type}
                 onChangeType={onChangeType}
-                className={cls.tabs}
             />
-        </div>
+        </VStack>
     );
 });

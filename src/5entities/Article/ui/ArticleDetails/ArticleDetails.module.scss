@@ -6,16 +6,9 @@
     }
 }
 
-.image {
-    margin: 0 0 var(--vspace-1);
 
-    img {
-        max-width: 100%;
-    }
-}
-
-.title {
-    margin: var(--vspace-3) 0;
+img {
+    max-width: 100%;
 }
 
 .skeleton {
@@ -23,8 +16,6 @@
 }
 
 .articleInfo {
-    display: flex;
-    align-items: center;
     opacity: 0.6;
 
     .icon {
@@ -35,12 +26,4 @@
     p {
         margin: 0;
     }
-}
-
-.articleBody {
-    margin-top: var(--vspace-3);
-}
-
-.block {
-    margin-top: var(--vspace-1);
 }

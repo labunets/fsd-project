@@ -3,8 +3,6 @@
     height: calc(100vh - var(--navbar-height));
     background: var(--inverted-bg-color);
     transition: width 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
     flex-shrink: 0;
 
     svg {
@@ -15,40 +13,22 @@
 }
 
 .switchers {
-    bottom: var(--vspace-3);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
     width: 100%;
-    align-items: center;
-    margin: var(--vspace-2) 0 0;
+    margin: var(--vspace-3) 0;
+    padding: 0 var(--vspace-2);
 }
 
-.items {
-    margin-top: var(--vspace-2);
-    margin-left: var(--vspace-2);
-    display: flex;
-    flex-direction: column;
+.items, .switchers {
+    margin: var(--vspace-3) 0;
+    padding: 0 var(--vspace-2);
 }
 
 .collapsed {
     width: var(--sidebar-width-collapsed);
 
-    .items {
-        margin-left: 0;
-    }
-
-    .switchers,
-    .items {
+    .items, .switchers {
         transition: width 2s ease-in-out;
-        display: flex;
         flex-direction: column;
-        align-items: center;
-
-        button {
-            padding: 0;
-            margin: var(--vspace) 0 0 0;
-            align-self: center;
-        }
+        padding: 0;
     }
 }

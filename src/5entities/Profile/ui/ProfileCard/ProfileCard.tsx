@@ -6,6 +6,7 @@ import { Loader } from '6shared/ui/Loader/Loader';
 import { Avatar, AvatarSize } from '6shared/ui/Avatar/Avatar';
 import { Currency, CurrencySelect } from '5entities/Currency';
 import { Country, CountrySelect } from '5entities/Country';
+import { VStack } from '6shared/ui/Stack';
 import { Profile } from '../../model/types/profile';
 import cls from './ProfileCard.module.scss';
 
@@ -65,7 +66,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
     }
 
     return (
-        <div className={classNames(cls.ProfileCard, {}, [className, cls.data])}>
+        <VStack gap="2" className={classNames(cls.ProfileCard, {}, [className, cls.data])}>
             <Avatar
                 src={data?.avatar}
                 size={AvatarSize.LARGE}
@@ -75,57 +76,49 @@ export const ProfileCard = (props: ProfileCardProps) => {
             <Input
                 value={data?.firstname}
                 label={t('Firstname')}
-                className={cls.input}
                 onChange={onChangeFirstname}
                 readonly={readonly}
             />
             <Input
                 value={data?.lastname}
                 label={t('Lastname')}
-                className={cls.input}
                 onChange={onChangeLastname}
                 readonly={readonly}
             />
             <Input
                 value={data?.age}
                 label={t('Age')}
-                className={cls.input}
                 onChange={onChangeAge}
                 readonly={readonly}
             />
             <Input
                 value={data?.city}
                 label={t('City')}
-                className={cls.input}
                 onChange={onChangeCity}
                 readonly={readonly}
             />
             <Input
                 value={data?.username}
                 label={t('Username')}
-                className={cls.input}
                 onChange={onChangeUsername}
                 readonly={readonly}
             />
             <Input
                 value={data?.avatar}
                 label={t('Avatar')}
-                className={cls.input}
                 onChange={onChangeAvatar}
                 readonly={readonly}
             />
             <CurrencySelect
                 value={data?.currency}
                 onChange={onChangeCurrency}
-                className={cls.input}
                 readonly={readonly}
             />
             <CountrySelect
                 value={data?.country}
                 onChange={onChangeCountry}
-                className={cls.input}
                 readonly={readonly}
             />
-        </div>
+        </VStack>
     );
 };

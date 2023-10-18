@@ -7,12 +7,11 @@ import { useSelector } from 'react-redux';
 import { useAppDispatch } from '6shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { DynamicModuleLoader, ReducersList } from '6shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { Text, TextTheme } from '6shared/ui/Text/Text';
+import { HStack, VStack } from '6shared/ui/Stack';
 import { addCommentFormActions, addCommentFormReducer } from '../../model/slices/addCommentFormSlice';
 import { getAddCommentFormError, getAddCommentFormText } from '../../model/selectors/addCommentFormSelectors';
-import cls from './AddCommentForm.module.scss';
 
 export interface AddCommentFormProps {
-    className?: string;
     onSendComment: (text: string) => void;
 }
 
@@ -22,7 +21,6 @@ const reducers: ReducersList = {
 
 const AddCommentForm = memo((props: AddCommentFormProps) => {
     const {
-        className,
         onSendComment,
     } = props;
     const { t } = useTranslation();
@@ -41,18 +39,18 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
 
     if (error) {
         return (
-            <div className={classNames(cls.AddCommentForm, {}, [className])}>
+            <HStack align="center">
                 <Text
                     text={t('Error loading comment form')}
                     theme={TextTheme.ERROR}
                 />
-            </div>
+            </HStack>
         );
     }
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classNames(cls.AddCommentForm, {}, [className])}>
+            <VStack>
                 <Input
                     placeholder={t('Enter your comment')}
                     value={text}
@@ -64,7 +62,7 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
                 >
                     {t('Send')}
                 </Button>
-            </div>
+            </VStack>
         </DynamicModuleLoader>
     );
 });

@@ -1,20 +1,10 @@
 .CommentCard {
-    padding: var(--vspace-3);
+    padding: var(--vspace-1);
     background: var(--inverted-bg-color);
     color: var(--secondary-color);
     border-radius: var(--input-border-radius);
 }
 
-.header {
-    display: flex;
-    align-items: center;
+.title {
     color: var(--secondary-color);
-}
-
-.username {
-    margin-left: var(--vspace-3);
-}
-
-.text {
-    margin-top: var(--vspace-3);
 }

@@ -96,11 +96,11 @@ export const ArticleList = memo((props: ArticleListProps) => {
                     className={classNames('', {}, [className, cls[view]])}
                 >
                     <List
-                        height={height}
+                        height={height ?? 700}
+                        width={width ? width - 20 : 700}
                         rowCount={rowCount}
                         rowHeight={isGrid ? 390 : 230}
                         rowRenderer={rowRenderer}
-                        width={width}
                         autoHeight
                         onScroll={onChildScroll}
                         isScrolling={isScrolling}

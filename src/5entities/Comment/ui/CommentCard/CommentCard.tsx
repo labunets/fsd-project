@@ -5,6 +5,7 @@ import { Text } from '6shared/ui/Text/Text';
 import { Skeleton } from '6shared/ui/Skeleton/Skeleton';
 import { AppLink } from '6shared/ui/AppLink/AppLink';
 import { RoutePath } from '6shared/config/routeConfig/routeConfig';
+import { HStack, VStack } from '6shared/ui/Stack';
 import cls from './CommentCard.module.scss';
 import { Comment } from '../../model/types/comment';
 
@@ -23,13 +24,13 @@ export const CommentCard = memo((props: CommentCardProps) => {
 
     if (isLoading) {
         return (
-            <div className={classNames(cls.CommentCard, {}, [className])}>
-                <div className={cls.header}>
+            <VStack>
+                <HStack>
                     <Skeleton className={cls.avatar} width={32} height={32} border="50%" />
                     <Skeleton className={cls.username} width={100} height={16} />
-                </div>
+                </HStack>
                 <Skeleton className={cls.text} width="100%" height={32} />
-            </div>
+            </VStack>
         );
     }
 
@@ -38,12 +39,14 @@ export const CommentCard = memo((props: CommentCardProps) => {
     }
 
     return (
-        <div className={classNames(cls.CommentCard, {}, [className])}>
-            <AppLink to={`${RoutePath.profile}${comment.user.id}`} className={cls.header}>
-                <Avatar size={AvatarSize.SMALL} src={comment.user.avatar} alt={comment.user.username} />
-                <Text className={cls.username} title={comment.user.username} />
+        <VStack className={cls.CommentCard}>
+            <AppLink to={`${RoutePath.profile}${comment.user.id}`}>
+                <HStack>
+                    <Avatar size={AvatarSize.SMALL} src={comment.user.avatar} alt={comment.user.username} />
+                    <Text title={comment.user.username} className={cls.title} />
+                </HStack>
             </AppLink>
-            <Text className={cls.text} text={comment.text} />
-        </div>
+            <Text text={comment.text} />
+        </VStack>
     );
 });

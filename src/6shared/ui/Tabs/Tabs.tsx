@@ -1,5 +1,6 @@
 import { classNames } from '6shared/lib/classNames/classNames';
 import { memo, ReactNode, useCallback } from 'react';
+import { HStack } from '../Stack';
 import { Button, ButtonTheme } from '../Button/Button';
 import cls from './Tabs.module.scss';
 
@@ -28,7 +29,7 @@ export const Tabs = memo((props: TabsProps) => {
     }, [onTabClick]);
 
     return (
-        <div className={classNames(cls.Tabs, {}, [className])}>
+        <HStack className={classNames(cls.Tabs, {}, [className])}>
             {tabs.map((tab) => (
                 <Button
                     key={tab.value}
@@ -40,6 +41,6 @@ export const Tabs = memo((props: TabsProps) => {
                     {tab.content}
                 </Button>
             ))}
-        </div>
+        </HStack>
     );
 });

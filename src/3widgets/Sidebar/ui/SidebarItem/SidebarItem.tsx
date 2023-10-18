@@ -5,6 +5,7 @@ import { memo } from 'react';
 import { useSelector } from 'react-redux';
 import { getUserAuthData } from '5entities/User';
 import { Text } from '6shared/ui/Text/Text';
+import { HStack } from '6shared/ui/Stack';
 import { SidebarItemTypes } from '../../model/types/sidebar';
 import cls from './SidebarItem.module.scss';
 
@@ -27,11 +28,13 @@ export const SidebarItem = memo(({ item, collapsed }: SidebarItemProps) => {
             theme={AppLinkTheme.SECONDARY}
             className={classNames(cls.item, { [cls.collapsed]: collapsed }, [])}
         >
-            <item.Icon className={cls.icon} />
-            <Text
-                text={t(item.text)}
-                className={cls.link}
-            />
+            <HStack>
+                <item.Icon className={cls.icon} />
+                <Text
+                    text={t(item.text)}
+                    className={cls.link}
+                />
+            </HStack>
         </AppLink>
     );
 });

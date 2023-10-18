@@ -4,21 +4,10 @@
     border: 2px solid var(--primary-color);
 }
 
-.data {
-    margin-top: var(--vspace-3);
-}
-
-.input {
-    margin-top: var(--vspace-3);
-}
-
 .loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 300px;
 }
 
 .avatar {
-    margin: var(--vspace) auto;
+    margin: 0 auto;
 }

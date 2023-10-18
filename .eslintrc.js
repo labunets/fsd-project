@@ -43,7 +43,18 @@ module.exports = {
         'react/button-has-type': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            ignoreAttribute: ['data-testid', 'to', 'name', 'target'],
+            ignoreAttribute: [
+                'data-testid',
+                'to',
+                'name',
+                'target',
+                'className',
+                'children',
+                'justify',
+                'align',
+                'direction',
+                'gap',
+            ],
         }],
         'max-len': ['error', {
             ignoreComments: true,

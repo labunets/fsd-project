@@ -37,11 +37,11 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
     )), [sidebarItemsList, collapsed]);
 
     return (
-        <menu
+        <aside
             data-testid="sidebar"
             className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [])}
         >
-            <VStack gap="2" align={collapsed ? 'center' : 'start'} className={cls.items}>
+            <VStack role="navigation" gap="2" align={collapsed ? 'center' : 'start'} className={cls.items}>
                 {itemsList}
             </VStack>
 
@@ -58,6 +58,6 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                     {collapsed ? <ChevronRightIcon /> : <ChevronLeftIcon />}
                 </Button>
             </HStack>
-        </menu>
+        </aside>
     );
 });

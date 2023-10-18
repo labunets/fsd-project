@@ -47,7 +47,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     {image}
                     <div className={cls.detailsWrapper}>
                         <div className={cls.title}>
-                            <Text title={article.title} size={TextSize.L} />
+                            <Text title={article.title} />
                             <Text text={article.subtitle} />
                         </div>
                         <div className={cls.infoWrapper}>

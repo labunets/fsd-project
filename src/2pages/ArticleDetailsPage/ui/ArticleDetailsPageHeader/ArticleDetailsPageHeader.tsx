@@ -7,7 +7,7 @@ import { Button, ButtonTheme } from '6shared/ui/Button/Button';
 import ChevronLeftIcon from '6shared/assets/icons/chevron-left.svg';
 import { useSelector } from 'react-redux';
 import { getArticleDetailsData } from '5entities/Article/model/selectors/articleDetails';
-import { getCanEditArticle } from '2pages/ArticleDetailsPage/model/selectors/article';
+import { getCanEditArticle } from '../../model/selectors/article';
 import cls from './ArticleDetailsPageHeader.module.scss';
 
 interface ArticleDetailsPageHeaderProps {

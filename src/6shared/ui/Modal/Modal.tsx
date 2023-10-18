@@ -3,7 +3,7 @@ import React, {
     useCallback, useEffect, useRef, useState,
 } from 'react';
 import { Mods, classNames } from '6shared/lib/classNames/classNames';
-import { Portal } from '6shared/ui/Portal/Portal';
+import { Portal } from '../Portal/Portal';
 import cls from './Modal.module.scss';
 
 interface ModalProps {

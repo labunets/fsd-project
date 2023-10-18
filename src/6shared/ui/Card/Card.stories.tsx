@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Text } from '6shared/ui/Text/Text';
+import { Text } from '../Text/Text';
 import { Card } from './Card';
 
 type Story = StoryObj<typeof Card>;

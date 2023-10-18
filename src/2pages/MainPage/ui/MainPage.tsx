@@ -5,22 +5,10 @@ import { Page } from '3widgets/Page/Page';
 
 const MainPage = () => {
     const { t } = useTranslation('main');
-    const [value, setValue] = useState('');
-
-    const onChange = (value: string) => {
-        setValue(value);
-    };
 
     return (
         <Page>
             <h1>{t('Main')}</h1>
-            <Input
-                label={t('Name')}
-                placeholder={t('John')}
-                onChange={onChange}
-                value={value}
-            />
-            {value}
         </Page>
     );
 };

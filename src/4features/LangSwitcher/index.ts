@@ -1,3 +1,3 @@
-import { LangSwitcher } from '4features/LangSwitcher/ui/LangSwitcher';
+import { LangSwitcher } from './ui/LangSwitcher';
 
 export { LangSwitcher };

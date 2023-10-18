@@ -1,3 +1,3 @@
-import { PageError } from '3widgets/PageError/ui/PageError';
+import { PageError } from './ui/PageError';
 
 export { PageError };

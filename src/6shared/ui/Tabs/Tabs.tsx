@@ -1,6 +1,6 @@
 import { classNames } from '6shared/lib/classNames/classNames';
 import { memo, ReactNode, useCallback } from 'react';
-import { Button, ButtonTheme } from '6shared/ui/Button/Button';
+import { Button, ButtonTheme } from '../Button/Button';
 import cls from './Tabs.module.scss';
 
 export interface TabItem {

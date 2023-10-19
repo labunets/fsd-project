@@ -1,8 +1,6 @@
 .ListBox {
     position: relative;
     width: fit-content;
-    display: inline-block;
-    cursor: pointer;
 }
 
 .readonly {
@@ -10,15 +8,23 @@
 }
 
 .trigger {
+    cursor: pointer;
+    color: inherit;
+    padding: 1em calc(1.5 * 1em);
+    border-radius: 1em;
+    line-height: calc(1.25 * 1em) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: fit-content;
     background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    outline: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: inherit;
 }
 
 .options {
-    width: fit-content;
     position: absolute;
     z-index: 10000;
     background-color: var(--inverted-bg-color);
@@ -29,7 +35,7 @@
 
 .item {
     padding: var(--vspace-1) var(--vspace-2);
-    cursor: pointer;
+    white-space: nowrap;
 }
 
 .active, .selected {
@@ -52,4 +58,24 @@
     font-weight: bold;
     color: var(--primary-color);
     display: block;
+}
+
+.optionsBottomLeft {
+    top: 100%;
+    right: 0;
+}
+
+.optionsBottomRight {
+    top: 100%;
+    left: 0;
+}
+
+.optionsTopRight {
+    bottom: 100%;
+    left: 0;
+}
+
+.optionsTopLeft {
+    right: 0;
+    bottom: 100%;
 }

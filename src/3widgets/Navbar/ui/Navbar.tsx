@@ -8,6 +8,8 @@ import { getUserAuthData, userActions } from '5entities/User';
 import { Text } from '6shared/ui/Text/Text';
 import { AppLink } from '6shared/ui/AppLink/AppLink';
 import { RoutePath } from '6shared/config/routeConfig/routeConfig';
+import { Dropdown } from '6shared/ui/Dropdown/Dropdown';
+import { Avatar } from '6shared/ui/Avatar/Avatar';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -40,12 +42,21 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                     <AppLink to={RoutePath.article_create}>
                         {t('New article')}
                     </AppLink>
-                    <Button
-                        theme={ButtonTheme.TERTIARY_INVERTED}
-                        onClick={onLogout}
-                    >
-                        <Text text={t('Logout')} />
-                    </Button>
+                    <Dropdown
+                        direction="bottom left"
+                        className={cls.dropdown}
+                        trigger={<Avatar src={authData.avatar} />}
+                        items={[
+                            {
+                                content: t('Profile'),
+                                href: RoutePath.profile + authData.id,
+                            },
+                            {
+                                content: t('Logout'),
+                                onClick: onLogout,
+                            },
+                        ]}
+                    />
                 </div>
             </header>
         );

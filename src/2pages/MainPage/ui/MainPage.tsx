@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Input } from '6shared/ui/Input/Input';
 import { Page } from '3widgets/Page/Page';
-import { ListBox } from '6shared/ui/ListBox/ListBox';
+import { Dropdown } from '6shared/ui/Dropdown/Dropdown';
+import { Button, ButtonTheme } from '6shared/ui/Button/Button';
 
 const MainPage = () => {
     const { t } = useTranslation('main');

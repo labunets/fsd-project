@@ -1,0 +1,60 @@
+.Dropdown {
+    position: relative;
+    width: fit-content;
+}
+
+.trigger {
+    background: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.items {
+    position: absolute;
+    z-index: 10000;
+    border-radius: var(--input-border-radius);
+    background-color: var(--inverted-bg-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    color: var(--secondary-color);
+    cursor: pointer;
+    padding: var(--vspace-1) var(--vspace-2);
+    white-space: nowrap;
+}
+
+.active, .selected {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+
+    svg {
+        min-width: 1em;
+        height: 1em;
+    }
+}
+
+.optionsBottomLeft {
+    top: 100%;
+    right: 0;
+}
+
+.optionsBottomRight {
+    top: 100%;
+    left: 0;
+}
+
+.optionsTopRight {
+    bottom: 100%;
+    left: 0;
+}
+
+.optionsTopLeft {
+    right: 0;
+    bottom: 100%;
+}

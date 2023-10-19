@@ -2,7 +2,7 @@
     cursor: pointer;
     color: inherit;
     padding: 1em calc(1.5 * 1em);
-    border-radius: 1em;
+    border-radius: var(--input-border-radius);
     line-height: calc(1.25 * 1em) !important;
     display: flex;
     align-items: center;

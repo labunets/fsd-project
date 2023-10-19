@@ -2,6 +2,7 @@ import React, { Fragment, ReactNode } from 'react';
 import { Listbox as HListbox } from '@headlessui/react';
 import CheckIcon from '6shared/assets/icons/outline-check.svg';
 import { classNames, Mods } from '6shared/lib/classNames/classNames';
+import { DropdownDirection } from '6shared/types/ui';
 import { HStack } from '../Stack';
 import { Button, ButtonTheme } from '../Button/Button';
 import cls from './ListBox.module.scss';
@@ -20,7 +21,15 @@ interface ListBoxProps {
     onChange: (value: string) => void;
     readonly?: boolean;
     label?: string;
+    direction?: DropdownDirection;
 }
+
+const mapDirectionClass: Record<DropdownDirection, string> = {
+    'bottom left': cls.optionsBottomLeft,
+    'bottom right': cls.optionsBottomRight,
+    'top right': cls.optionsTopRight,
+    'top left': cls.optionsTopLeft,
+};
 
 export function ListBox(props: ListBoxProps) {
     const {
@@ -31,11 +40,14 @@ export function ListBox(props: ListBoxProps) {
         onChange,
         readonly,
         label,
+        direction = 'bottom right',
     } = props;
 
     const mods: Mods = {
         [cls.readonly]: readonly,
     };
+
+    const optionsClasses = [mapDirectionClass[direction]];
 
     return (
         <HListbox
@@ -47,11 +59,11 @@ export function ListBox(props: ListBoxProps) {
         >
             <HListbox.Label className={cls.label}>{label}</HListbox.Label>
             <HListbox.Button className={cls.trigger}>
-                <Button theme={ButtonTheme.SECONDARY} disabled={readonly}>
-                    {value ?? defaultValue}
-                </Button>
+                {value ?? defaultValue}
             </HListbox.Button>
-            <HListbox.Options className={cls.options}>
+            <HListbox.Options
+                className={classNames(cls.options, {}, optionsClasses)}
+            >
                 {items?.map((item) => (
                     <HListbox.Option
                         key={item.value}

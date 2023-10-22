@@ -56,7 +56,7 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
     }, [onChangeOrder]);
 
     return (
-        <HStack>
+        <HStack max={false}>
             <Select
                 options={sortFieldOptions}
                 label={t('Sort by')}

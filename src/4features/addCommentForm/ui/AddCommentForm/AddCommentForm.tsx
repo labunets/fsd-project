@@ -50,18 +50,20 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <HStack>
+            <HStack justify="end">
                 <Input
                     placeholder={t('Enter your comment')}
                     value={text}
                     onChange={onCommentTextChange}
                 />
-                <Button
-                    theme={ButtonTheme.PRIMARY}
-                    onClick={onSendHandler}
-                >
-                    {t('Send')}
-                </Button>
+                {text && (
+                    <Button
+                        theme={ButtonTheme.PRIMARY}
+                        onClick={onSendHandler}
+                    >
+                        {t('Send')}
+                    </Button>
+                )}
             </HStack>
         </DynamicModuleLoader>
     );

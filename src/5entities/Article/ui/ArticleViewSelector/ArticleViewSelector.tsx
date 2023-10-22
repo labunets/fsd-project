@@ -32,7 +32,7 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
     };
 
     return (
-        <HStack justify="end">
+        <HStack justify="end" max={false}>
             {viewTypes.map((viewType) => (
                 <Button
                     theme={ButtonTheme.TERTIARY}

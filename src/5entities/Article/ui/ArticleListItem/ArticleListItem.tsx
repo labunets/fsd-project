@@ -7,6 +7,7 @@ import { Card } from '6shared/ui/Card/Card';
 import { Avatar, AvatarSize } from '6shared/ui/Avatar/Avatar';
 import { RoutePath } from '6shared/config/routeConfig/routeConfig';
 import { AppLink } from '6shared/ui/AppLink/AppLink';
+import { HStack, VStack } from '6shared/ui/Stack';
 import cls from './ArticleListItem.module.scss';
 import { Article, ArticleView } from '../../model/types/article';
 
@@ -30,10 +31,10 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     const types = <Text text={article.type.join(', ')} size={TextSize.S} className={cls.types} />;
     const date = <Text text={article.createdAt} size={TextSize.S} className={cls.date} />;
     const views = (
-        <div className={cls.viewsWrapper}>
+        <HStack gap="0" className={cls.viewsWrapper} align="center">
             <EyeIcon className={cls.icon} />
             <Text text={String(article.views)} size={TextSize.S} className={cls.views} />
-        </div>
+        </HStack>
     );
 
     if (view === ArticleView.LIST) {
@@ -45,19 +46,19 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             >
                 <Card className={cls.card}>
                     {image}
-                    <div className={cls.detailsWrapper}>
-                        <div className={cls.title}>
-                            <Text title={article.title} />
-                            <Text text={article.subtitle} />
-                        </div>
-                        <div className={cls.infoWrapper}>
+                    <VStack className={cls.detailsWrapper}>
+                        <HStack gap="0" max={false}>
                             <Avatar size={AvatarSize.SMALL} src={article.user.avatar} />
                             <Text text={article.user.username} size={TextSize.M} className={cls.username} />
+                        </HStack>
+                        <Text title={article.title} />
+                        <Text text={article.subtitle} />
+                        <HStack gap="0" max={false} justify="between">
                             {views}
                             {types}
                             {date}
-                        </div>
-                    </div>
+                        </HStack>
+                    </VStack>
                 </Card>
             </AppLink>
         );
@@ -70,16 +71,20 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
         >
             <Card className={cls.card}>
-                {image}
-                <div className={cls.title}>
-                    <Text title={article.title} />
-                    <Text text={article.subtitle} />
-                </div>
-                <div className={cls.infoWrapper}>
-                    {types}
-                    {date}
-                    {views}
-                </div>
+                <VStack>
+                    {image}
+                    <VStack gap="2" className={cls.detailsWrapper}>
+                        <VStack gap="0">
+                            <Text title={article.title} />
+                            <Text text={article.subtitle} />
+                        </VStack>
+                        <HStack className={cls.infoWrapper}>
+                            {types}
+                            {date}
+                            {views}
+                        </HStack>
+                    </VStack>
+                </VStack>
             </Card>
         </AppLink>
     );

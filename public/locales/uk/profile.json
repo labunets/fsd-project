@@ -15,5 +15,6 @@
   "Server error": "Помилка сервера",
   "Invalid username or password": "Невірне ім'я користувача або пароль",
   "Incorrect age": "Невірний вік",
-  "Invalid country": "Невірна країна"
+  "Invalid country": "Невірна країна",
+  "Profile not found": "Profile not found"
 }

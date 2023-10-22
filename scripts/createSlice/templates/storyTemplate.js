@@ -1,0 +1,17 @@
+module.exports = (layer, componentName) => `import type { Meta, StoryObj } from '@storybook/react';
+import { ${componentName} } from './${componentName}';
+
+type Story = StoryObj<typeof ${componentName}>;
+
+const meta: Meta<typeof ${componentName}> = {
+    title: '${layer}/${componentName}',
+    component: ${componentName},
+    tags: ['autodocs'],
+};
+
+export default meta;
+
+export const Normal: Story = {
+    args: {},
+};
+`;

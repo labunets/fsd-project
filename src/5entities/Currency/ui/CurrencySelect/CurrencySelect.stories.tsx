@@ -10,6 +10,9 @@ const meta: Meta<typeof CurrencySelect> = {
     component: CurrencySelect,
     tags: ['autodocs'],
     args: {},
+    decorators: [
+        (Story) => <div style={{ padding: 150 }}><Story /></div>,
+    ],
 };
 
 export default meta;

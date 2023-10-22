@@ -28,7 +28,9 @@
 
     .items, .switchers {
         transition: width 2s ease-in-out;
-        flex-direction: column;
         padding: 0;
+    }
+    .switchers {
+        flex-direction: column-reverse;
     }
 }

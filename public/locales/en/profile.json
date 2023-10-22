@@ -15,5 +15,6 @@
   "Server error": "Server error",
   "Invalid username or password": "Invalid username or password",
   "Incorrect age": "Incorrect age",
-  "Invalid country": "Invalid country"
+  "Invalid country": "Invalid country",
+  "Profile not found": "Profile not found"
 }

@@ -1,4 +1,5 @@
 {
+  "": "",
   "Age": "",
   "Avatar": "",
   "Cancel": "",
@@ -14,6 +15,7 @@
   "Lastname": "",
   "No data provided": "",
   "Profile": "",
+  "Profile not found": "",
   "Save": "",
   "Server error": "Server error",
   "Username": ""

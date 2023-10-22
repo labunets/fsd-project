@@ -10,6 +10,9 @@ const meta: Meta<typeof CountrySelect> = {
     component: CountrySelect,
     tags: ['autodocs'],
     args: {},
+    decorators: [
+        (Story) => <div style={{ padding: 150 }}><Story /></div>,
+    ],
 };
 
 export default meta;

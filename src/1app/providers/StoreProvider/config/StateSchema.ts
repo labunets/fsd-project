@@ -1,5 +1,4 @@
 import { LoginSchema } from '4features/AuthByUsername';
-import { ProfileSchema } from '5entities/Profile';
 import { UserSchema } from '5entities/User';
 import {
     AnyAction, EnhancedStore, Reducer, ReducersMapObject,
@@ -11,10 +10,13 @@ import { AddCommentFormSchema } from '4features/addCommentForm';
 import { ArticlesPageSchema } from '2pages/ArticlesPage';
 import { UISchema } from '4features/UI';
 import { ArticleDetailsPageSchema } from '2pages/ArticleDetailsPage';
+import { rtkApi } from '6shared/api/rtkApi';
+import { ProfileSchema } from '4features/editableProfileCard';
 
 export interface StateSchema {
     user: UserSchema;
     ui: UISchema;
+    [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
 
     // Async reducers
     loginForm?: LoginSchema;

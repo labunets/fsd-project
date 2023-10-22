@@ -50,7 +50,7 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <VStack>
+            <HStack>
                 <Input
                     placeholder={t('Enter your comment')}
                     value={text}
@@ -62,7 +62,7 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
                 >
                     {t('Send')}
                 </Button>
-            </VStack>
+            </HStack>
         </DynamicModuleLoader>
     );
 });

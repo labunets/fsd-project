@@ -4,7 +4,7 @@ import { ArticlesPageFilters } from './ArticlesPageFilters';
 type Story = StoryObj<typeof ArticlesPageFilters>;
 
 const meta: Meta<typeof ArticlesPageFilters> = {
-    title: 'ArticlesPageFilters',
+    title: '2pages/ArticlesPageFilters',
     component: ArticlesPageFilters,
     tags: ['autodocs'],
 };

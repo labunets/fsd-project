@@ -12,13 +12,13 @@ import { Article, ArticleView } from '../../model/types/article';
 interface ArticleListProps {
     className?: string;
     articles: Article[];
-    isLoading: boolean;
+    isLoading?: boolean;
     view?: ArticleView;
     target?: HTMLAttributeAnchorTarget;
 }
 
 const getSkeletons = (view: ArticleView) => (
-    new Array(view === ArticleView.GRID ? 12 : 6)
+    new Array(view === ArticleView.GRID ? 4 : 4)
         .fill(0)
         .map((item, index) => (
             <ArticleListItemSkeleton view={view} key={index} className={cls.card} />
@@ -37,7 +37,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
 
     const isGrid = view === ArticleView.GRID;
 
-    const itemsPerRow = isGrid ? 3 : 1;
+    const itemsPerRow = isGrid ? 1 : 1;
     const rowCount = isGrid
         ? Math.ceil(articles.length / itemsPerRow)
         : articles.length;

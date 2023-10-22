@@ -111,7 +111,7 @@ describe('articleDetailsSlice', () => {
         expect(thunk.api.get)
             .toHaveBeenCalled();
         expect(thunk.api.get)
-            .toHaveBeenCalledWith('/articles/1');
+            .toHaveBeenCalledWith('/articles/1', { params: { _expand: 'user' } });
         expect(result.meta.requestStatus)
             .toBe('fulfilled');
         expect(result.payload)
@@ -135,7 +135,7 @@ describe('articleDetailsSlice', () => {
         expect(thunk.api.get)
             .toHaveBeenCalled();
         expect(thunk.api.get)
-            .toHaveBeenCalledWith('/articles/1');
+            .toHaveBeenCalledWith('/articles/1', { params: { _expand: 'user' } });
         expect(result.meta.requestStatus)
             .toBe('rejected');
         expect(result.payload)

@@ -8,6 +8,9 @@ const meta: Meta<typeof Dropdown> = {
     title: '6shared/Dropdown',
     component: Dropdown,
     tags: ['autodocs'],
+    decorators: [
+        (Story) => <div style={{ padding: 150 }}><Story /></div>,
+    ],
 };
 
 export default meta;

@@ -4,7 +4,7 @@ import ArticleEditPage from './ArticleEditPage';
 type Story = StoryObj<typeof ArticleEditPage>;
 
 const meta: Meta<typeof ArticleEditPage> = {
-    title: 'ArticleEditPage',
+    title: '2pages/ArticleEditPage',
     component: ArticleEditPage,
     tags: ['autodocs'],
 };

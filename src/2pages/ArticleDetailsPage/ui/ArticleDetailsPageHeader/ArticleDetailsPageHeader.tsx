@@ -7,6 +7,7 @@ import { Button, ButtonTheme } from '6shared/ui/Button/Button';
 import ChevronLeftIcon from '6shared/assets/icons/chevron-left.svg';
 import { useSelector } from 'react-redux';
 import { getArticleDetailsData } from '5entities/Article/model/selectors/articleDetails';
+import { HStack } from '6shared/ui/Stack';
 import { getCanEditArticle } from '../../model/selectors/article';
 import cls from './ArticleDetailsPageHeader.module.scss';
 
@@ -30,7 +31,7 @@ export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderPro
     }, [article?.id, navigate]);
 
     return (
-        <div className={classNames(cls.ArticleDetailsPageHeader, {}, [className])}>
+        <HStack gap="1" justify="between" className={classNames(cls.ArticleDetailsPageHeader, {}, [className])}>
             <Button
                 theme={ButtonTheme.TERTIARY}
                 beforeIcon={<ChevronLeftIcon />}
@@ -48,6 +49,6 @@ export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderPro
                     {t('Edit')}
                 </Button>
             )}
-        </div>
+        </HStack>
     );
 });

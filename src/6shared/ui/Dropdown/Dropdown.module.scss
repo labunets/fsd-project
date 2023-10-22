@@ -27,6 +27,7 @@
     cursor: pointer;
     padding: var(--vspace-1) var(--vspace-2);
     white-space: nowrap;
+    width: 100%;
 }
 
 .active, .selected {

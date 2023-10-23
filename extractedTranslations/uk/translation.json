@@ -33,6 +33,13 @@
   "Invalid username or password": "Invalid username or password",
   "John": "John",
   "Lastname": "Lastname",
+  "Loading": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Login": "Login",
   "Login by username": "Login by username",
   "Logout": "Logout",

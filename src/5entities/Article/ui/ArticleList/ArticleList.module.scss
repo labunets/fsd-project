@@ -7,8 +7,14 @@
 
 .GRID {
     max-width: 100%;
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--vspace-2);
+    }
+
     .card {
-        display: inline-flex;
         gap: 10px;
         height: 360px;
     }

@@ -59,13 +59,17 @@ export const ArticleList = memo((props: ArticleListProps) => {
                     view={view}
                     className={cls.card}
                     target={target}
-                    key={i}
+                    key={articles[i].id}
                 />,
             );
         }
 
         return (
-            <div key={key} style={style}>
+            <div
+                style={style}
+                key={key}
+                className={cls.row}
+            >
                 {items}
             </div>
         );
@@ -83,6 +87,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
     }
 
     return (
+        // @ts-ignore
         <WindowScroller
             scrollElement={document.getElementById(PAGE_ID) as Element}
         >
@@ -95,11 +100,13 @@ export const ArticleList = memo((props: ArticleListProps) => {
                 isScrolling,
             }) => (
                 <div
+                    // @ts-ignore
                     ref={registerChild}
                     className={classNames('', {}, [className, cls[view]])}
                 >
                     {virtualized
                         ? (
+                            // @ts-ignore
                             <List
                                 height={height ?? 700}
                                 width={width ? width - 20 : 700}

@@ -88,7 +88,7 @@ const article: Article = {
 };
 
 export const Normal: Story = {
-    args: {},
+    args: { },
 };
 Normal.decorators = [StoreDecorator({
     articleDetails: {

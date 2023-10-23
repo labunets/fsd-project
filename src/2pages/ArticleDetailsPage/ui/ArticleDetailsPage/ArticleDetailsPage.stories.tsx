@@ -2,17 +2,10 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Article } from '5entities/Article';
 import { ArticleBlockType, ArticleType } from '5entities/Article/model/types/article';
 import { StoreDecorator } from '6shared/config/storybook/StoreDecorator/StoreDecorator';
+import { Comment } from '5entities/Comment';
 import ArticleDetailsPage from './ArticleDetailsPage';
 
 type Story = StoryObj<typeof ArticleDetailsPage>;
-
-const meta: Meta<typeof ArticleDetailsPage> = {
-    title: '2pages/ArticleDetailsPage',
-    component: ArticleDetailsPage,
-    tags: ['autodocs'],
-};
-
-export default meta;
 
 const article: Article = {
     id: '1',
@@ -87,6 +80,44 @@ const article: Article = {
         },
     ],
 };
+
+const comment: Comment = {
+    id: '1',
+    text: 'some comment',
+    user: { id: '1', username: 'John Doe' },
+};
+
+const meta: Meta<typeof ArticleDetailsPage> = {
+    title: '2pages/ArticleDetailsPage',
+    component: ArticleDetailsPage,
+    tags: ['autodocs'],
+    parameters: {
+        mockData: [
+            {
+                url: `${__API__}/articles?_limit=3`,
+                method: 'GET',
+                status: 200,
+                response: [
+                    { ...article, id: '1' },
+                    { ...article, id: '2' },
+                    { ...article, id: '3' },
+                ],
+            },
+            {
+                url: `${__API__}/comments/1?_expand=user`,
+                method: 'GET',
+                status: 200,
+                response: [
+                    { ...comment, id: '1' },
+                    { ...comment, id: '2' },
+                    { ...comment, id: '3' },
+                ],
+            },
+        ],
+    },
+};
+
+export default meta;
 
 export const Normal: Story = {
     args: { },

@@ -945,6 +945,12 @@
       "userId": "1",
       "text": "Wow",
       "id": "2TrdXOT"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "const path = require('path');  const server = jsonServer.create();  const router = jsonServer.router(path.resolve(__dirname, 'db.json')) ;  server.use(jsonServer.defaults({})); server.use(jsonServer.bodyParser);",
+      "id": "1AYtS5l"
     }
   ],
   "users": [
@@ -952,21 +958,27 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": ["ADMIN"],
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://placehold.co/120?text=Admin"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://placehold.co/120?text=User"
     },
     {
       "id": "3",
       "username": "manager",
       "password": "123",
-      "roles": ["MANAGER"],
+      "roles": [
+        "MANAGER"
+      ],
       "avatar": "https://placehold.co/120?text=Manager"
     }
   ],

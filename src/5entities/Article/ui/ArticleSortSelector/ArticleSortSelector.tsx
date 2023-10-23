@@ -3,7 +3,8 @@ import { memo, useCallback, useMemo } from 'react';
 import { Select, SelectOption } from '6shared/ui/Select/Select';
 import { SortOrder } from '6shared/types';
 import { HStack } from '6shared/ui/Stack';
-import { ArticleSortField } from '../../model/types/article';
+
+import { ArticleSortField } from '../../model/consts/consts';
 
 interface ArticleSortSelectorProps {
     sort: ArticleSortField;

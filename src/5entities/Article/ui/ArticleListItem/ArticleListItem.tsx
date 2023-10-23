@@ -8,8 +8,9 @@ import { Avatar, AvatarSize } from '6shared/ui/Avatar/Avatar';
 import { RoutePath } from '6shared/config/routeConfig/routeConfig';
 import { AppLink } from '6shared/ui/AppLink/AppLink';
 import { HStack, VStack } from '6shared/ui/Stack';
+import { ArticleView } from '../../model/consts/consts';
 import cls from './ArticleListItem.module.scss';
-import { Article, ArticleView } from '../../model/types/article';
+import { Article } from '../../model/types/article';
 
 interface ArticleListItemProps {
     className?: string;

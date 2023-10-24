@@ -1,13 +1,13 @@
-import { classNames } from '6shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { HTMLAttributeAnchorTarget, memo } from 'react';
-import { Text, TextSize } from '6shared/ui/Text/Text';
-import EyeIcon from '6shared/assets/icons/outline-eye.svg';
-import { Card } from '6shared/ui/Card/Card';
-import { Avatar, AvatarSize } from '6shared/ui/Avatar/Avatar';
-import { RoutePath } from '6shared/config/routeConfig/routeConfig';
-import { AppLink } from '6shared/ui/AppLink/AppLink';
-import { HStack, VStack } from '6shared/ui/Stack';
+import { classNames } from '@/6shared/lib/classNames/classNames';
+import { Text, TextSize } from '@/6shared/ui/Text/Text';
+import EyeIcon from '@/6shared/assets/icons/outline-eye.svg';
+import { Card } from '@/6shared/ui/Card/Card';
+import { Avatar, AvatarSize } from '@/6shared/ui/Avatar/Avatar';
+import { RoutePath } from '@/6shared/config/routeConfig/routeConfig';
+import { AppLink } from '@/6shared/ui/AppLink/AppLink';
+import { HStack, VStack } from '@/6shared/ui/Stack';
 import { ArticleView } from '../../model/consts/consts';
 import cls from './ArticleListItem.module.scss';
 import { Article } from '../../model/types/article';
@@ -43,7 +43,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             <AppLink
                 target={target}
                 to={RoutePath.article_details + article.id}
-                className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
+                className={classNames(cls.link, {}, [className, cls[view]])}
             >
                 <Card className={cls.card}>
                     {image}
@@ -69,7 +69,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         <AppLink
             target={target}
             to={RoutePath.article_details + article.id}
-            className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
+            className={classNames('', {}, [className, cls[view]])}
         >
             <Card className={cls.card}>
                 <VStack>

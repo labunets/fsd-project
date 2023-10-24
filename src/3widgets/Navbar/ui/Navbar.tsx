@@ -1,18 +1,18 @@
 import React, { memo, useCallback, useState } from 'react';
-import { classNames } from '6shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Button, ButtonTheme } from '6shared/ui/Button/Button';
-import { LoginModal } from '4features/AuthByUsername';
 import { useSelector } from 'react-redux';
-import { getUserAuthData } from '5entities/User';
-import { Text } from '6shared/ui/Text/Text';
-import { AppLink } from '6shared/ui/AppLink/AppLink';
-import { RoutePath } from '6shared/config/routeConfig/routeConfig';
-import { HStack } from '6shared/ui/Stack';
-import { NotificationButton } from '4features/notificationButton';
-import { AvatarDropdown } from '4features/avatarDropdown/ui/AvatarDropdown/AvatarDropdown';
-import { Drawer } from '6shared/ui/Drawer/Drawer';
-import { NotificationList } from '5entities/Notification';
+import { LoginModal } from '@/4features/AuthByUsername';
+import { getUserAuthData } from '@/5entities/User';
+import { NotificationButton } from '@/4features/notificationButton';
+import { AvatarDropdown } from '@/4features/avatarDropdown/ui/AvatarDropdown/AvatarDropdown';
+import { NotificationList } from '@/5entities/Notification';
+import { classNames } from '@/6shared/lib/classNames/classNames';
+import { Button, ButtonTheme } from '@/6shared/ui/Button/Button';
+import { Text } from '@/6shared/ui/Text/Text';
+import { AppLink } from '@/6shared/ui/AppLink/AppLink';
+import { RoutePath } from '@/6shared/config/routeConfig/routeConfig';
+import { HStack } from '@/6shared/ui/Stack';
+import { Drawer } from '@/6shared/ui/Drawer/Drawer';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {

@@ -12,6 +12,6 @@ export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelecto
 export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector';
 export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs';
 export { getArticleDetailsData } from './model/selectors/articleDetails';
-export { ArticleView } from '5entities/Article/model/consts/consts';
-export { ArticleType } from '5entities/Article/model/consts/consts';
-export { ArticleSortField } from '5entities/Article/model/consts/consts';
+export { ArticleView } from './model/consts/consts';
+export { ArticleType } from './model/consts/consts';
+export { ArticleSortField } from './model/consts/consts';

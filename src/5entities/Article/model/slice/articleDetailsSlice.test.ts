@@ -1,4 +1,4 @@
-import { TestAsyncThunk } from '6shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
+import { TestAsyncThunk } from '@/6shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { ArticleBlockType, ArticleType } from '../consts/consts';
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
 import { articleDetailsReducer } from './articleDetailsSlice';

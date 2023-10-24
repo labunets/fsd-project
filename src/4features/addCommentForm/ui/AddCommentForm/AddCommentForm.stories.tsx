@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { StoreDecorator } from '6shared/config/storybook/StoreDecorator/StoreDecorator';
+import { StoreDecorator } from '@/6shared/config/storybook/StoreDecorator/StoreDecorator';
 import AddCommentForm from './AddCommentForm';
 
 type Story = StoryObj<typeof AddCommentForm>;

@@ -7,12 +7,9 @@
 
 .GRID {
     max-width: 100%;
-
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: var(--vspace-2);
-    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--vspace-2);
 
     .card {
         gap: 10px;

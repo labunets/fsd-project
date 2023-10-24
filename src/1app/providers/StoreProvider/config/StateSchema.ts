@@ -1,17 +1,17 @@
-import { LoginSchema } from '4features/AuthByUsername';
-import { UserSchema } from '5entities/User';
 import {
     AnyAction, EnhancedStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
 import { CombinedState } from 'redux';
-import { ArticleDetailsSchema } from '5entities/Article';
-import { AddCommentFormSchema } from '4features/addCommentForm';
-import { ArticlesPageSchema } from '2pages/ArticlesPage';
-import { UISchema } from '4features/UI';
-import { ArticleDetailsPageSchema } from '2pages/ArticleDetailsPage';
-import { rtkApi } from '6shared/api/rtkApi';
-import { ProfileSchema } from '4features/editableProfileCard';
+import { UserSchema } from '@/5entities/User';
+import { LoginSchema } from '@/4features/AuthByUsername';
+import { ArticleDetailsSchema } from '@/5entities/Article';
+import { AddCommentFormSchema } from '@/4features/addCommentForm';
+import { ArticlesPageSchema } from '@/2pages/ArticlesPage';
+import { UISchema } from '@/4features/UI';
+import { ArticleDetailsPageSchema } from '@/2pages/ArticleDetailsPage';
+import { ProfileSchema } from '@/4features/editableProfileCard';
+import { rtkApi } from '@/6shared/api/rtkApi';
 
 export interface StateSchema {
     user: UserSchema;

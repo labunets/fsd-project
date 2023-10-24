@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
+import { useSelector } from 'react-redux';
 import {
     ArticleSortField,
     ArticleSortSelector,
@@ -7,13 +8,12 @@ import {
     ArticleTypeTabs,
     ArticleView,
     ArticleViewSelector,
-} from '5entities/Article';
-import { useSelector } from 'react-redux';
-import { useAppDispatch } from '6shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Input } from '6shared/ui/Input/Input';
-import { SortOrder } from '6shared/types';
-import { useDebounce } from '6shared/lib/hooks/useDebounce/useDebounce';
-import { HStack, VStack } from '6shared/ui/Stack';
+} from '@/5entities/Article';
+import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { Input } from '@/6shared/ui/Input/Input';
+import { SortOrder } from '@/6shared/types';
+import { useDebounce } from '@/6shared/lib/hooks/useDebounce/useDebounce';
+import { HStack, VStack } from '@/6shared/ui/Stack';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { articlesPageActions } from '../../model/slices/ArticlesPageSlice';
 import {

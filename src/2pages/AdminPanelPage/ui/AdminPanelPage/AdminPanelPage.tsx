@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Page } from '3widgets/Page/Page';
-import { Text, TextSize } from '6shared/ui/Text/Text';
+import { Page } from '@/3widgets/Page/Page';
+import { Text, TextSize } from '@/6shared/ui/Text/Text';
 
 const AdminPanelPage = () => {
     const { t } = useTranslation('admin');

@@ -6,20 +6,10 @@
     left: 0;
     opacity: 0;
     pointer-events: none;
-    z-index: -1;
     color: var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.overlay {
-    width: 100%;
-    height: 100%;
-    background: var(--overlay-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .content {
@@ -29,12 +19,12 @@
     transition: 0.3s transform;
     transform: scale(0.5);
     max-width: 60%;
+    z-index: var(--modal-z-index);
 }
 
 .opened {
     pointer-events: auto;
     opacity: 1;
-    z-index: var(--modal-z-index);
 
     .content {
         transform: scale(1);

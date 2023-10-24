@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import { Code } from '6shared/ui/Code/Code';
-import { VStack } from '6shared/ui/Stack';
+import { Code } from '@/6shared/ui/Code/Code';
+import { VStack } from '@/6shared/ui/Stack';
 import { ArticleCodeBlock } from '../../model/types/article';
 
 interface ArticleCodeBlockComponentProps {

@@ -1,8 +1,8 @@
 import React, { Fragment, ReactNode } from 'react';
 import { Listbox as HListbox } from '@headlessui/react';
-import CheckIcon from '6shared/assets/icons/outline-check.svg';
-import { classNames, Mods } from '6shared/lib/classNames/classNames';
-import { DropdownDirection } from '6shared/types/ui';
+import CheckIcon from '@/6shared/assets/icons/outline-check.svg';
+import { classNames, Mods } from '@/6shared/lib/classNames/classNames';
+import { DropdownDirection } from '@/6shared/types/ui';
 import popupCls from '../../styles/popup.module.scss';
 import { HStack } from '../../../Stack';
 import cls from './ListBox.module.scss';

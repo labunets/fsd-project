@@ -1,11 +1,11 @@
-import { classNames } from '6shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { AppLink, AppLinkTheme } from '6shared/ui/AppLink/AppLink';
 import { memo } from 'react';
 import { useSelector } from 'react-redux';
-import { getUserAuthData } from '5entities/User';
-import { Text } from '6shared/ui/Text/Text';
-import { HStack } from '6shared/ui/Stack';
+import { getUserAuthData } from '@/5entities/User';
+import { AppLink, AppLinkTheme } from '@/6shared/ui/AppLink/AppLink';
+import { classNames } from '@/6shared/lib/classNames/classNames';
+import { Text } from '@/6shared/ui/Text/Text';
+import { HStack } from '@/6shared/ui/Stack';
 import { SidebarItemTypes } from '../../model/types/sidebar';
 import cls from './SidebarItem.module.scss';
 

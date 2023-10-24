@@ -1,4 +1,4 @@
-import '1app/styles/index.scss';
+import '@/1app/styles/index.scss';
 import { Decorator, StoryFn } from '@storybook/react';
 import React from 'react';
 

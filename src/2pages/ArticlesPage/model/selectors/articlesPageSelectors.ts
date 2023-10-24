@@ -1,9 +1,9 @@
-import { StateSchema } from '1app/providers/StoreProvider';
-import { ArticleSortField, ArticleType, ArticleView } from '5entities/Article';
+import { ArticleSortField, ArticleType, ArticleView } from '@/5entities/Article';
+import { StateSchema } from '@/1app/providers/StoreProvider';
 
 export const getArticlesPageIsLoading = (state: StateSchema) => state.articlesPage?.isLoading || false;
 export const getArticlesPageError = (state: StateSchema) => state.articlesPage?.error;
-export const getArticlesPageView = (state: StateSchema) => state.articlesPage?.view || ArticleView.GRID;
+export const getArticlesPageView = (state: StateSchema) => state.articlesPage?.view || ArticleView.LIST;
 export const getArticlesPageNumber = (state: StateSchema) => state.articlesPage?.page || 1;
 export const getArticlesPageLimit = (state: StateSchema) => state.articlesPage?.limit || 12;
 export const getArticlesPageHasMore = (state: StateSchema) => state.articlesPage?.hasMore;

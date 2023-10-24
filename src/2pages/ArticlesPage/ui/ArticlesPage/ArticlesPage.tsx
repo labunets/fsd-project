@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
-import { Text, TextSize } from '6shared/ui/Text/Text';
-import { DynamicModuleLoader, ReducersList } from '6shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { useAppDispatch } from '6shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Page } from '3widgets/Page/Page';
-import { VStack } from '6shared/ui/Stack';
+import { Page } from '@/3widgets/Page/Page';
+import { Text, TextSize } from '@/6shared/ui/Text/Text';
+import { DynamicModuleLoader, ReducersList } from '@/6shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { VStack } from '@/6shared/ui/Stack';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { articlesPageReducer } from '../../model/slices/ArticlesPageSlice';

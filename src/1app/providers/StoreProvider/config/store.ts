@@ -1,9 +1,9 @@
 import { CombinedState, configureStore, ReducersMapObject } from '@reduxjs/toolkit';
-import { userReducer } from '5entities/User';
-import { $api } from '6shared/api/api';
 import { Reducer } from 'redux';
-import { uiReducer } from '4features/UI';
-import { rtkApi } from '6shared/api/rtkApi';
+import { userReducer } from '@/5entities/User';
+import { uiReducer } from '@/4features/UI';
+import { $api } from '@/6shared/api/api';
+import { rtkApi } from '@/6shared/api/rtkApi';
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 import { createReducerManager } from './reducerManager';
 

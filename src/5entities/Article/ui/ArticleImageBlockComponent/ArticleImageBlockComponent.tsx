@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import { Text, TextAlign } from '6shared/ui/Text/Text';
-import { VStack } from '6shared/ui/Stack';
+import { Text, TextAlign } from '@/6shared/ui/Text/Text';
+import { VStack } from '@/6shared/ui/Stack';
 import { ArticleImageBlock } from '../../model/types/article';
 
 interface ArticleImageBlockComponentProps {

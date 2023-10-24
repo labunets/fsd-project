@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
-import { Text } from '6shared/ui/Text/Text';
-import { VStack } from '6shared/ui/Stack';
+import { Text } from '@/6shared/ui/Text/Text';
+import { VStack } from '@/6shared/ui/Stack';
 import { ArticleTextBlock } from '../../model/types/article';
 
 interface ArticleTextBlockComponentProps {

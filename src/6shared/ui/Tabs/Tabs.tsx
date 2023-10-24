@@ -1,5 +1,5 @@
-import { classNames } from '6shared/lib/classNames/classNames';
 import { memo, ReactNode, useCallback } from 'react';
+import { classNames } from '@/6shared/lib/classNames/classNames';
 import { HStack } from '../Stack';
 import { Button, ButtonTheme } from '../Button/Button';
 import cls from './Tabs.module.scss';

@@ -1,17 +1,17 @@
-import { classNames } from '6shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { DynamicModuleLoader, ReducersList } from '6shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { memo, useCallback, useEffect } from 'react';
-import { useAppDispatch } from '6shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
+import { classNames } from '@/6shared/lib/classNames/classNames';
+import { DynamicModuleLoader, ReducersList } from '@/6shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
     Text, TextAlign, TextSize, TextTheme,
-} from '6shared/ui/Text/Text';
-import { Skeleton } from '6shared/ui/Skeleton/Skeleton';
-import { Image, ImageAlign } from '6shared/ui/Image/Image';
-import EyeIcon from '6shared/assets/icons/outline-eye.svg';
-import CalendarIcon from '6shared/assets/icons/outline-calendar.svg';
-import { HStack, VStack } from '6shared/ui/Stack';
+} from '@/6shared/ui/Text/Text';
+import { Skeleton } from '@/6shared/ui/Skeleton/Skeleton';
+import { Image, ImageAlign } from '@/6shared/ui/Image/Image';
+import EyeIcon from '@/6shared/assets/icons/outline-eye.svg';
+import CalendarIcon from '@/6shared/assets/icons/outline-calendar.svg';
+import { HStack, VStack } from '@/6shared/ui/Stack';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';

@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useMemo } from 'react';
-import { TabItem, Tabs } from '6shared/ui/Tabs/Tabs';
+import { TabItem, Tabs } from '@/6shared/ui/Tabs/Tabs';
 
 import { ArticleType } from '../../model/consts/consts';
 

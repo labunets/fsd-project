@@ -1,32 +1,27 @@
-import { classNames } from '6shared/lib/classNames/classNames';
-import { HTMLAttributeAnchorTarget, memo } from 'react';
-import { Text, TextTheme } from '6shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
-import { List, ListRowProps, WindowScroller } from 'react-virtualized';
-import { PAGE_ID } from '3widgets/Page/Page';
-import { HStack } from '6shared/ui/Stack';
+import { HTMLAttributeAnchorTarget, memo } from 'react';
+import { classNames } from '@/6shared/lib/classNames/classNames';
+import { Text, TextSize } from '@/6shared/ui/Text/Text';
+import { PAGE_ID } from '@/3widgets/Page/Page';
 import { ArticleView } from '../../model/consts/consts';
-import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
+import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import cls from './ArticleList.module.scss';
 import { Article } from '../../model/types/article';
 
 interface ArticleListProps {
     className?: string;
-    articles: Article[];
+    articles: Article[]
     isLoading?: boolean;
-    view?: ArticleView;
     target?: HTMLAttributeAnchorTarget;
-    virtualized?: boolean;
+    view?: ArticleView;
 }
 
-const getSkeletons = (view: ArticleView) => (
-    new Array(view === ArticleView.GRID ? 4 : 4)
-        .fill(0)
-        .map((item, index) => (
-            <ArticleListItemSkeleton view={view} key={index} className={cls.card} />
-        ))
-);
+const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.GRID ? 9 : 3)
+    .fill(0)
+    .map((item, index) => (
+        <ArticleListItemSkeleton className={cls.card} key={index} view={view} />
+    ));
 
 export const ArticleList = memo((props: ArticleListProps) => {
     const {
@@ -35,108 +30,32 @@ export const ArticleList = memo((props: ArticleListProps) => {
         view = ArticleView.GRID,
         isLoading,
         target,
-        virtualized = true,
     } = props;
-    const { t } = useTranslation('article');
-
-    const isGrid = view === ArticleView.GRID;
-
-    const itemsPerRow = isGrid ? 1 : 1;
-    const rowCount = isGrid
-        ? Math.ceil(articles.length / itemsPerRow)
-        : articles.length;
-
-    const rowRenderer = ({
-        index, key, style,
-    }: ListRowProps) => {
-        const items = [];
-        const fromIndex = index * itemsPerRow;
-        const toIndex = Math.min(fromIndex + itemsPerRow, articles.length);
-
-        for (let i = fromIndex; i < toIndex; i += 1) {
-            items.push(
-                <ArticleListItem
-                    article={articles[i]}
-                    view={view}
-                    className={cls.card}
-                    target={target}
-                    key={articles[i].id}
-                />,
-            );
-        }
-
-        return (
-            <div
-                style={style}
-                key={key}
-                className={cls.row}
-            >
-                {items}
-            </div>
-        );
-    };
+    const { t } = useTranslation();
 
     if (!isLoading && !articles.length) {
         return (
             <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-                <Text
-                    title={t('No articles found')}
-                    theme={TextTheme.ERROR}
-                />
+                <Text size={TextSize.L} title={t('Статьи не найдены')} />
             </div>
         );
     }
 
     return (
-        // @ts-ignore
-        <WindowScroller
-            scrollElement={document.getElementById(PAGE_ID) as Element}
+        <div
+            className={classNames(cls.ArticleList, {}, [className, cls[view]])}
         >
-            {({
-                width,
-                height,
-                registerChild,
-                onChildScroll,
-                scrollTop,
-                isScrolling,
-            }) => (
-                <div
-                    // @ts-ignore
-                    ref={registerChild}
-                    className={classNames('', {}, [className, cls[view]])}
-                >
-                    {virtualized
-                        ? (
-                            // @ts-ignore
-                            <List
-                                height={height ?? 700}
-                                width={width ? width - 20 : 700}
-                                rowCount={rowCount}
-                                rowHeight={isGrid ? 390 : 230}
-                                rowRenderer={rowRenderer}
-                                autoHeight
-                                onScroll={onChildScroll}
-                                isScrolling={isScrolling}
-                                scrollTop={scrollTop}
-                            />
-                        )
-                        : (
-                            <HStack gap="2">
-                                {articles.map((item) => (
-                                    <ArticleListItem
-                                        article={item}
-                                        view={view}
-                                        className={cls.card}
-                                        target={target}
-                                        key={item.id}
-                                    />
-                                ))}
-                            </HStack>
-                        )}
+            {articles.map((item) => (
+                <ArticleListItem
+                    article={item}
+                    view={view}
+                    target={target}
+                    key={item.id}
+                    className={cls.card}
+                />
+            ))}
+            {isLoading && getSkeletons(view)}
+        </div>
 
-                    {isLoading && getSkeletons(view)}
-                </div>
-            )}
-        </WindowScroller>
     );
 });

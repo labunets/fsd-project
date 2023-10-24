@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Article, ArticleType } from '5entities/Article';
+import { Article, ArticleType } from '@/5entities/Article';
 import { ArticleRecommendationsList } from './ArticleRecommendationsList';
 
 type Story = StoryObj<typeof ArticleRecommendationsList>;

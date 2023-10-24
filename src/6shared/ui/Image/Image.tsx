@@ -1,5 +1,5 @@
-import { classNames } from '6shared/lib/classNames/classNames';
 import { memo } from 'react';
+import { classNames } from '@/6shared/lib/classNames/classNames';
 import cls from './Image.module.scss';
 import ImageImg from './image.png';
 

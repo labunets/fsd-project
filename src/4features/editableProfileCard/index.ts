@@ -3,4 +3,4 @@ export type {
     ProfileSchema,
 
 } from './model/types/editableProfileCardSchema';
-export { ValidateProfileError } from '4features/editableProfileCard/model/consts/consts';
+export { ValidateProfileError } from './model/consts/consts';

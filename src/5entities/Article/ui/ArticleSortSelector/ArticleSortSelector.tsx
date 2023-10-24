@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useMemo } from 'react';
-import { Select, SelectOption } from '6shared/ui/Select/Select';
-import { SortOrder } from '6shared/types';
-import { HStack } from '6shared/ui/Stack';
+import { Select, SelectOption } from '@/6shared/ui/Select/Select';
+import { SortOrder } from '@/6shared/types';
+import { HStack } from '@/6shared/ui/Stack';
 
 import { ArticleSortField } from '../../model/consts/consts';
 

@@ -1,12 +1,12 @@
 import { memo } from 'react';
-import { useAppDispatch } from '6shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
-import { useInitialEffect } from '6shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { ArticleList } from '5entities/Article';
-import { Page } from '3widgets/Page/Page';
-import { Text, TextSize, TextTheme } from '6shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
+import { ArticleList } from '@/5entities/Article';
+import { Page } from '@/3widgets/Page/Page';
+import { Text, TextSize, TextTheme } from '@/6shared/ui/Text/Text';
+import { useInitialEffect } from '@/6shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getArticles } from '../../model/slices/ArticlesPageSlice';
 import {
     getArticlesPageError,

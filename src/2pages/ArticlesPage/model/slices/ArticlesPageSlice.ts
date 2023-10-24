@@ -55,7 +55,7 @@ const ArticlesPageSlice = createSlice({
             state.type = action.payload;
         },
         initState: (state) => {
-            const view = localStorage.getItem(ARTICLES_VIEW_LOCALSTORAGE_KEY) as ArticleView;
+            const view = localStorage.getItem(ARTICLES_VIEW_LOCALSTORAGE_KEY) as ArticleView || ArticleView.GRID;
             state.view = view;
             state.limit = view === ArticleView.GRID ? 12 : 6;
             state._inited = true;
@@ -86,7 +86,7 @@ const ArticlesPageSlice = createSlice({
             })
             .addCase(fetchArticlesList.rejected, (state, action) => {
                 state.isLoading = false;
-                state.error = action.payload;
+                state.error = String(action.payload);
             });
     },
 });

@@ -47,13 +47,15 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             >
                 <Card className={cls.card}>
                     {image}
-                    <VStack className={cls.detailsWrapper}>
+                    <VStack gap="1" className={cls.detailsWrapper}>
                         <HStack gap="0" max={false}>
                             <Avatar size={AvatarSize.SMALL} src={article.user.avatar} />
                             <Text text={article.user.username} size={TextSize.M} className={cls.username} />
                         </HStack>
-                        <Text title={article.title} />
-                        <Text text={article.subtitle} />
+                        <VStack gap="0">
+                            <Text title={article.title} />
+                            <Text text={article.subtitle} />
+                        </VStack>
                         <HStack gap="0" max={false} justify="between">
                             {views}
                             {types}

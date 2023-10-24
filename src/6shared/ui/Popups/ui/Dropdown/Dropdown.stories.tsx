@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from '../Button/Button';
+import { Button } from '../../../Button/Button';
 import { Dropdown } from './Dropdown';
 
 type Story = StoryObj<typeof Dropdown>;
 
 const meta: Meta<typeof Dropdown> = {
-    title: '6shared/Dropdown',
+    title: '6shared/Popovers/Dropdown',
     component: Dropdown,
     tags: ['autodocs'],
     decorators: [

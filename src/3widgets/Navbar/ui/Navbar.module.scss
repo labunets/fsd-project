@@ -15,11 +15,15 @@
     align-items: center;
     padding: 0.5em;
     gap: var(--vspace-1);
-    flex-wrap: wrap;
 
     button {
         margin: 0;
         align-self: center;
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
     }
 }
 
@@ -28,10 +32,6 @@
     color: var(--secondary-color);
 }
 
-.dropdown {
-    position: relative;
-    width: fit-content;
-    display: inline-block;
-    cursor: pointer;
+.actions {
     cursor: pointer;
 }

@@ -4,12 +4,6 @@
 }
 
 .trigger {
-    background: none;
-    outline: none;
-    margin: 0;
-    padding: 0;
-    border: none;
-    cursor: pointer;
     color: var(--primary-color);
 }
 
@@ -30,7 +24,8 @@
     width: 100%;
 }
 
-.active, .selected {
+.active,
+.selected {
     background-color: var(--accent-color);
     color: var(--secondary-color);
 
@@ -38,24 +33,4 @@
         min-width: 1em;
         height: 1em;
     }
-}
-
-.optionsBottomLeft {
-    top: 100%;
-    right: 0;
-}
-
-.optionsBottomRight {
-    top: 100%;
-    left: 0;
-}
-
-.optionsTopRight {
-    bottom: 100%;
-    left: 0;
-}
-
-.optionsTopLeft {
-    right: 0;
-    bottom: 100%;
 }

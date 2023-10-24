@@ -1,8 +1,3 @@
-.ListBox {
-    position: relative;
-    width: fit-content;
-}
-
 .readonly {
     opacity: 0.7;
 }
@@ -38,7 +33,8 @@
     white-space: nowrap;
 }
 
-.active, .selected {
+.active,
+.selected {
     background-color: var(--accent-color);
     color: var(--secondary-color);
 
@@ -58,24 +54,4 @@
     font-weight: bold;
     color: var(--primary-color);
     display: block;
-}
-
-.optionsBottomLeft {
-    top: 100%;
-    right: 0;
-}
-
-.optionsBottomRight {
-    top: 100%;
-    left: 0;
-}
-
-.optionsTopRight {
-    bottom: 100%;
-    left: 0;
-}
-
-.optionsTopLeft {
-    right: 0;
-    bottom: 100%;
 }

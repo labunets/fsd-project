@@ -18,7 +18,8 @@
     padding: 0 var(--vspace-2);
 }
 
-.items, .switchers {
+.items,
+.switchers {
     margin: var(--vspace-3) 0;
     padding: 0 var(--vspace-2);
 }
@@ -26,10 +27,12 @@
 .collapsed {
     width: var(--sidebar-width-collapsed);
 
-    .items, .switchers {
+    .items,
+    .switchers {
         transition: width 2s ease-in-out;
         padding: 0;
     }
+
     .switchers {
         flex-direction: column-reverse;
     }

@@ -1,15 +1,18 @@
-import { classNames } from '6shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { memo, useCallback, useMemo } from 'react';
+import { memo, useCallback } from 'react';
 import {
-    ArticleSortField, ArticleSortSelector, ArticleType, ArticleTypeTabs, ArticleView, ArticleViewSelector,
+    ArticleSortField,
+    ArticleSortSelector,
+    ArticleType,
+    ArticleTypeTabs,
+    ArticleView,
+    ArticleViewSelector,
 } from '5entities/Article';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from '6shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Input } from '6shared/ui/Input/Input';
 import { SortOrder } from '6shared/types';
 import { useDebounce } from '6shared/lib/hooks/useDebounce/useDebounce';
-import { TabItem, Tabs } from '6shared/ui/Tabs/Tabs';
 import { HStack, VStack } from '6shared/ui/Stack';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { articlesPageActions } from '../../model/slices/ArticlesPageSlice';
@@ -72,7 +75,7 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
     }, [dispatch, fetchData]);
 
     return (
-        <VStack>
+        <VStack className={className}>
             <HStack justify="between">
                 <ArticleSortSelector
                     order={order}

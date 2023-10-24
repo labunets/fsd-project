@@ -1,0 +1,9 @@
+.panel {
+    position: absolute;
+    z-index: 10000;
+    border-radius: var(--input-border-radius);
+    background-color: var(--inverted-bg-color);
+    display: flex;
+    flex-direction: column;
+    padding: var(--vspace-1);
+}

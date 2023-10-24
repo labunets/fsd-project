@@ -3,9 +3,10 @@ import { Listbox as HListbox } from '@headlessui/react';
 import CheckIcon from '6shared/assets/icons/outline-check.svg';
 import { classNames, Mods } from '6shared/lib/classNames/classNames';
 import { DropdownDirection } from '6shared/types/ui';
-import { HStack } from '../Stack';
-import { Button, ButtonTheme } from '../Button/Button';
+import popupCls from '../../styles/popup.module.scss';
+import { HStack } from '../../../Stack';
 import cls from './ListBox.module.scss';
+import { mapDirectionClass } from '../../styles/consts';
 
 export interface ListBoxItem {
     value: string;
@@ -23,13 +24,6 @@ interface ListBoxProps {
     label?: string;
     direction?: DropdownDirection;
 }
-
-const mapDirectionClass: Record<DropdownDirection, string> = {
-    'bottom left': cls.optionsBottomLeft,
-    'bottom right': cls.optionsBottomRight,
-    'top right': cls.optionsTopRight,
-    'top left': cls.optionsTopLeft,
-};
 
 export function ListBox(props: ListBoxProps) {
     const {
@@ -52,7 +46,7 @@ export function ListBox(props: ListBoxProps) {
     return (
         <HListbox
             as="div"
-            className={classNames(cls.ListBox, mods, [className])}
+            className={classNames(cls.ListBox, mods, [className, popupCls.popup])}
             value={value}
             onChange={onChange}
             disabled={readonly}

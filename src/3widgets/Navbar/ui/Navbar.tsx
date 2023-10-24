@@ -11,6 +11,8 @@ import { RoutePath } from '6shared/config/routeConfig/routeConfig';
 import { HStack } from '6shared/ui/Stack';
 import { NotificationButton } from '4features/notificationButton';
 import { AvatarDropdown } from '4features/avatarDropdown/ui/AvatarDropdown/AvatarDropdown';
+import { Drawer } from '6shared/ui/Drawer/Drawer';
+import { NotificationList } from '5entities/Notification';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {

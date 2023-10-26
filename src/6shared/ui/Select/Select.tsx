@@ -43,14 +43,18 @@ export const Select = memo((props: SelectProps) => {
 
     const mods: Mods = {};
 
+    const selectId = `select-${Math.random().toString(36).substring(2, 9)}`;
+
     return (
         <div className={classNames(cls.Wrapper, mods, [className])}>
             {label && (
-                <span className={cls.label}>
+                <label className={cls.label} htmlFor={selectId}>
                     {label}
-                </span>
+                </label>
             )}
             <select
+                id={selectId}
+                name={label}
                 className={cls.select}
                 value={value}
                 onChange={onChangeHandler}

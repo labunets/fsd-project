@@ -1,0 +1,30 @@
+.starIcon {
+    margin-right: 2px;
+    cursor: pointer;
+    fill: none;
+    stroke: var(--accent-color);
+}
+
+.normal {
+    fill: none;
+}
+
+.hovered {
+    fill: var(--accent-color);
+}
+
+.selected {
+    cursor: auto;
+}
+
+.small {
+    width: 12px;
+}
+
+.medium {
+    width: 16px;
+}
+
+.large {
+    width: 24px;
+}

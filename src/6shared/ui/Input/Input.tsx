@@ -44,12 +44,15 @@ export const Input = memo((props: InputProps) => {
         [cls.readonly]: readonly,
     };
 
+    const inputId = `search-${Math.random().toString(36).substring(2, 9)}`;
+
     return (
         <div className={classNames(cls.InputWrapper, mods, [className])}>
-            <label className={cls.label} htmlFor={label}>
+            <label className={cls.label} htmlFor={inputId}>
                 {label}
             </label>
             <input
+                id={inputId}
                 ref={ref}
                 type={type}
                 value={value}

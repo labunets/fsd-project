@@ -46,7 +46,11 @@
   "IT": "ІТ",
   "SCIENCE": "НАУКА",
   "ECONOMICS": "ЕКОНОМІКА",
-  "New article": "New article",
-  "Dashboard": "Dashboard",
-  "You are not allowed to access this page": "You are not allowed to access this page"
+  "New article": "Нова стаття",
+  "Dashboard": "Панель керування",
+  "You are not allowed to access this page": "Ви не маєте доступу до цієї сторінки",
+  "Type": "Тип",
+  "Your feedback": "Ваш відгук",
+  "Message": "Повідомлення",
+  "Close": "Close"
 }

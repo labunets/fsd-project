@@ -65,6 +65,7 @@
   "Something went wrong": "Something went wrong",
   "Sort by": "Sort by",
   "Throw error": "Throw error",
+  "Type": "Type",
   "Username": "Username",
   "You are not allowed to access this page": "You are not allowed to access this page",
   "ascending": "ascending",
@@ -75,5 +76,9 @@
   "order": "order",
   "title": "title",
   "views": "views",
-  "Статьи не найдены": "Статьи не найдены"
+  "Статьи не найдены": "Статьи не найдены",
+  "Yor feedback": "Yor feedback",
+  "Your feedback": "Your feedback",
+  "Message": "Message",
+  "Close": "Close"
 }

@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { useParams } from 'react-router-dom';
 import { ArticleDetails } from '@/5entities/Article';
@@ -11,6 +10,7 @@ import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDet
 import { articleDetailsPageReducer } from '../../model/slices';
 import cls from './ArticleDetailsPage.module.scss';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
+import { ArticleRating } from '@/4features/articleRating';
 
 interface ArticlesDetailsPageProps {
     className?: string;
@@ -22,8 +22,11 @@ const reducers: ReducersList = {
 
 const ArticleDetailsPage = (props: ArticlesDetailsPageProps) => {
     const { className } = props;
-    const { t } = useTranslation('article');
     const { id } = useParams<{ id: string }>();
+
+    if (!id) {
+        return null;
+    }
 
     return (
         <DynamicModuleLoader reducers={reducers}>
@@ -31,6 +34,7 @@ const ArticleDetailsPage = (props: ArticlesDetailsPageProps) => {
                 <VStack gap="3">
                     <ArticleDetailsPageHeader />
                     <ArticleDetails id={id} />
+                    <ArticleRating articleId={id} />
                     <ArticleRecommendationsList />
                     <ArticleDetailsComments id={id} />
                 </VStack>

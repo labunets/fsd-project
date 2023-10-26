@@ -1,7 +1,10 @@
 .Card {
     border-radius: var(--input-border-radius);
     background: var(--bg-color);
-    width: 100%;
     box-shadow: var(--card-shadow);
     padding: 1em;
+}
+
+.max {
+    width: 100%;
 }

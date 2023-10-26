@@ -1057,5 +1057,65 @@
       "username": "veronica",
       "avatar": "https://placehold.co/120?text=Nica"
     }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Good article 1",
+      "articleId": "1",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 3,
+      "feedback": "Good article 2",
+      "articleId": "2",
+      "userId": "1"
+    },
+    {
+      "userId": "1",
+      "articleId": "8",
+      "rate": 1,
+      "feedback": "",
+      "id": "rinc7Au"
+    },
+    {
+      "userId": "1",
+      "articleId": "10",
+      "rate": 5,
+      "feedback": "Wow!",
+      "id": "az6bCyz"
+    },
+    {
+      "userId": "1",
+      "articleId": "11",
+      "rate": 3,
+      "feedback": "12341234",
+      "id": "d0Jq9Bx"
+    },
+    {
+      "userId": "1",
+      "articleId": "7",
+      "rate": 5,
+      "feedback": "ghjdtguhdfghj",
+      "id": "WeUWHE4"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Good profile 1",
+      "profileId": "1",
+      "userId": "2"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Good profile 2",
+      "profileId": "2",
+      "userId": "1"
+    }
   ]
 }

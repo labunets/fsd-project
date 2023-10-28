@@ -4,7 +4,7 @@ import { NotificationButton } from './NotificationButton';
 type Story = StoryObj<typeof NotificationButton>;
 
 const meta: Meta<typeof NotificationButton> = {
-    title: 'NotificationButton',
+    title: '4features/NotificationButton',
     component: NotificationButton,
     tags: ['autodocs'],
 };

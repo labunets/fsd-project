@@ -4,7 +4,7 @@ import { AvatarDropdown } from './AvatarDropdown';
 type Story = StoryObj<typeof AvatarDropdown>;
 
 const meta: Meta<typeof AvatarDropdown> = {
-    title: 'AvatarDropdown',
+    title: '4features/AvatarDropdown',
     component: AvatarDropdown,
     tags: ['autodocs'],
 };

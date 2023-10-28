@@ -4,7 +4,7 @@ import { StarRating } from './StarRating';
 type Story = StoryObj<typeof StarRating>;
 
 const meta: Meta<typeof StarRating> = {
-    title: 'StarRating',
+    title: '6shared/StarRating',
     component: StarRating,
     tags: ['autodocs'],
 };

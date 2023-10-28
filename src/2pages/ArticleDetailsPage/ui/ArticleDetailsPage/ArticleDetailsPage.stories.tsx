@@ -97,6 +97,7 @@ const meta: Meta<typeof ArticleDetailsPage> = {
                 url: `${__API__}/articles?_limit=3`,
                 method: 'GET',
                 status: 200,
+
                 response: [
                     { ...article, id: '1' },
                     { ...article, id: '2' },

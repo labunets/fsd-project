@@ -4,7 +4,7 @@ import { RatingCard } from './RatingCard';
 type Story = StoryObj<typeof RatingCard>;
 
 const meta: Meta<typeof RatingCard> = {
-    title: 'RatingCard',
+    title: '5entities/RatingCard',
     component: RatingCard,
     tags: ['autodocs'],
 };

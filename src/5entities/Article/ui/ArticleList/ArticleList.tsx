@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next';
 import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import { Text, TextSize } from '@/6shared/ui/Text/Text';
-import { PAGE_ID } from '@/3widgets/Page/Page';
 import { ArticleView } from '../../model/consts/consts';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';

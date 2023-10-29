@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { getArticleDetailsData } from '@/5entities/Article/model/selectors/articleDetails';
+import { getArticleDetailsData } from '@/5entities/Article';
 import { RoutePath } from '@/6shared/config/routeConfig/routeConfig';
 import { Button, ButtonTheme } from '@/6shared/ui/Button/Button';
 import ChevronLeftIcon from '@/6shared/assets/icons/chevron-left.svg';

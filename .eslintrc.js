@@ -77,6 +77,7 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
         'rel-path-check/path-checker': ['error', { alias: '@' }],
+        'rel-path-check/pub-api-imports': ['error', { alias: '@' }],
     },
     globals: {
         __IS_DEV__: true,

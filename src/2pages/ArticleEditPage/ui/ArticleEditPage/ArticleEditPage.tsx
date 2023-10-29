@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { useParams } from 'react-router-dom';
-import { Page } from '@/3widgets/Page/Page';
+import { Page } from '@/3widgets/Page';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 
 interface ArticleEditPageProps {

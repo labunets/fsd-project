@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { LoginModal } from '@/4features/AuthByUsername';
 import { getUserAuthData } from '@/5entities/User';
 import { NotificationButton } from '@/4features/notificationButton';
-import { AvatarDropdown } from '@/4features/avatarDropdown/ui/AvatarDropdown/AvatarDropdown';
+import { AvatarDropdown } from '@/4features/avatarDropdown';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from '@/6shared/ui/Button/Button';
 import { Text } from '@/6shared/ui/Text/Text';

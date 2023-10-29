@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArticleList } from '@/5entities/Article';
-import { Page } from '@/3widgets/Page/Page';
+import { Page } from '@/3widgets/Page';
 import { Text, TextSize, TextTheme } from '@/6shared/ui/Text/Text';
 import { useInitialEffect } from '@/6shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatch';

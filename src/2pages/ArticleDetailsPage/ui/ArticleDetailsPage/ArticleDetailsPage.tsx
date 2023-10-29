@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { useParams } from 'react-router-dom';
 import { ArticleDetails } from '@/5entities/Article';
-import { Page } from '@/3widgets/Page/Page';
+import { Page } from '@/3widgets/Page';
 import { ArticleRecommendationsList } from '@/4features/articleRecommendationsList';
 import { DynamicModuleLoader, ReducersList } from '@/6shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { VStack } from '@/6shared/ui/Stack';

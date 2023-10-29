@@ -1,15 +1,9 @@
 import { StoryFn } from '@storybook/react';
-// TODO: remove eslint-disable
-// eslint-disable-next-line rel-path-check/pub-api-imports
-import { loginReducer } from '@/4features/AuthByUsername/model/slice/loginSlice';
-// eslint-disable-next-line rel-path-check/pub-api-imports
-import { articleDetailsReducer } from '@/5entities/Article/model/slice/articleDetailsSlice';
-// eslint-disable-next-line rel-path-check/pub-api-imports
-import { addCommentFormReducer } from '@/4features/addCommentForm/model/slices/addCommentFormSlice';
-// eslint-disable-next-line rel-path-check/pub-api-imports
-import { articleDetailsPageReducer } from '@/2pages/ArticleDetailsPage/model/slices';
-// eslint-disable-next-line rel-path-check/pub-api-imports
-import { profileReducer } from '@/4features/editableProfileCard/model/slice/profileSlice';
+import { loginReducer } from '@/4features/AuthByUsername/testing';
+import { articleDetailsReducer } from '@/5entities/Article/testing';
+import { addCommentFormReducer } from '@/4features/addCommentForm/testing';
+import { articleDetailsPageReducer } from '@/2pages/ArticleDetailsPage/testing';
+import { profileReducer } from '@/4features/editableProfileCard/testing';
 import { ReducersList } from '@/6shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { StateSchema, StoreProvider } from '@/1app/providers/StoreProvider';
 

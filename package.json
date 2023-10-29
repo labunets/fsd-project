@@ -1,6 +1,6 @@
 {
   "name": "fsd-project",
-  "version": "1.0.90",
+  "version": "1.0.91",
   "description": "FSD practice",
   "main": "index.js",
   "scripts": {
@@ -75,7 +75,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.2",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "eslint-plugin-rel-path-check": "^0.0.7",
+    "eslint-plugin-rel-path-check": "^0.0.8",
     "eslint-plugin-storybook": "^0.6.15",
     "file-loader": "^6.2.0",
     "fork-ts-checker-webpack-plugin": "^7.2.13",

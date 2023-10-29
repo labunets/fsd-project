@@ -9,7 +9,7 @@ import { getProfileData } from '../../model/selectors/getProfileData/getProfileD
 import {
     getProfileReadonly,
 } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
-import { profileActions } from '../../model/slice/profileSlice';
+import { profileActions } from '../../model/slices/profileSlice';
 import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData';
 
 interface EditableProfileCardHeaderProps {

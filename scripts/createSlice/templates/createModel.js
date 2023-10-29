@@ -25,7 +25,7 @@ module.exports = async (layer, sliceName) => {
                 reduxSliceTemplate(sliceName),
             );
         } catch (e) {
-            console.log('Failed to create redux slice', e);
+            console.log('Failed to create redux slices', e);
         }
     };
 

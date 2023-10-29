@@ -10,7 +10,7 @@ if (!layer || !layers.includes(layer)) {
 }
 
 if (!sliceName) {
-    throw new Error('Specify the name of the slice');
+    throw new Error('Specify the name of the slices');
 }
 
 createTemplate(layer, sliceName);

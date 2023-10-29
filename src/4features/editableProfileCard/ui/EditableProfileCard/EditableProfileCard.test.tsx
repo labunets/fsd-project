@@ -5,7 +5,7 @@ import { Currency } from '@/5entities/Currency';
 import { Country } from '@/5entities/Country';
 import { componentRender } from '@/6shared/lib/tests/componentRender/componentRender';
 import { $api } from '@/6shared/api/api';
-import { profileReducer } from '../../model/slice/profileSlice';
+import { profileReducer } from '../../model/slices/profileSlice';
 import { EditableProfileCard } from './EditableProfileCard';
 
 const profile: Profile = {

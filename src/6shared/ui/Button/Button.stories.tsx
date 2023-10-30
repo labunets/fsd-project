@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from '@/6shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/1app/providers/ThemeProvider';
 import HeartIcon from '@/6shared/assets/icons/outline-heart.svg';
 import ChevronRightIcon from '@/6shared/assets/icons/chevron-right.svg';
 import { Button, ButtonSize, ButtonTheme } from './Button';

@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from '@/6shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/1app/providers/ThemeProvider';
 import { StoreDecorator } from '@/6shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Navbar } from './Navbar';
+import { Theme } from '@/6shared/const/theme';
 
 type Story = StoryObj<typeof Navbar>;
 

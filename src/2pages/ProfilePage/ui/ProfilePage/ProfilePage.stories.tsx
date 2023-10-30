@@ -2,9 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Currency } from '@/5entities/Currency';
 import { Country } from '@/5entities/Country';
 import { ThemeDecorator } from '@/6shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/1app/providers/ThemeProvider';
 import { StoreDecorator } from '@/6shared/config/storybook/StoreDecorator/StoreDecorator';
 import ProfilePage from './ProfilePage';
+import { Theme } from '@/6shared/const/theme';
 
 type Story = StoryObj<typeof ProfilePage>;
 

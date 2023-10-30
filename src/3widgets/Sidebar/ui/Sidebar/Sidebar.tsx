@@ -1,7 +1,5 @@
 import { useSelector } from 'react-redux';
 import { memo, useMemo, useState } from 'react';
-import { ThemeSwitcher } from '@/3widgets/ThemeSwitcher';
-import { LangSwitcher } from '@/3widgets/LangSwitcher';
 import { Button, ButtonTheme } from '@/6shared/ui/Button/Button';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import ChevronLeftIcon from '@/6shared/assets/icons/chevron-left.svg';
@@ -10,6 +8,8 @@ import { HStack, VStack } from '@/6shared/ui/Stack';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 import { getSidebarItems } from '../../model/selectors/getSidebarItems';
 import cls from './Sidebar.module.scss';
+import { ThemeSwitcher } from '@/4features/ThemeSwitcher';
+import { LangSwitcher } from '@/4features/LangSwitcher';
 
 interface SidebarProps {
     className?: string;

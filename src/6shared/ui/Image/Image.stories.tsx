@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from '@/6shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/1app/providers/ThemeProvider';
 import { Image, ImageAlign } from './Image';
 import SampleImg from './image.png';
 

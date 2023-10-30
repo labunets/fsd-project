@@ -9,9 +9,9 @@ import { classNames } from '@/6shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from '@/6shared/ui/Button/Button';
 import { Text } from '@/6shared/ui/Text/Text';
 import { AppLink } from '@/6shared/ui/AppLink/AppLink';
-import { RoutePath } from '@/6shared/config/routeConfig/routeConfig';
 import { HStack } from '@/6shared/ui/Stack';
 import cls from './Navbar.module.scss';
+import { RoutePath } from '@/6shared/const/router';
 
 interface NavbarProps {
     className?: string;

@@ -6,8 +6,8 @@ import {
 } from '@/5entities/User';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import { Avatar } from '@/6shared/ui/Avatar/Avatar';
-import { RoutePath } from '@/6shared/config/routeConfig/routeConfig';
 import { Dropdown } from '@/6shared/ui/Popups';
+import { RoutePath } from '@/6shared/const/router';
 
 interface AvatarDropdownProps {
     className?: string;

@@ -5,12 +5,12 @@ import { Text, TextSize } from '@/6shared/ui/Text/Text';
 import EyeIcon from '@/6shared/assets/icons/outline-eye.svg';
 import { Card } from '@/6shared/ui/Card/Card';
 import { Avatar, AvatarSize } from '@/6shared/ui/Avatar/Avatar';
-import { RoutePath } from '@/6shared/config/routeConfig/routeConfig';
 import { AppLink } from '@/6shared/ui/AppLink/AppLink';
 import { HStack, VStack } from '@/6shared/ui/Stack';
 import { ArticleView } from '../../model/consts/consts';
 import cls from './ArticleListItem.module.scss';
 import { Article } from '../../model/types/article';
+import { RoutePath } from '@/6shared/const/router';
 
 interface ArticleListItemProps {
     className?: string;

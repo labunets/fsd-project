@@ -3,13 +3,13 @@ import { memo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { getArticleDetailsData } from '@/5entities/Article';
-import { RoutePath } from '@/6shared/config/routeConfig/routeConfig';
 import { Button, ButtonTheme } from '@/6shared/ui/Button/Button';
 import ChevronLeftIcon from '@/6shared/assets/icons/chevron-left.svg';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import { HStack } from '@/6shared/ui/Stack';
 import { getCanEditArticle } from '../../model/selectors/article';
 import cls from './ArticleDetailsPageHeader.module.scss';
+import { RoutePath } from '@/6shared/const/router';
 
 interface ArticleDetailsPageHeaderProps {
     className?: string;

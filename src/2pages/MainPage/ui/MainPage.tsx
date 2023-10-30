@@ -12,16 +12,6 @@ const MainPage = () => {
     return (
         <Page>
             <Text title={t('Main')} size={TextSize.L} />
-            <VStack>
-                <StarRating />
-                <RatingCard
-                    title={t('Rate your experience')}
-                    feedbackTitle={t('Your feedback')}
-                    hasFeedback
-                    onCancel={() => {}}
-                    onAccept={() => {}}
-                />
-            </VStack>
         </Page>
     );
 };

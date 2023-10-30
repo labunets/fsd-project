@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { classNames } from '@/6shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from '@/6shared/ui/Button/Button';
+import { Button, ButtonTheme } from '@/6shared/ui/Button';
 import GlobeIcon from '@/6shared/assets/icons/filled-globe.svg';
 
 interface LangSwitcherProps {

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { getUserAuthData } from '@/5entities/User';
 import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { HStack } from '@/6shared/ui/Stack';
-import { Button, ButtonTheme } from '@/6shared/ui/Button/Button';
+import { Button, ButtonTheme } from '@/6shared/ui/Button';
 import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';
 import {
     getProfileReadonly,

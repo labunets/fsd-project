@@ -10,7 +10,7 @@ import {
     ArticleViewSelector,
 } from '@/5entities/Article';
 import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Input } from '@/6shared/ui/Input/Input';
+import { Input } from '@/6shared/ui/Input';
 import { SortOrder } from '@/6shared/types';
 import { useDebounce } from '@/6shared/lib/hooks/useDebounce/useDebounce';
 import { HStack, VStack } from '@/6shared/ui/Stack';

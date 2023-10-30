@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { memo, useMemo, useState } from 'react';
-import { Button, ButtonTheme } from '@/6shared/ui/Button/Button';
+import { Button, ButtonTheme } from '@/6shared/ui/Button';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import ChevronLeftIcon from '@/6shared/assets/icons/chevron-left.svg';
 import ChevronRightIcon from '@/6shared/assets/icons/chevron-right.svg';

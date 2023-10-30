@@ -3,7 +3,7 @@ import { memo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { getArticleDetailsData } from '@/5entities/Article';
-import { Button, ButtonTheme } from '@/6shared/ui/Button/Button';
+import { Button, ButtonTheme } from '@/6shared/ui/Button';
 import ChevronLeftIcon from '@/6shared/assets/icons/chevron-left.svg';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import { HStack } from '@/6shared/ui/Stack';

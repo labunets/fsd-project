@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { classNames } from '@/6shared/lib/classNames/classNames';
-import { Text, TextSize } from '@/6shared/ui/Text/Text';
+import { Text, TextSize } from '@/6shared/ui/Text';
 import EyeIcon from '@/6shared/assets/icons/outline-eye.svg';
-import { Card } from '@/6shared/ui/Card/Card';
-import { Avatar, AvatarSize } from '@/6shared/ui/Avatar/Avatar';
-import { AppLink } from '@/6shared/ui/AppLink/AppLink';
+import { Card } from '@/6shared/ui/Card';
+import { Avatar, AvatarSize } from '@/6shared/ui/Avatar';
+import { AppLink } from '@/6shared/ui/AppLink';
 import { HStack, VStack } from '@/6shared/ui/Stack';
 import { ArticleView } from '../../model/consts/consts';
 import cls from './ArticleListItem.module.scss';

@@ -6,9 +6,9 @@ import { DynamicModuleLoader, ReducersList } from '@/6shared/lib/components/Dyna
 import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
     Text, TextAlign, TextSize, TextTheme,
-} from '@/6shared/ui/Text/Text';
-import { Skeleton } from '@/6shared/ui/Skeleton/Skeleton';
-import { Image, ImageAlign } from '@/6shared/ui/Image/Image';
+} from '@/6shared/ui/Text';
+import { Skeleton } from '@/6shared/ui/Skeleton';
+import { Image, ImageAlign } from '@/6shared/ui/Image';
 import EyeIcon from '@/6shared/assets/icons/outline-eye.svg';
 import CalendarIcon from '@/6shared/assets/icons/outline-calendar.svg';
 import { HStack, VStack } from '@/6shared/ui/Stack';

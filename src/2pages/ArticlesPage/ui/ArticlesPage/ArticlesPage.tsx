@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { Page } from '@/3widgets/Page';
-import { Text, TextSize } from '@/6shared/ui/Text/Text';
+import { Text, TextSize } from '@/6shared/ui/Text';
 import { DynamicModuleLoader, ReducersList } from '@/6shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { VStack } from '@/6shared/ui/Stack';

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Page } from '@/3widgets/Page';
-import { Text, TextSize } from '@/6shared/ui/Text/Text';
-import { StarRating } from '@/6shared/ui/StarRating/StarRating';
+import { Text, TextSize } from '@/6shared/ui/Text';
+import { StarRating } from '@/6shared/ui/StarRating';
 import { VStack } from '@/6shared/ui/Stack';
 import { RatingCard } from '@/5entities/Rating';
 

@@ -5,7 +5,7 @@ import {
     getUserAuthData, isUserAdmin, isUserManager, userActions,
 } from '@/5entities/User';
 import { classNames } from '@/6shared/lib/classNames/classNames';
-import { Avatar } from '@/6shared/ui/Avatar/Avatar';
+import { Avatar } from '@/6shared/ui/Avatar';
 import { Dropdown } from '@/6shared/ui/Popups';
 import { RoutePath } from '@/6shared/const/router';
 

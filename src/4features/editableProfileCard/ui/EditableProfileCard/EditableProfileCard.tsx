@@ -6,7 +6,7 @@ import { Country } from '@/5entities/Country';
 import { ProfileCard } from '@/5entities/Profile';
 import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from '@/6shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { Text, TextTheme } from '@/6shared/ui/Text/Text';
+import { Text, TextTheme } from '@/6shared/ui/Text';
 import { DynamicModuleLoader, ReducersList } from '@/6shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import { VStack } from '@/6shared/ui/Stack';

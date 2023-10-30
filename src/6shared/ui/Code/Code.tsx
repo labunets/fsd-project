@@ -1,4 +1,4 @@
-import { memo, ReactNode, useCallback } from 'react';
+import { memo, useCallback } from 'react';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import CopyIcon from '@/6shared/assets/icons/outline-copy.svg';
 import { Button, ButtonSize, ButtonTheme } from '../Button/Button';

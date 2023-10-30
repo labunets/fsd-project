@@ -1,5 +1,4 @@
 import { memo } from 'react';
-import { classNames } from '@/6shared/lib/classNames/classNames';
 import { Avatar, AvatarSize } from '@/6shared/ui/Avatar';
 import { Text } from '@/6shared/ui/Text';
 import { Skeleton } from '@/6shared/ui/Skeleton';

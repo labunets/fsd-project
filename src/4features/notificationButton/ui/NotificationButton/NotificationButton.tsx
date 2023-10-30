@@ -6,7 +6,6 @@ import BellIcon from '@/6shared/assets/icons/outline-bell.svg';
 import { Popover } from '@/6shared/ui/Popups';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import { Drawer } from '@/6shared/ui/Drawer';
-import { AnimationProvider } from '@/6shared/lib/components/AnimationProvider';
 import cls from './NotificationButton.module.scss';
 
 interface NotificationButtonProps {

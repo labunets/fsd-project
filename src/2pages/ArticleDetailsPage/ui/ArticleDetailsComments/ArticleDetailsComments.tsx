@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { memo, Suspense, useCallback } from 'react';
+import { memo, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { AddCommentForm } from '@/4features/addCommentForm';
 import { CommentList } from '@/5entities/Comment';
@@ -7,7 +7,6 @@ import { Text } from '@/6shared/ui/Text';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import { useInitialEffect } from '@/6shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { VStack } from '@/6shared/ui/Stack';
-import { Skeleton } from '@/6shared/ui/Skeleton';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';

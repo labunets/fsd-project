@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { memo, useCallback, useMemo } from 'react';
+import { memo, useMemo } from 'react';
 import { Select, SelectOption } from '@/6shared/ui/Select';
 import { SortOrder } from '@/6shared/types';
 import { HStack } from '@/6shared/ui/Stack';
@@ -22,7 +22,18 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
     } = props;
     const { t } = useTranslation();
 
-    const sortFieldOptions = useMemo<SelectOption[]>(() => [
+    const orderOptions = useMemo<SelectOption<SortOrder>[]>(() => [
+        {
+            value: 'asc',
+            content: t('ascending'),
+        },
+        {
+            value: 'desc',
+            content: t('descending'),
+        },
+    ], [t]);
+
+    const sortFieldOptions = useMemo<SelectOption<ArticleSortField>[]>(() => [
         {
             value: ArticleSortField.CREATED,
             content: t('created'),
@@ -37,38 +48,19 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
         },
     ], [t]);
 
-    const orderOptions = useMemo<SelectOption[]>(() => [
-        {
-            value: 'asc',
-            content: t('ascending'),
-        },
-        {
-            value: 'desc',
-            content: t('descending'),
-        },
-    ], [t]);
-
-    const changeSortHandler = useCallback((newSort: string) => {
-        onChangeSort(newSort as ArticleSortField);
-    }, [onChangeSort]);
-
-    const changeOrderHandler = useCallback((newOrder: string) => {
-        onChangeOrder(newOrder as SortOrder);
-    }, [onChangeOrder]);
-
     return (
         <HStack max={false}>
-            <Select
+            <Select<ArticleSortField>
                 options={sortFieldOptions}
                 label={t('Sort by')}
                 value={sort}
-                onChange={changeSortHandler}
+                onChange={onChangeSort}
             />
-            <Select
+            <Select<SortOrder>
                 options={orderOptions}
                 label={t('order')}
                 value={order}
-                onChange={changeOrderHandler}
+                onChange={onChangeOrder}
             />
         </HStack>
     );

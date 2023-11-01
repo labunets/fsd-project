@@ -34,6 +34,7 @@ export default {
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
         '\\.(svg|png)': '<rootDir>/config/jest/mocks/jestEmptyComponent.tsx',
+        '^@/(.*)$': '<rootDir>/src/$1',
     },
 
     reporters: [

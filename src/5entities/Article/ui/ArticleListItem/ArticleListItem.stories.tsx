@@ -3,6 +3,7 @@ import { ThemeDecorator } from '@/6shared/config/storybook/ThemeDecorator/ThemeD
 import { ArticleView } from '../../model/consts/consts';
 import { Article } from '../../model/types/article';
 import { ArticleListItem } from './ArticleListItem';
+import { Theme } from '@/6shared/const/theme';
 
 type Story = StoryObj<typeof ArticleListItem>;
 

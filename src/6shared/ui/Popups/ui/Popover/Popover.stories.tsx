@@ -8,7 +8,7 @@ const meta: Meta<typeof Popover> = {
     component: Popover,
     tags: ['autodocs'],
     decorators: [
-        (Story) => <div style={{ padding: 100 }}><Story /></div>,
+        (Story) => <div style={{ paddingTop: 150, paddingBottom: 150 }}><Story /></div>,
     ],
 };
 

@@ -9,7 +9,7 @@ const meta: Meta<typeof Dropdown> = {
     component: Dropdown,
     tags: ['autodocs'],
     decorators: [
-        (Story) => <div style={{ padding: 150 }}><Story /></div>,
+        (Story) => <div style={{ paddingTop: 150, paddingBottom: 150 }}><Story /></div>,
     ],
 };
 

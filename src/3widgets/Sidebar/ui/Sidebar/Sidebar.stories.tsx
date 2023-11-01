@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from '@/6shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { StoreDecorator } from '@/6shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Sidebar } from './Sidebar';
+import { Theme } from '@/6shared/const/theme';
 
 type Story = StoryObj<typeof Sidebar>;
 

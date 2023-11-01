@@ -3,6 +3,7 @@ import { Currency } from '@/5entities/Currency';
 import { Country } from '@/5entities/Country';
 import { ThemeDecorator } from '@/6shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { ProfileCard } from './ProfileCard';
+import { Theme } from '@/6shared/const/theme';
 
 type Story = StoryObj<typeof ProfileCard>;
 

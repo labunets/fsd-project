@@ -36,7 +36,7 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
             onChange={onChangeHandler}
             value={value}
             items={options}
-            defaultValue={t('Select currency')}
+            defaultValue={t('Select country')}
             readonly={readonly}
             label={t('Country')}
             direction="top right"

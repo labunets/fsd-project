@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from '@/6shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Skeleton } from './Skeleton';
+import { Theme } from '@/6shared/const/theme';
 
 type Story = StoryObj<typeof Skeleton>;
 

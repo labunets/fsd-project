@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from '@/6shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Image, ImageAlign } from './Image';
 import SampleImg from './image.png';
+import { Theme } from '@/6shared/const/theme';
 
 type Story = StoryObj<typeof Image>;
 

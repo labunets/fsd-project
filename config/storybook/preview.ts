@@ -1,6 +1,5 @@
 import type { Preview } from '@storybook/react';
 import { StyleDecorator } from '../../src/6shared/config/storybook/StyleDecorator/StyleDecorator';
-import { ThemeDecorator } from '../../src/6shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { RouterDecorator } from '../../src/6shared/config/storybook/RouterDecorator/RouterDecorator';
 import { StoreDecorator } from '../../src/6shared/config/storybook/StoreDecorator/StoreDecorator';
 import { SuspenseDecorator } from '../../src/6shared/config/storybook/SuspenseDecorator/SuspenseDecorator';
@@ -16,10 +15,31 @@ const preview: Preview = {
             },
         },
         layout: 'fullscreen',
+        themes: {
+            default: 'light',
+            list: [
+                {
+                    name: 'light',
+                    class: ['app', Theme.LIGHT],
+                    color: '#ffffff',
+                    default: true,
+                },
+                {
+                    name: 'dark',
+                    class: ['app', Theme.DARK],
+                    color: '#000000',
+                },
+                {
+                    name: 'blue',
+                    class: ['app', Theme.BLUE],
+                    color: '#0b2566',
+                },
+            ],
+        },
     },
     decorators: [
         StyleDecorator,
-        ThemeDecorator(Theme.LIGHT),
+        // ThemeDecorator(Theme.LIGHT),
         RouterDecorator,
         StoreDecorator({}),
         SuspenseDecorator,

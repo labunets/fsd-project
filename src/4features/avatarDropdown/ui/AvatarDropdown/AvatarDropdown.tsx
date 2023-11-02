@@ -7,7 +7,7 @@ import {
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import { Avatar } from '@/6shared/ui/Avatar';
 import { Dropdown } from '@/6shared/ui/Popups';
-import { RoutePath } from '@/6shared/const/router';
+import { getRouteAdminPanel, getRouteProfile } from '@/6shared/const/router';
 
 interface AvatarDropdownProps {
     className?: string;
@@ -40,12 +40,12 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
                 ...(isAdminPanelAvailable
                     ? [{
                         content: t('Dashboard'),
-                        href: RoutePath.admin_panel,
+                        href: getRouteAdminPanel(),
                     }]
                     : []),
                 {
                     content: t('Profile'),
-                    href: RoutePath.profile + authData.id,
+                    href: getRouteProfile(authData.id),
                 },
                 {
                     content: t('Logout'),

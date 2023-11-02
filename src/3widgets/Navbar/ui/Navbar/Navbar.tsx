@@ -11,7 +11,7 @@ import { Text } from '@/6shared/ui/Text';
 import { AppLink } from '@/6shared/ui/AppLink';
 import { HStack } from '@/6shared/ui/Stack';
 import cls from './Navbar.module.scss';
-import { RoutePath } from '@/6shared/const/router';
+import { getRouteArticleCreate } from '@/6shared/const/router';
 
 interface NavbarProps {
     className?: string;
@@ -35,7 +35,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
             <header className={classNames(cls.Navbar, {}, [className])}>
                 <div className={cls.links}>
                     <HStack gap="3" className={cls.actions}>
-                        <AppLink to={RoutePath.article_create}>
+                        <AppLink to={getRouteArticleCreate()}>
                             {t('New article')}
                         </AppLink>
                         <NotificationButton />

@@ -10,7 +10,7 @@ import { HStack, VStack } from '@/6shared/ui/Stack';
 import { ArticleView } from '../../model/consts/consts';
 import cls from './ArticleListItem.module.scss';
 import { Article } from '../../model/types/article';
-import { RoutePath } from '@/6shared/const/router';
+import { getRouteArticleDetails } from '@/6shared/const/router';
 
 interface ArticleListItemProps {
     className?: string;
@@ -42,7 +42,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         return (
             <AppLink
                 target={target}
-                to={RoutePath.article_details + article.id}
+                to={getRouteArticleDetails(article.id)}
                 className={classNames(cls.link, {}, [className, cls[view]])}
             >
                 <Card className={cls.card}>
@@ -70,7 +70,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     return (
         <AppLink
             target={target}
-            to={RoutePath.article_details + article.id}
+            to={getRouteArticleDetails(article.id)}
             className={classNames('', {}, [className, cls[view]])}
         >
             <Card className={cls.card}>

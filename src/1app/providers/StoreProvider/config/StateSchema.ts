@@ -12,8 +12,10 @@ import { UISchema } from '@/4features/UI';
 import { ArticleDetailsPageSchema } from '@/2pages/ArticleDetailsPage';
 import { ProfileSchema } from '@/4features/editableProfileCard';
 import { rtkApi } from '@/6shared/api/rtkApi';
+import { CounterSchema } from '@/5entities/Counter';
 
 export interface StateSchema {
+    counter: CounterSchema;
     user: UserSchema;
     ui: UISchema;
     [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;

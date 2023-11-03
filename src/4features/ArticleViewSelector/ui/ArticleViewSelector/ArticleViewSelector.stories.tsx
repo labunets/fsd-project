@@ -4,7 +4,7 @@ import { ArticleViewSelector } from './ArticleViewSelector';
 type Story = StoryObj<typeof ArticleViewSelector>;
 
 const meta: Meta<typeof ArticleViewSelector> = {
-    title: '5entities/Article/ArticleViewSelector',
+    title: '4features/ArticleViewSelector',
     component: ArticleViewSelector,
     tags: ['autodocs'],
 };

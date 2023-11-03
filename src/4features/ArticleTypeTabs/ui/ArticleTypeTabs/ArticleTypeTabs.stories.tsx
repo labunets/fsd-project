@@ -4,7 +4,7 @@ import { ArticleTypeTabs } from './ArticleTypeTabs';
 type Story = StoryObj<typeof ArticleTypeTabs>;
 
 const meta: Meta<typeof ArticleTypeTabs> = {
-    title: '5entities/Article/ArticleTypeTabs',
+    title: '4features/ArticleTypeTabs',
     component: ArticleTypeTabs,
     tags: ['autodocs'],
 };

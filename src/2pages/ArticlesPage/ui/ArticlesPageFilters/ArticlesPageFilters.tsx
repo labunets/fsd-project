@@ -1,14 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
-import {
-    ArticleSortField,
-    ArticleSortSelector,
-    ArticleType,
-    ArticleTypeTabs,
-    ArticleView,
-    ArticleViewSelector,
-} from '@/5entities/Article';
+import { ArticleSortField, ArticleType, ArticleView } from '@/5entities/Article';
 import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Input } from '@/6shared/ui/Input';
 import { SortOrder } from '@/6shared/types';
@@ -23,6 +16,9 @@ import {
     getArticlesPageType,
     getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
+import { ArticleTypeTabs } from '@/4features/ArticleTypeTabs';
+import { ArticleViewSelector } from '@/4features/ArticleViewSelector';
+import { ArticleSortSelector } from '@/4features/ArticleSortSelector';
 
 interface ArticlesPageFiltersProps {
     className?: string;

@@ -4,7 +4,7 @@ import { ArticleSortSelector } from './ArticleSortSelector';
 type Story = StoryObj<typeof ArticleSortSelector>;
 
 const meta: Meta<typeof ArticleSortSelector> = {
-    title: '5entities/Article/ArticleSortSelector',
+    title: '4features/ArticleSortSelector',
     component: ArticleSortSelector,
     tags: ['autodocs'],
 };

@@ -3,8 +3,8 @@ import GridIcon from '@/6shared/assets/icons/outline-grid.svg';
 import ListIcon from '@/6shared/assets/icons/outline-list.svg';
 import { Button, ButtonTheme } from '@/6shared/ui/Button';
 import { HStack } from '@/6shared/ui/Stack';
-import { ArticleView } from '../../model/consts/consts';
 import cls from './ArticleViewSelector.module.scss';
+import { ArticleView } from '@/5entities/Article';
 
 interface ArticleViewSelectorProps {
     view: ArticleView;

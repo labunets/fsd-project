@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { ArticleSortField, ArticleType, ArticleView } from '@/5entities/Article';
 import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Input } from '@/6shared/ui/Input';
-import { SortOrder } from '@/6shared/types';
+import { SortOrder } from '@/6shared/types/sort';
 import { useDebounce } from '@/6shared/lib/hooks/useDebounce/useDebounce';
 import { HStack, VStack } from '@/6shared/ui/Stack';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';

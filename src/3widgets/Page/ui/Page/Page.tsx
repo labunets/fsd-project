@@ -11,8 +11,9 @@ import { useInitialEffect } from '@/6shared/lib/hooks/useInitialEffect/useInitia
 import { StateSchema } from '@/1app/providers/StoreProvider';
 import { useThrottle } from '@/6shared/lib/hooks/useThrottle/useThrottle';
 import cls from './Page.module.scss';
+import { TestProps } from '@/6shared/types/tests';
 
-interface PageProps {
+interface PageProps extends TestProps {
     className?: string;
     children: ReactNode;
     onScrollEnd?: () => void;
@@ -21,7 +22,9 @@ interface PageProps {
 export const PAGE_ID = 'PAGE_ID';
 
 export const Page = (props: PageProps) => {
-    const { className, children, onScrollEnd } = props;
+    const {
+        className, children, onScrollEnd, ...otherProps
+    } = props;
     const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>;
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
     const dispatch = useAppDispatch();
@@ -53,6 +56,7 @@ export const Page = (props: PageProps) => {
             className={classNames(cls.Page, {}, [className])}
             onScroll={onScroll}
             id={PAGE_ID}
+            data-testid={otherProps['data-testid'] != null ? otherProps['data-testid'] : 'Page'}
         >
             {children}
             {onScrollEnd ? <div ref={triggerRef} className={cls.trigger} /> : null}

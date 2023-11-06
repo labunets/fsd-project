@@ -17,16 +17,11 @@
         }
     }
 
-    .imageWrapper {
+    .image {
         height: 200px;
         width: 300px;
         min-width: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         border-radius: var(--input-border-radius) 0 0 var(--input-border-radius);
-        background-position: center center;
-        background-size: cover;
     }
 
     .detailsWrapper {
@@ -36,10 +31,6 @@
 
     .infoWrapper {
         opacity: 0.5;
-    }
-
-    .img {
-        width: 100%;
     }
 
     .title {
@@ -89,11 +80,9 @@
         }
     }
 
-    .imageWrapper {
+    .image {
         height: 200px;
-        width: 100%;
-        background-position: center center;
-        background-size: cover;
+        width: 300px;
         border-radius: var(--input-border-radius) var(--input-border-radius) 0 0;
     }
 

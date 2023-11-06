@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import { Text, TextSize } from '@/6shared/ui/Text';
@@ -11,6 +10,8 @@ import { ArticleView } from '../../model/consts/consts';
 import cls from './ArticleListItem.module.scss';
 import { Article } from '../../model/types/article';
 import { getRouteArticleDetails } from '@/6shared/const/router';
+import { AppImage } from '@/6shared/ui/AppImage';
+import { Skeleton } from '@/6shared/ui/Skeleton';
 
 interface ArticleListItemProps {
     className?: string;
@@ -26,9 +27,15 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         view,
         target,
     } = props;
-    const { t } = useTranslation();
 
-    const image = <div className={cls.imageWrapper} style={{ backgroundImage: `url(${article.img})` }} />;
+    const image = (
+        <AppImage
+            fallback={<Skeleton width={300} height={200} />}
+            src={article.img}
+            alt={article.title}
+            className={cls.image}
+        />
+    );
     const types = <Text text={article.type.join(', ')} size={TextSize.S} className={cls.types} />;
     const date = <Text text={article.createdAt} size={TextSize.S} className={cls.date} />;
     const views = (

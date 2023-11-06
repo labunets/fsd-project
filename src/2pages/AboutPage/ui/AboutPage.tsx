@@ -7,7 +7,7 @@ const AboutPage = () => {
     const { t } = useTranslation('about');
 
     return (
-        <Page>
+        <Page data-testid="AboutPage">
             <Text title={t('About')} size={TextSize.L} />
         </Page>
     );

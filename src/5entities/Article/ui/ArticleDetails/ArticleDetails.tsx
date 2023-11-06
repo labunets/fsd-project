@@ -8,7 +8,6 @@ import {
     Text, TextAlign, TextSize, TextTheme,
 } from '@/6shared/ui/Text';
 import { Skeleton } from '@/6shared/ui/Skeleton';
-import { Image, ImageAlign } from '@/6shared/ui/Image';
 import EyeIcon from '@/6shared/assets/icons/outline-eye.svg';
 import CalendarIcon from '@/6shared/assets/icons/outline-calendar.svg';
 import { HStack, VStack } from '@/6shared/ui/Stack';
@@ -25,6 +24,7 @@ import {
 } from '../../model/selectors/articleDetails';
 import { ArticleBlock } from '../../model/types/article';
 import { ArticleBlockType } from '../../model/consts/consts';
+import { AppImage } from '@/6shared/ui/AppImage';
 
 interface ArticleDetailsProps {
     className?: string;
@@ -102,10 +102,10 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     } else {
         content = (
             <VStack gap="2">
-                <Image
+                <AppImage
                     src={article?.img}
                     alt={article?.title}
-                    align={ImageAlign.LEFT}
+                    fallback={<Skeleton width={300} height={200} />}
                 />
                 <Text
                     title={article?.title}

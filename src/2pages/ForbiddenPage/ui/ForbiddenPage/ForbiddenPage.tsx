@@ -6,7 +6,7 @@ const ForbiddenPage = () => {
     const { t } = useTranslation();
 
     return (
-        <Page>
+        <Page data-testid="ForbiddenPage">
             <Text
                 theme={TextTheme.ERROR}
                 title={t('You are not allowed to access this page')}

@@ -2,6 +2,8 @@ import { memo } from 'react';
 import { Text, TextAlign } from '@/6shared/ui/Text';
 import { VStack } from '@/6shared/ui/Stack';
 import { ArticleImageBlock } from '../../model/types/article';
+import { AppImage } from '@/6shared/ui/AppImage';
+import { Skeleton } from '@/6shared/ui/Skeleton';
 
 interface ArticleImageBlockComponentProps {
     block: ArticleImageBlock;
@@ -14,9 +16,10 @@ export const ArticleImageBlockComponent = memo((props: ArticleImageBlockComponen
 
     return (
         <VStack align="center">
-            <img
+            <AppImage
                 src={block.src}
                 alt={block.title}
+                fallback={<Skeleton width={100} height={100} />}
             />
             {block.title
                 && (

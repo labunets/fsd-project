@@ -7,7 +7,7 @@ const AdminPanelPage = () => {
     const { t } = useTranslation('admin');
 
     return (
-        <Page>
+        <Page data-testid="AdminPanelPage">
             <Text title={t('Admin Panel')} size={TextSize.L} />
         </Page>
     );

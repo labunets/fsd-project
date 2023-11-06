@@ -1,7 +1,9 @@
 import { memo } from 'react';
-import { Mods, classNames } from '@/6shared/lib/classNames/classNames';
+import { classNames, Mods } from '@/6shared/lib/classNames/classNames';
 import cls from './Avatar.module.scss';
 import AvatarImg from './avatar.png';
+import { AppImage } from '@/6shared/ui/AppImage';
+import { Skeleton } from '@/6shared/ui/Skeleton';
 
 export enum AvatarSize {
     SMALL = 'small',
@@ -30,9 +32,10 @@ export const Avatar = memo((props: AvatarProps) => {
 
     return (
         <div className={classNames(cls.Avatar, mods, [className])}>
-            <img
+            <AppImage
                 src={src || AvatarImg}
                 alt={alt}
+                fallback={<Skeleton border="100%" />}
             />
         </div>
     );

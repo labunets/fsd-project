@@ -3,7 +3,7 @@ import { classNames } from '@/6shared/lib/classNames/classNames';
 import { HStack, VStack } from '../Stack';
 import { Button, ButtonTheme } from '../Button/Button';
 import cls from './Tabs.module.scss';
-import { Text, TextSize } from '@/6shared/ui/Text';
+import { Text, TextSize } from '../Text';
 
 export interface TabItem {
     value: string;

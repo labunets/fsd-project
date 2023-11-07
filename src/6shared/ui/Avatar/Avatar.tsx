@@ -2,8 +2,8 @@ import { memo } from 'react';
 import { classNames, Mods } from '@/6shared/lib/classNames/classNames';
 import cls from './Avatar.module.scss';
 import AvatarImg from './avatar.png';
-import { AppImage } from '@/6shared/ui/AppImage';
-import { Skeleton } from '@/6shared/ui/Skeleton';
+import { AppImage } from '../AppImage';
+import { Skeleton } from '../Skeleton';
 
 export enum AvatarSize {
     SMALL = 'small',

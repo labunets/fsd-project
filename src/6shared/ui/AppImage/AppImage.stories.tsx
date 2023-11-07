@@ -4,7 +4,7 @@ import { AppImage } from './AppImage';
 type Story = StoryObj<typeof AppImage>;
 
 const meta: Meta<typeof AppImage> = {
-    title: 'AppImage',
+    title: '6shared/AppImage',
     component: AppImage,
     tags: ['autodocs'],
 };

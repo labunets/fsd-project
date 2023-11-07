@@ -1044,6 +1044,15 @@
         "MANAGER"
       ],
       "avatar": "https://placehold.co/120?text=Manager"
+    },
+    {
+      "id": "4",
+      "username": "testuser",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ],
+      "avatar": "https://placehold.co/120?text=TestUser"
     }
   ],
   "profile": [

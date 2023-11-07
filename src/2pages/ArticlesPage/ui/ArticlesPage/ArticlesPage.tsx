@@ -27,7 +27,10 @@ const ArticlesPage = (props: ArticlesPageProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeOnUnmount={false}>
-            <Page onScrollEnd={onLoadNextPart}>
+            <Page
+                data-testid="ArticlesPage"
+                onScrollEnd={onLoadNextPart}
+            >
                 <VStack gap="2">
                     <Text title={t('Articles')} size={TextSize.L} />
                     <ArticlesPageFilters />

@@ -1,6 +1,13 @@
-import { createEntityAdapter, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import {
-    Article, ArticleSortField, ArticleType, ArticleView,
+    createEntityAdapter,
+    createSlice,
+    PayloadAction,
+} from '@reduxjs/toolkit';
+import {
+    Article,
+    ArticleSortField,
+    ArticleType,
+    ArticleView,
 } from '@/5entities/Article';
 import { StateSchema } from '@/1app/providers/StoreProvider';
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from '@/6shared/const/localstorage';
@@ -37,7 +44,10 @@ const ArticlesPageSlice = createSlice({
         setView: (state, action: PayloadAction<ArticleView>) => {
             state.view = action.payload;
             // save to local storage
-            localStorage.setItem(ARTICLES_VIEW_LOCALSTORAGE_KEY, action.payload);
+            localStorage.setItem(
+                ARTICLES_VIEW_LOCALSTORAGE_KEY,
+                action.payload,
+            );
         },
         setPage: (state, action: PayloadAction<number>) => {
             state.page = action.payload;
@@ -55,7 +65,10 @@ const ArticlesPageSlice = createSlice({
             state.type = action.payload;
         },
         initState: (state) => {
-            const view = localStorage.getItem(ARTICLES_VIEW_LOCALSTORAGE_KEY) as ArticleView || ArticleView.GRID;
+            const view =
+                (localStorage.getItem(
+                    ARTICLES_VIEW_LOCALSTORAGE_KEY,
+                ) as ArticleView) || ArticleView.GRID;
             state.view = view;
             state.limit = view === ArticleView.GRID ? 12 : 6;
             state._inited = true;
@@ -71,10 +84,7 @@ const ArticlesPageSlice = createSlice({
                     articlesAdapter.removeAll(state);
                 }
             })
-            .addCase(fetchArticlesList.fulfilled, (
-                state,
-                action,
-            ) => {
+            .addCase(fetchArticlesList.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.hasMore = action.payload.length >= state.limit;
 
@@ -91,7 +101,5 @@ const ArticlesPageSlice = createSlice({
     },
 });
 
-export const {
-    reducer: articlesPageReducer,
-    actions: articlesPageActions,
-} = ArticlesPageSlice;
+export const { reducer: articlesPageReducer, actions: articlesPageActions } =
+    ArticlesPageSlice;

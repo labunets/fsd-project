@@ -10,6 +10,9 @@ describe('Open articles list page', () => {
     });
     it.skip('This test is skipped', () => {
         cy.getByTestId('ArticleList').should('exist');
-        cy.getByTestId('ArticleListItem').should('have.length.greaterThan', 3000);
+        cy.getByTestId('ArticleListItem').should(
+            'have.length.greaterThan',
+            3000,
+        );
     });
 });

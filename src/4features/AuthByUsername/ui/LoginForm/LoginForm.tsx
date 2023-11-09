@@ -5,7 +5,10 @@ import { classNames } from '@/6shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from '@/6shared/ui/Button';
 import { Input } from '@/6shared/ui/Input';
 import { Text, TextTheme } from '@/6shared/ui/Text';
-import { DynamicModuleLoader, ReducersList } from '@/6shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import {
+    DynamicModuleLoader,
+    ReducersList,
+} from '@/6shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
@@ -32,13 +35,19 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     const isLoading = useSelector(getLoginIsLoading);
     const error = useSelector(getLoginError);
 
-    const onChangeUsername = useCallback((value: string) => {
-        dispatch(loginActions.setUsername(value));
-    }, [dispatch]);
+    const onChangeUsername = useCallback(
+        (value: string) => {
+            dispatch(loginActions.setUsername(value));
+        },
+        [dispatch],
+    );
 
-    const onChangePassword = useCallback((value: string) => {
-        dispatch(loginActions.setPassword(value));
-    }, [dispatch]);
+    const onChangePassword = useCallback(
+        (value: string) => {
+            dispatch(loginActions.setPassword(value));
+        },
+        [dispatch],
+    );
 
     const onLoginClick = useCallback(async () => {
         const result = await dispatch(loginByUsername({ username, password }));
@@ -48,12 +57,12 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     }, [onSuccess, dispatch, password, username]);
 
     return (
-        <DynamicModuleLoader
-            removeOnUnmount
-            reducers={initialReducers}
-        >
+        <DynamicModuleLoader removeOnUnmount reducers={initialReducers}>
             <div className={classNames(cls.LoginForm, {}, [className])}>
-                <Text title={t('Login by username')} theme={TextTheme.PRIMARY} />
+                <Text
+                    title={t('Login by username')}
+                    theme={TextTheme.PRIMARY}
+                />
                 <Input
                     type="text"
                     className={cls.input}
@@ -79,7 +88,12 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                 >
                     {t('Login')}
                 </Button>
-                {error && <Text text={t('Invalid username or password')} theme={TextTheme.ERROR} />}
+                {error && (
+                    <Text
+                        text={t('Invalid username or password')}
+                        theme={TextTheme.ERROR}
+                    />
+                )}
             </div>
         </DynamicModuleLoader>
     );

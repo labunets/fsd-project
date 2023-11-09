@@ -62,12 +62,17 @@ export const RatingCard = memo((props: RatingCardProps) => {
                 label={t('Message')}
                 value={feedback}
                 onChange={setFeedback}
+                data-testid="RatingCard.Input"
             />
         </>
     );
 
     return (
-        <Card className={className} max>
+        <Card
+            className={className}
+            max
+            data-testid="RatingCard"
+        >
             <VStack align="center">
                 <Text title={starsCount ? t('Thanks for your rating!') : title} />
                 <StarRating selectedStars={rate} size={StarRatingSize.M} onSelect={onSelectStars} />
@@ -76,10 +81,18 @@ export const RatingCard = memo((props: RatingCardProps) => {
                         <VStack align="center">
                             {modalContent}
                             <HStack justify="between">
-                                <Button theme={ButtonTheme.SECONDARY} onClick={cancelHandler}>
+                                <Button
+                                    data-testid="RatingCard.Close"
+                                    theme={ButtonTheme.SECONDARY}
+                                    onClick={cancelHandler}
+                                >
                                     {t('Cancel')}
                                 </Button>
-                                <Button theme={ButtonTheme.PRIMARY} onClick={acceptHandler}>
+                                <Button
+                                    data-testid="RatingCard.Send"
+                                    theme={ButtonTheme.PRIMARY}
+                                    onClick={acceptHandler}
+                                >
                                     {t('Send')}
                                 </Button>
                             </HStack>
@@ -90,7 +103,12 @@ export const RatingCard = memo((props: RatingCardProps) => {
                     <Drawer isOpen={isModalOpen} onClose={cancelHandler} lazy>
                         <VStack align="center">
                             {modalContent}
-                            <Button onClick={acceptHandler} theme={ButtonTheme.PRIMARY} fullWidth>
+                            <Button
+                                data-testid="RatingCard.Send"
+                                onClick={acceptHandler}
+                                theme={ButtonTheme.PRIMARY}
+                                fullWidth
+                            >
                                 {t('Send')}
                             </Button>
                         </VStack>

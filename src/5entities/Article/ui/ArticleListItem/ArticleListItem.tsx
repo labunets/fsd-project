@@ -48,6 +48,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     if (view === ArticleView.LIST) {
         return (
             <AppLink
+                data-testid="ArticleListItem"
                 target={target}
                 to={getRouteArticleDetails(article.id)}
                 className={classNames(cls.link, {}, [className, cls[view]])}
@@ -76,6 +77,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 
     return (
         <AppLink
+            data-testid="ArticleListItem"
             target={target}
             to={getRouteArticleDetails(article.id)}
             className={classNames('', {}, [className, cls[view]])}

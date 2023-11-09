@@ -839,6 +839,32 @@
           ]
         }
       ]
+    },
+    {
+      "title": "TESTING ARTICLE",
+      "subtitle": "Biology",
+      "img": "https://placehold.co/600x400?text=Python",
+      "views": 1022,
+      "createdAt": "26.02.2022",
+      "userId": "1",
+      "type": [
+        "SCIENCE"
+      ],
+      "blocks": [],
+      "id": "cwIJcno"
+    },
+    {
+      "title": "TESTING ARTICLE",
+      "subtitle": "Biology",
+      "img": "https://placehold.co/600x400?text=Python",
+      "views": 1022,
+      "createdAt": "26.02.2022",
+      "userId": "1",
+      "type": [
+        "SCIENCE"
+      ],
+      "blocks": [],
+      "id": "YLad4RL"
     }
   ],
   "comments": [
@@ -1077,6 +1103,28 @@
       "city": "Kyiv",
       "username": "veronica",
       "avatar": "https://placehold.co/120?text=Nica"
+    },
+    {
+      "id": "3",
+      "firstname": "Manager",
+      "lastname": "Office",
+      "age": 14,
+      "currency": "UAH",
+      "country": "Ukraine",
+      "city": "Kyiv",
+      "username": "manager",
+      "avatar": "https://placehold.co/120?text=Manager"
+    },
+    {
+      "id": "4",
+      "firstname": "Tester",
+      "lastname": "Qa",
+      "age": 24,
+      "currency": "UAH",
+      "country": "Ukraine",
+      "city": "Kyiv",
+      "username": "testuser",
+      "avatar": "https://placehold.co/120?text=QA"
     }
   ],
   "article-ratings": [

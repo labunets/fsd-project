@@ -114,7 +114,11 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                     align={TextAlign.LEFT}
                     theme={TextTheme.PRIMARY}
                 />
-                <VStack gap="0" className={cls.articleInfo}>
+                <VStack
+                    data-testid="ArticleDetails.Info"
+                    gap="0"
+                    className={cls.articleInfo}
+                >
                     <HStack>
                         <EyeIcon className={cls.icon} />
                         <Text
@@ -143,7 +147,10 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classNames(cls.ArticleDetails, {}, [className])}>
+            <div
+                data-testid="ArticleDetails"
+                className={classNames(cls.ArticleDetails, {}, [className])}
+            >
                 {content}
             </div>
         </DynamicModuleLoader>

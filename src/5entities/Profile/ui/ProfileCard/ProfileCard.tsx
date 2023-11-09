@@ -66,7 +66,11 @@ export const ProfileCard = (props: ProfileCardProps) => {
     }
 
     return (
-        <VStack gap="2" className={classNames(cls.ProfileCard, {}, [className, cls.data])}>
+        <VStack
+            gap="2"
+            data-testid="ProfileCard"
+            className={classNames(cls.ProfileCard, {}, [className, cls.data])}
+        >
             <Avatar
                 src={data?.avatar}
                 size={AvatarSize.LARGE}

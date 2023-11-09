@@ -1,0 +1,11 @@
+{
+  "id": "1",
+  "firstname": "Den",
+  "lastname": "Labunets",
+  "age": 44,
+  "currency": "UAH",
+  "country": "Ukraine",
+  "city": "Kyiv",
+  "username": "admin",
+  "avatar": "https://placehold.co/120?text=Den"
+}

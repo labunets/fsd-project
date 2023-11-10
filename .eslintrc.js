@@ -111,6 +111,7 @@ module.exports = {
             'error',
             { maximum: 4, when: 'always' },
         ],
+        'react/no-unstable-nested-components': 'warn',
     },
     globals: {
         __IS_DEV__: true,

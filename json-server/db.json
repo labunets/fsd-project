@@ -1056,9 +1056,10 @@
         "isCounterEnabled": true
       },
       "jsonSettings": {
-        "theme": "app_blue_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "settingsPageHasBeenOpen": false,
+        "isArticlePageWasOpened": true
       },
       "avatar": "https://placehold.co/120?text=Admin"
     },
@@ -1074,9 +1075,10 @@
         "isCounterEnabled": false
       },
       "jsonSettings": {
-        "theme": "app_dark_theme",
+        "theme": "app_light_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "settingsPageHasBeenOpen": false,
+        "isArticlePageWasOpened": true
       },
       "avatar": "https://placehold.co/120?text=User"
     },

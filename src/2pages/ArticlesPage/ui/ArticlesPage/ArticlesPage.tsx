@@ -12,6 +12,7 @@ import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters'
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { articlesPageReducer } from '../../model/slices/ArticlesPageSlice';
 import { ArticleInfiniteList } from '../../ui/ArticleInfiniteList/ArticleInfiniteList';
+import { ArticlePageGreeting } from '@/4features/articlePageGreeting';
 
 interface ArticlesPageProps {}
 
@@ -34,6 +35,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
                     <Text title={t('Articles')} size={TextSize.L} />
                     <ArticlesPageFilters />
                     <ArticleInfiniteList />
+                    <ArticlePageGreeting />
                 </VStack>
             </Page>
         </DynamicModuleLoader>

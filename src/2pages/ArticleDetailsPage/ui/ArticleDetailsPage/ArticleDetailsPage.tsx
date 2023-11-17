@@ -15,8 +15,6 @@ import { articleDetailsPageReducer } from '../../model/slices';
 import cls from './ArticleDetailsPage.module.scss';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
 import { ArticleRating } from '@/4features/articleRating';
-import { toggleFeatures } from '@/6shared/lib/features';
-import { Card } from '@/6shared/ui/Card';
 
 interface ArticlesDetailsPageProps {
     className?: string;
@@ -35,12 +33,6 @@ const ArticleDetailsPage = (props: ArticlesDetailsPageProps) => {
         return null;
     }
 
-    const rating = toggleFeatures({
-        name: 'isArticleRatingEnabled',
-        on: () => <ArticleRating articleId={id} />,
-        off: () => <Card>{t('Article rating coming soon!')}</Card>,
-    });
-
     return (
         <DynamicModuleLoader reducers={reducers}>
             <Page
@@ -49,7 +41,7 @@ const ArticleDetailsPage = (props: ArticlesDetailsPageProps) => {
                 <VStack gap="3">
                     <ArticleDetailsPageHeader />
                     <ArticleDetails id={id} />
-                    {rating}
+                    <ArticleRating articleId={id} />
                     <ArticleRecommendationsList />
                     <ArticleDetailsComments id={id} />
                 </VStack>

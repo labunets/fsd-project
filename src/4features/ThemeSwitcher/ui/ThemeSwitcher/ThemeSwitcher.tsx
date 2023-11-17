@@ -1,9 +1,11 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import LightIcon from '@/6shared/assets/icons/brightness-white.svg';
 import { Button, ButtonTheme } from '@/6shared/ui/Button';
 import cls from './ThemeSwitcher.module.scss';
 import { useTheme } from '@/6shared/lib/hooks/useTheme/useTheme';
+import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { saveJsonSettings } from '@/5entities/User';
 
 interface ThemeSwitcherProps {
     className?: string;
@@ -11,12 +13,19 @@ interface ThemeSwitcherProps {
 
 export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
     const { theme, toggleTheme } = useTheme();
+    const dispatch = useAppDispatch();
+
+    const onToggleHandler = useCallback(() => {
+        toggleTheme((newTheme) => {
+            dispatch(saveJsonSettings({ theme: newTheme }));
+        });
+    }, [dispatch, toggleTheme]);
 
     return (
         <Button
             theme={ButtonTheme.TERTIARY_INVERTED}
             className={classNames(cls.ThemeSwitcher, {}, [className])}
-            onClick={toggleTheme}
+            onClick={onToggleHandler}
         >
             <LightIcon className={cls.svg} />
         </Button>

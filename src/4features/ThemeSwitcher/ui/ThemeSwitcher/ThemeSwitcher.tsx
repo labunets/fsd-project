@@ -1,7 +1,7 @@
 import React, { memo, useCallback } from 'react';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import LightIcon from '@/6shared/assets/icons/brightness-white.svg';
-import { Button, ButtonTheme } from '@/6shared/ui/Button';
+import { Button, ButtonTheme } from '@/6shared/ui/deprecated/Button';
 import cls from './ThemeSwitcher.module.scss';
 import { useTheme } from '@/6shared/lib/hooks/useTheme/useTheme';
 import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatch';

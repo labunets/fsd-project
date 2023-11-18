@@ -2,11 +2,11 @@ import { useTranslation } from 'react-i18next';
 import { Currency, CurrencySelect } from '@/5entities/Currency';
 import { Country, CountrySelect } from '@/5entities/Country';
 import { classNames } from '@/6shared/lib/classNames/classNames';
-import { Text, TextAlign, TextTheme } from '@/6shared/ui/Text';
-import { Input } from '@/6shared/ui/Input';
-import { Loader } from '@/6shared/ui/Loader';
-import { Avatar, AvatarSize } from '@/6shared/ui/Avatar';
-import { VStack } from '@/6shared/ui/Stack';
+import { Text, TextAlign, TextTheme } from '@/6shared/ui/deprecated/Text';
+import { Input } from '@/6shared/ui/deprecated/Input';
+import { Loader } from '@/6shared/ui/deprecated/Loader';
+import { Avatar, AvatarSize } from '@/6shared/ui/deprecated/Avatar';
+import { VStack } from '@/6shared/ui/deprecated/Stack';
 import { Profile } from '../../model/types/profile';
 import cls from './ProfileCard.module.scss';
 
@@ -46,7 +46,12 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
     if (isLoading) {
         return (
-            <div className={classNames(cls.ProfileCard, {}, [className, cls.loading])}>
+            <div
+                className={classNames(cls.ProfileCard, {}, [
+                    className,
+                    cls.loading,
+                ])}
+            >
                 <Loader />
             </div>
         );
@@ -54,7 +59,12 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
     if (error) {
         return (
-            <div className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
+            <div
+                className={classNames(cls.ProfileCard, {}, [
+                    className,
+                    cls.error,
+                ])}
+            >
                 <Text
                     title={t('Error')}
                     text={t('Cannot load profile data')}

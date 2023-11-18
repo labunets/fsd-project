@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Page } from '@/3widgets/Page';
-import { Text, TextTheme } from '@/6shared/ui/Text';
+import { Text, TextTheme } from '@/6shared/ui/deprecated/Text';
 
 const ForbiddenPage = () => {
     const { t } = useTranslation();

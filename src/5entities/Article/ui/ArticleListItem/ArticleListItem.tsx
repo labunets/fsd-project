@@ -1,17 +1,17 @@
 import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { classNames } from '@/6shared/lib/classNames/classNames';
-import { Text, TextSize } from '@/6shared/ui/Text';
+import { Text, TextSize } from '@/6shared/ui/deprecated/Text';
 import EyeIcon from '@/6shared/assets/icons/outline-eye.svg';
-import { Card } from '@/6shared/ui/Card';
-import { Avatar, AvatarSize } from '@/6shared/ui/Avatar';
-import { AppLink } from '@/6shared/ui/AppLink';
-import { HStack, VStack } from '@/6shared/ui/Stack';
+import { Card } from '@/6shared/ui/deprecated/Card';
+import { Avatar, AvatarSize } from '@/6shared/ui/deprecated/Avatar';
+import { AppLink } from '@/6shared/ui/deprecated/AppLink';
+import { HStack, VStack } from '@/6shared/ui/deprecated/Stack';
 import { ArticleView } from '../../model/consts/consts';
 import cls from './ArticleListItem.module.scss';
 import { Article } from '../../model/types/article';
 import { getRouteArticleDetails } from '@/6shared/const/router';
-import { AppImage } from '@/6shared/ui/AppImage';
-import { Skeleton } from '@/6shared/ui/Skeleton';
+import { AppImage } from '@/6shared/ui/deprecated/AppImage';
+import { Skeleton } from '@/6shared/ui/deprecated/Skeleton';
 
 interface ArticleListItemProps {
     className?: string;
@@ -21,12 +21,7 @@ interface ArticleListItemProps {
 }
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
-    const {
-        className,
-        article,
-        view,
-        target,
-    } = props;
+    const { className, article, view, target } = props;
 
     const image = (
         <AppImage
@@ -36,12 +31,24 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             className={cls.image}
         />
     );
-    const types = <Text text={article.type.join(', ')} size={TextSize.S} className={cls.types} />;
-    const date = <Text text={article.createdAt} size={TextSize.S} className={cls.date} />;
+    const types = (
+        <Text
+            text={article.type.join(', ')}
+            size={TextSize.S}
+            className={cls.types}
+        />
+    );
+    const date = (
+        <Text text={article.createdAt} size={TextSize.S} className={cls.date} />
+    );
     const views = (
         <HStack gap="0" className={cls.viewsWrapper} align="center">
             <EyeIcon className={cls.icon} />
-            <Text text={String(article.views)} size={TextSize.S} className={cls.views} />
+            <Text
+                text={String(article.views)}
+                size={TextSize.S}
+                className={cls.views}
+            />
         </HStack>
     );
 
@@ -57,8 +64,15 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     {image}
                     <VStack gap="1" className={cls.detailsWrapper}>
                         <HStack gap="0" max={false}>
-                            <Avatar size={AvatarSize.SMALL} src={article.user.avatar} />
-                            <Text text={article.user.username} size={TextSize.M} className={cls.username} />
+                            <Avatar
+                                size={AvatarSize.SMALL}
+                                src={article.user.avatar}
+                            />
+                            <Text
+                                text={article.user.username}
+                                size={TextSize.M}
+                                className={cls.username}
+                            />
                         </HStack>
                         <VStack gap="0">
                             <Text title={article.title} />

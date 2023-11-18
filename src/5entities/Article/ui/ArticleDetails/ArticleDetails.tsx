@@ -2,15 +2,21 @@ import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/6shared/lib/classNames/classNames';
-import { DynamicModuleLoader, ReducersList } from '@/6shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import {
+    DynamicModuleLoader,
+    ReducersList,
+} from '@/6shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
-    Text, TextAlign, TextSize, TextTheme,
-} from '@/6shared/ui/Text';
-import { Skeleton } from '@/6shared/ui/Skeleton';
+    Text,
+    TextAlign,
+    TextSize,
+    TextTheme,
+} from '@/6shared/ui/deprecated/Text';
+import { Skeleton } from '@/6shared/ui/deprecated/Skeleton';
 import EyeIcon from '@/6shared/assets/icons/outline-eye.svg';
 import CalendarIcon from '@/6shared/assets/icons/outline-calendar.svg';
-import { HStack, VStack } from '@/6shared/ui/Stack';
+import { HStack, VStack } from '@/6shared/ui/deprecated/Stack';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
@@ -23,7 +29,7 @@ import {
 } from '../../model/selectors/articleDetails';
 import { ArticleBlock } from '../../model/types/article';
 import { ArticleBlockType } from '../../model/consts/consts';
-import { AppImage } from '@/6shared/ui/AppImage';
+import { AppImage } from '@/6shared/ui/deprecated/AppImage';
 import { articleDetailsReducer } from '../../model/slices/articleDetailsSlice';
 
 interface ArticleDetailsProps {
@@ -36,10 +42,7 @@ const reducers: ReducersList = {
 };
 
 export const ArticleDetails = memo((props: ArticleDetailsProps) => {
-    const {
-        className,
-        id,
-    } = props;
+    const { className, id } = props;
     const { t } = useTranslation('article');
     const dispatch = useAppDispatch();
     const isLoading = useSelector(getArticleDetailsIsLoading);
@@ -48,29 +51,20 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
     const renderBlock = useCallback((block: ArticleBlock) => {
         switch (block.type) {
-        case ArticleBlockType.TEXT:
-            return (
-                <ArticleTextBlockComponent
-                    block={block}
-                    key={block.id}
-                />
-            );
-        case ArticleBlockType.IMAGE:
-            return (
-                <ArticleImageBlockComponent
-                    block={block}
-                    key={block.id}
-                />
-            );
-        case ArticleBlockType.CODE:
-            return (
-                <ArticleCodeBlockComponent
-                    block={block}
-                    key={block.id}
-                />
-            );
-        default:
-            return null;
+            case ArticleBlockType.TEXT:
+                return (
+                    <ArticleTextBlockComponent block={block} key={block.id} />
+                );
+            case ArticleBlockType.IMAGE:
+                return (
+                    <ArticleImageBlockComponent block={block} key={block.id} />
+                );
+            case ArticleBlockType.CODE:
+                return (
+                    <ArticleCodeBlockComponent block={block} key={block.id} />
+                );
+            default:
+                return null;
         }
     }, []);
 
@@ -138,9 +132,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                         />
                     </HStack>
                 </VStack>
-                <VStack gap="2">
-                    {article?.blocks.map(renderBlock)}
-                </VStack>
+                <VStack gap="2">{article?.blocks.map(renderBlock)}</VStack>
             </VStack>
         );
     }

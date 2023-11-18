@@ -1,8 +1,8 @@
 import { memo } from 'react';
 import GridIcon from '@/6shared/assets/icons/outline-grid.svg';
 import ListIcon from '@/6shared/assets/icons/outline-list.svg';
-import { Button, ButtonTheme } from '@/6shared/ui/Button';
-import { HStack } from '@/6shared/ui/Stack';
+import { Button, ButtonTheme } from '@/6shared/ui/deprecated/Button';
+import { HStack } from '@/6shared/ui/deprecated/Stack';
 import cls from './ArticleViewSelector.module.scss';
 import { ArticleView } from '@/5entities/Article';
 
@@ -23,10 +23,7 @@ const viewTypes = [
 ];
 
 export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
-    const {
-        view,
-        onViewClick,
-    } = props;
+    const { view, onViewClick } = props;
     const onClick = (newView: ArticleView) => () => {
         onViewClick?.(newView);
     };
@@ -39,7 +36,9 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
                     onClick={onClick(viewType.view)}
                     active={viewType.view === view}
                     key={viewType.view}
-                    className={viewType.view === view ? cls.standard : cls.pointer}
+                    className={
+                        viewType.view === view ? cls.standard : cls.pointer
+                    }
                 >
                     {viewType.icon}
                 </Button>

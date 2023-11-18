@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
-import { Text } from '@/6shared/ui/Text';
-import { VStack } from '@/6shared/ui/Stack';
+import { Text } from '@/6shared/ui/deprecated/Text';
+import { VStack } from '@/6shared/ui/deprecated/Stack';
 import { CommentCard } from '../CommentCard/CommentCard';
 import { Comment } from '../../model/types/comment';
 
@@ -12,11 +12,7 @@ interface CommentListProps {
 }
 
 export const CommentList = memo((props: CommentListProps) => {
-    const {
-        className,
-        isLoading,
-        comments,
-    } = props;
+    const { className, isLoading, comments } = props;
     const { t } = useTranslation();
 
     if (isLoading) {
@@ -31,15 +27,17 @@ export const CommentList = memo((props: CommentListProps) => {
 
     return (
         <VStack className={className}>
-            {comments?.length
-                ? comments.map((comment) => (
+            {comments?.length ? (
+                comments.map((comment) => (
                     <CommentCard
                         key={comment.id}
                         comment={comment}
                         isLoading={isLoading}
                     />
                 ))
-                : <Text text={t('No comments')} />}
+            ) : (
+                <Text text={t('No comments')} />
+            )}
         </VStack>
     );
 });

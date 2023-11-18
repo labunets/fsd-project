@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useMemo } from 'react';
-import { Select, SelectOption } from '@/6shared/ui/Select';
+import { Select, SelectOption } from '@/6shared/ui/deprecated/Select';
 import { SortOrder } from '@/6shared/types/sort';
-import { HStack } from '@/6shared/ui/Stack';
+import { HStack } from '@/6shared/ui/deprecated/Stack';
 import { ArticleSortField } from '@/5entities/Article';
 
 interface ArticleSortSelectorProps {
@@ -13,39 +13,40 @@ interface ArticleSortSelectorProps {
 }
 
 export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
-    const {
-        sort,
-        order,
-        onChangeOrder,
-        onChangeSort,
-    } = props;
+    const { sort, order, onChangeOrder, onChangeSort } = props;
     const { t } = useTranslation();
 
-    const orderOptions = useMemo<SelectOption<SortOrder>[]>(() => [
-        {
-            value: 'asc',
-            content: t('ascending'),
-        },
-        {
-            value: 'desc',
-            content: t('descending'),
-        },
-    ], [t]);
+    const orderOptions = useMemo<SelectOption<SortOrder>[]>(
+        () => [
+            {
+                value: 'asc',
+                content: t('ascending'),
+            },
+            {
+                value: 'desc',
+                content: t('descending'),
+            },
+        ],
+        [t],
+    );
 
-    const sortFieldOptions = useMemo<SelectOption<ArticleSortField>[]>(() => [
-        {
-            value: ArticleSortField.CREATED,
-            content: t('created'),
-        },
-        {
-            value: ArticleSortField.TITLE,
-            content: t('title'),
-        },
-        {
-            value: ArticleSortField.VIEWS,
-            content: t('views'),
-        },
-    ], [t]);
+    const sortFieldOptions = useMemo<SelectOption<ArticleSortField>[]>(
+        () => [
+            {
+                value: ArticleSortField.CREATED,
+                content: t('created'),
+            },
+            {
+                value: ArticleSortField.TITLE,
+                content: t('title'),
+            },
+            {
+                value: ArticleSortField.VIEWS,
+                content: t('views'),
+            },
+        ],
+        [t],
+    );
 
     return (
         <HStack max={false}>

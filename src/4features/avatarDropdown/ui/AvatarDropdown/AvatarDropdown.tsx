@@ -2,11 +2,14 @@ import { useTranslation } from 'react-i18next';
 import React, { memo, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-    getUserAuthData, isUserAdmin, isUserManager, userActions,
+    getUserAuthData,
+    isUserAdmin,
+    isUserManager,
+    userActions,
 } from '@/5entities/User';
 import { classNames } from '@/6shared/lib/classNames/classNames';
-import { Avatar } from '@/6shared/ui/Avatar';
-import { Dropdown } from '@/6shared/ui/Popups';
+import { Avatar } from '@/6shared/ui/deprecated/Avatar';
+import { Dropdown } from '@/6shared/ui/deprecated/Popups';
 import { getRouteAdminPanel, getRouteProfile } from '@/6shared/const/router';
 
 interface AvatarDropdownProps {
@@ -38,10 +41,12 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
             trigger={<Avatar src={authData.avatar} />}
             items={[
                 ...(isAdminPanelAvailable
-                    ? [{
-                        content: t('Dashboard'),
-                        href: getRouteAdminPanel(),
-                    }]
+                    ? [
+                          {
+                              content: t('Dashboard'),
+                              href: getRouteAdminPanel(),
+                          },
+                      ]
                     : []),
                 {
                     content: t('Profile'),

@@ -1,17 +1,17 @@
 import { useSelector } from 'react-redux';
 import { memo, useMemo, useState } from 'react';
-import { Button, ButtonTheme } from '@/6shared/ui/Button';
+import { Button, ButtonTheme } from '@/6shared/ui/deprecated/Button';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import ChevronLeftIcon from '@/6shared/assets/icons/chevron-left.svg';
 import ChevronRightIcon from '@/6shared/assets/icons/chevron-right.svg';
-import { HStack, VStack } from '@/6shared/ui/Stack';
+import { HStack, VStack } from '@/6shared/ui/deprecated/Stack';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 import { getSidebarItems } from '../../model/selectors/getSidebarItems';
 import cls from './Sidebar.module.scss';
 import { ThemeSwitcher } from '@/4features/ThemeSwitcher';
 import { LangSwitcher } from '@/4features/LangSwitcher';
 import { ToggleFeatures } from '@/6shared/lib/features';
-import { AppLogo } from '@/6shared/ui/AppLogo';
+import { AppLogo } from '@/6shared/ui/deprecated/AppLogo';
 
 interface SidebarProps {
     className?: string;

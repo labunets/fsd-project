@@ -1,6 +1,6 @@
 import { classNames } from '@/6shared/lib/classNames/classNames';
 
-import { Loader } from '@/6shared/ui/Loader';
+import { Loader } from '@/6shared/ui/deprecated/Loader';
 import cls from './PageLoader.module.scss';
 
 interface PageLoaderProps {

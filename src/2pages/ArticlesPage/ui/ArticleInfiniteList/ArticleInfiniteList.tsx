@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArticleList } from '@/5entities/Article';
 import { Page } from '@/3widgets/Page';
-import { Text, TextSize, TextTheme } from '@/6shared/ui/Text';
+import { Text, TextSize, TextTheme } from '@/6shared/ui/deprecated/Text';
 import { useInitialEffect } from '@/6shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getArticles } from '../../model/slices/ArticlesPageSlice';
@@ -37,7 +37,11 @@ export const ArticleInfiniteList = memo((props: ArticleInfiniteListProps) => {
         return (
             <Page>
                 <Text title={t('Articles')} size={TextSize.L} />
-                <Text text={t('Error')} theme={TextTheme.ERROR} size={TextSize.L} />
+                <Text
+                    text={t('Error')}
+                    theme={TextTheme.ERROR}
+                    size={TextSize.L}
+                />
             </Page>
         );
     }

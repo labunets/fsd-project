@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { classNames } from '@/6shared/lib/classNames/classNames';
-import { Modal } from '@/6shared/ui/Modal';
-import { Loader } from '@/6shared/ui/Loader';
+import { Modal } from '@/6shared/ui/deprecated/Modal';
+import { Loader } from '@/6shared/ui/deprecated/Loader';
 import { LoginFormAsync } from '../LoginForm/LoginForm.async';
 
 interface LoginModalProps {
@@ -11,11 +11,7 @@ interface LoginModalProps {
 }
 
 export const LoginModal = (props: LoginModalProps) => {
-    const {
-        className,
-        isOpen,
-        onClose,
-    } = props;
+    const { className, isOpen, onClose } = props;
 
     return (
         <Modal

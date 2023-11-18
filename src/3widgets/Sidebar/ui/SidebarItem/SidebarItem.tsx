@@ -2,15 +2,15 @@ import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { useSelector } from 'react-redux';
 import { getUserAuthData } from '@/5entities/User';
-import { AppLink, AppLinkTheme } from '@/6shared/ui/AppLink';
+import { AppLink, AppLinkTheme } from '@/6shared/ui/deprecated/AppLink';
 import { classNames } from '@/6shared/lib/classNames/classNames';
-import { Text } from '@/6shared/ui/Text';
-import { HStack } from '@/6shared/ui/Stack';
+import { Text } from '@/6shared/ui/deprecated/Text';
+import { HStack } from '@/6shared/ui/deprecated/Stack';
 import { SidebarItemTypes } from '../../model/types/sidebar';
 import cls from './SidebarItem.module.scss';
 
 interface SidebarItemProps {
-    item: SidebarItemTypes,
+    item: SidebarItemTypes;
     collapsed?: boolean;
 }
 
@@ -30,10 +30,7 @@ export const SidebarItem = memo(({ item, collapsed }: SidebarItemProps) => {
         >
             <HStack>
                 <item.Icon className={cls.icon} />
-                <Text
-                    text={t(item.text)}
-                    className={cls.link}
-                />
+                <Text text={t(item.text)} className={cls.link} />
             </HStack>
         </AppLink>
     );

@@ -1,6 +1,6 @@
 @import "reset";
 @import "./themes/light";
-@import "./themes/blue";
+@import "themes/yellow";
 @import "./themes/dark";
 @import "./variables/global";
 
@@ -13,6 +13,12 @@ body {
     background-color: var(--bg-color);
     color: var(--primary-color);
     min-width: 480px;
+}
+
+.app_redesigned {
+    background-color: var(--bg-redesigned);
+    font: var(--font-m-redesigned);
+    color: var(--text-redesigned);
 }
 
 .content-page {

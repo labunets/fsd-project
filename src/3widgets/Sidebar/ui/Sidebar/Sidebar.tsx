@@ -10,6 +10,8 @@ import { getSidebarItems } from '../../model/selectors/getSidebarItems';
 import cls from './Sidebar.module.scss';
 import { ThemeSwitcher } from '@/4features/ThemeSwitcher';
 import { LangSwitcher } from '@/4features/LangSwitcher';
+import { ToggleFeatures } from '@/6shared/lib/features';
+import { AppLogo } from '@/6shared/ui/AppLogo';
 
 interface SidebarProps {
     className?: string;
@@ -28,36 +30,68 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
         localStorage.setItem('collapsed', String(!collapsed));
     };
 
-    const itemsList = useMemo(() => sidebarItemsList.map((item) => (
-        <SidebarItem
-            item={item}
-            collapsed={collapsed}
-            key={item.path}
-        />
-    )), [sidebarItemsList, collapsed]);
+    const itemsList = useMemo(
+        () =>
+            sidebarItemsList.map((item) => (
+                <SidebarItem
+                    item={item}
+                    collapsed={collapsed}
+                    key={item.path}
+                />
+            )),
+        [sidebarItemsList, collapsed],
+    );
 
     return (
-        <aside
-            data-testid="sidebar"
-            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [])}
-        >
-            <VStack role="navigation" gap="2" align={collapsed ? 'center' : 'start'} className={cls.items}>
-                {itemsList}
-            </VStack>
-
-            <HStack gap="0" justify="between" className={cls.switchers}>
-                <ThemeSwitcher />
-                <LangSwitcher
-                    className={cls.lang}
-                />
-                <Button
-                    data-testid="sidebar-toggle"
-                    theme={ButtonTheme.TERTIARY_INVERTED}
-                    onClick={onToggle}
+        <ToggleFeatures
+            feature="isAppRedesigned"
+            on={
+                <aside
+                    data-testid="sidebar"
+                    className={classNames(
+                        cls.SidebarRedesigned,
+                        { [cls.collapsed]: collapsed },
+                        [],
+                    )}
                 >
-                    {collapsed ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-                </Button>
-            </HStack>
-        </aside>
+                    <AppLogo className={cls.logo} />
+                </aside>
+            }
+            off={
+                <aside
+                    data-testid="sidebar"
+                    className={classNames(
+                        cls.Sidebar,
+                        { [cls.collapsed]: collapsed },
+                        [],
+                    )}
+                >
+                    <VStack
+                        role="navigation"
+                        gap="2"
+                        align={collapsed ? 'center' : 'start'}
+                        className={cls.items}
+                    >
+                        {itemsList}
+                    </VStack>
+
+                    <HStack gap="0" justify="between" className={cls.switchers}>
+                        <ThemeSwitcher />
+                        <LangSwitcher className={cls.lang} />
+                        <Button
+                            data-testid="sidebar-toggle"
+                            theme={ButtonTheme.TERTIARY_INVERTED}
+                            onClick={onToggle}
+                        >
+                            {collapsed ? (
+                                <ChevronRightIcon />
+                            ) : (
+                                <ChevronLeftIcon />
+                            )}
+                        </Button>
+                    </HStack>
+                </aside>
+            }
+        />
     );
 });

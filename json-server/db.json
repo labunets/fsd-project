@@ -1053,13 +1053,14 @@
       ],
       "features": {
         "isArticleRatingEnabled": true,
-        "isCounterEnabled": true
+        "isCounterEnabled": true,
+        "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_dark_theme",
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false,
-        "isArticlePageWasOpened": true
+        "isArticlePageWasOpened": true,
+        "theme": "app_dark_theme"
       },
       "avatar": "https://placehold.co/120?text=Admin"
     },

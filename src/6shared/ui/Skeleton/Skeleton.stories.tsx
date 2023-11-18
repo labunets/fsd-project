@@ -51,7 +51,7 @@ export const NormalBlue: Story = {
         height: 200,
     },
 };
-NormalBlue.decorators = [ThemeDecorator(Theme.BLUE)];
+NormalBlue.decorators = [ThemeDecorator(Theme.YELLOW)];
 
 export const CircleBlue: Story = {
     args: {
@@ -60,4 +60,4 @@ export const CircleBlue: Story = {
         height: 100,
     },
 };
-CircleBlue.decorators = [ThemeDecorator(Theme.BLUE)];
+CircleBlue.decorators = [ThemeDecorator(Theme.YELLOW)];

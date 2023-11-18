@@ -31,8 +31,8 @@ const preview: Preview = {
                 },
                 {
                     name: 'blue',
-                    class: ['app', Theme.BLUE],
-                    color: '#0b2566',
+                    class: ['app', Theme.YELLOW],
+                    color: '#f0c048',
                 },
             ],
         },

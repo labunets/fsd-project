@@ -1,6 +1,9 @@
 import { useSelector } from 'react-redux';
 import { memo, useMemo, useState } from 'react';
-import { Button, ButtonTheme } from '@/6shared/ui/deprecated/Button';
+import {
+    Button as DeprecatedButton,
+    ButtonTheme,
+} from '@/6shared/ui/deprecated/Button';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import ChevronLeftIcon from '@/6shared/assets/icons/chevron-left.svg';
 import ChevronRightIcon from '@/6shared/assets/icons/chevron-right.svg';
@@ -11,7 +14,8 @@ import cls from './Sidebar.module.scss';
 import { ThemeSwitcher } from '@/4features/ThemeSwitcher';
 import { LangSwitcher } from '@/4features/LangSwitcher';
 import { ToggleFeatures } from '@/6shared/lib/features';
-import { AppLogo } from '@/6shared/ui/deprecated/AppLogo';
+import { AppLogo } from '@/6shared/ui/redesigned/AppLogo';
+import { Button } from '@/6shared/ui/redesigned/Button';
 
 interface SidebarProps {
     className?: string;
@@ -50,11 +54,32 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                     data-testid="sidebar"
                     className={classNames(
                         cls.SidebarRedesigned,
-                        { [cls.collapsed]: collapsed },
+                        { [cls.collapsedRedesigned]: collapsed },
                         [],
                     )}
                 >
-                    <AppLogo className={cls.logo} />
+                    <AppLogo className={cls.logo} size={collapsed ? 50 : 100} />
+                    <VStack
+                        role="navigation"
+                        gap="1"
+                        align={collapsed ? 'center' : 'start'}
+                        className={cls.items}
+                    >
+                        {itemsList}
+                    </VStack>
+                    <Button
+                        data-testid="sidebar-toggle"
+                        className={cls.collapseBtn}
+                        variant="clear"
+                        square
+                        size="l"
+                        onClick={onToggle}
+                        beforeIcon={<ChevronRightIcon />}
+                    />
+                    <HStack gap="2" justify="center" className={cls.switchers}>
+                        <ThemeSwitcher />
+                        <LangSwitcher className={cls.lang} />
+                    </HStack>
                 </aside>
             }
             off={
@@ -78,7 +103,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                     <HStack gap="0" justify="between" className={cls.switchers}>
                         <ThemeSwitcher />
                         <LangSwitcher className={cls.lang} />
-                        <Button
+                        <DeprecatedButton
                             data-testid="sidebar-toggle"
                             theme={ButtonTheme.TERTIARY_INVERTED}
                             onClick={onToggle}
@@ -88,7 +113,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                             ) : (
                                 <ChevronLeftIcon />
                             )}
-                        </Button>
+                        </DeprecatedButton>
                     </HStack>
                 </aside>
             }

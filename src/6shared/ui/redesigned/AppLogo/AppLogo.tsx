@@ -1,25 +1,22 @@
 import React, { memo } from 'react';
 import cls from './AppLogo.module.scss';
-import { HStack } from '../Stack';
+import { HStack } from '../../deprecated/Stack';
 import AppSvg from '@/6shared/assets/images/app-logo.svg';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 
 interface AppLogoProps {
     className?: string;
+    size?: number;
 }
 
-/**
- * Deprecated, using new components from redesigned folder
- * @deprecated
- */
-export const AppLogo = memo(({ className }: AppLogoProps) => {
+export const AppLogo = memo(({ className, size = 50 }: AppLogoProps) => {
     return (
         <HStack
             max
             justify="center"
             className={classNames(cls.appLogoWrapper, {}, [className])}
         >
-            <AppSvg className={cls.appLogo} />
+            <AppSvg width={size} height={size} className={cls.appLogo} />
         </HStack>
     );
 });

@@ -71,6 +71,8 @@ module.exports = {
                     'as',
                     'border',
                     'feature',
+                    'variant',
+                    'size',
                 ],
             },
         ],

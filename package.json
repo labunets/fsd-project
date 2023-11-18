@@ -1,6 +1,6 @@
 {
   "name": "fsd-project",
-  "version": "1.0.133",
+  "version": "1.0.134",
   "description": "FSD practice",
   "main": "index.js",
   "scripts": {

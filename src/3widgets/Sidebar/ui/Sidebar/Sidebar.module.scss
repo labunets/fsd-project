@@ -10,18 +10,18 @@
         min-width: var(--font-line-m);
         height: var(--font-line-m);
     }
-}
 
-.switchers {
-    width: 100%;
-    margin: var(--vspace-3) 0;
-    padding: 0 var(--vspace-2);
-}
+    .switchers {
+        width: 100%;
+        margin: var(--vspace-3) 0;
+        padding: 0 var(--vspace-2);
+    }
 
-.items,
-.switchers {
-    margin: var(--vspace-3) 0;
-    padding: 0 var(--vspace-2);
+    .items,
+    .switchers {
+        margin: var(--vspace-3) 0;
+        padding: 0 var(--vspace-2);
+    }
 }
 
 .collapsed {
@@ -43,8 +43,68 @@
     width: 220px;
     height: 100%;
     border-radius: 32px;
+    position: relative;
 
     .logo {
         padding-top: var(--vspace-3);
+
+        svg {
+            width: 61%;
+            height: auto;
+        }
+    }
+
+    .switchers {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin: var(--vspace-3) 0;
+        padding: 0 var(--vspace-2);
+
+        svg {
+            fill: var(--icon-redesigned);
+        }
+    }
+
+    .items,
+    .switchers {
+        margin: var(--vspace-3) 0;
+    }
+
+    .collapseBtn {
+        position: absolute;
+        right: 1em;
+        top: 50%;
+        transform: rotate(180deg);
+        fill: var(--icon-redesigned)
+    }
+
+}
+
+.collapsedRedesigned {
+    width: var(--sidebar-width-collapsed);
+
+    .logo {
+        padding-top: 0;
+
+        svg {
+            width: 75%;
+            height: auto;
+        }
+    }
+
+    .items,
+    .switchers {
+        transition: width 2s ease-in-out;
+        padding: 0;
+    }
+
+    .switchers {
+        flex-direction: column-reverse;
+    }
+
+    .collapseBtn {
+        transform: rotate(0deg);
+        right: calc(50% - var(--font-line-l) / 2);
     }
 }

@@ -7,7 +7,7 @@ import {
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import ChevronLeftIcon from '@/6shared/assets/icons/chevron-left.svg';
 import ChevronRightIcon from '@/6shared/assets/icons/chevron-right.svg';
-import { HStack, VStack } from '@/6shared/ui/deprecated/Stack';
+import { HStack, VStack } from '@/6shared/ui/redesigned/Stack';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 import { getSidebarItems } from '../../model/selectors/getSidebarItems';
 import cls from './Sidebar.module.scss';
@@ -76,7 +76,11 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                         onClick={onToggle}
                         beforeIcon={<ChevronRightIcon />}
                     />
-                    <HStack gap="2" justify="center" className={cls.switchers}>
+                    <HStack
+                        gap={collapsed ? '1' : '2'}
+                        justify="center"
+                        className={cls.switchers}
+                    >
                         <ThemeSwitcher />
                         <LangSwitcher className={cls.lang} />
                     </HStack>

@@ -9,7 +9,7 @@ import { classNames } from '@/6shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from '@/6shared/ui/deprecated/Button';
 import { Text } from '@/6shared/ui/deprecated/Text';
 import { AppLink } from '@/6shared/ui/deprecated/AppLink';
-import { HStack } from '@/6shared/ui/deprecated/Stack';
+import { HStack } from '@/6shared/ui/redesigned/Stack';
 import cls from './Navbar.module.scss';
 import { getRouteArticleCreate } from '@/6shared/const/router';
 import { ToggleFeatures } from '@/6shared/lib/features';

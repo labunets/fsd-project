@@ -6,7 +6,7 @@ import { Theme } from '@/6shared/const/theme';
 type Story = StoryObj<typeof AppLink>;
 
 const meta: Meta<typeof AppLink> = {
-    title: '6shared/AppLink',
+    title: 'deprecated/6shared/AppLink',
     component: AppLink,
     tags: ['autodocs'],
     args: {

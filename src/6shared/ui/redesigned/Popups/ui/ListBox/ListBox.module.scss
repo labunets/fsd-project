@@ -1,0 +1,56 @@
+.readonly {
+    opacity: 0.7;
+}
+
+.trigger {
+    cursor: pointer;
+    color: inherit;
+    padding: 1em calc(1.5 * 1em);
+    border-radius: 1em;
+    line-height: calc(1.25 * 1em) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: fit-content;
+    background: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: inherit;
+}
+
+.options {
+    position: absolute;
+    z-index: 10000;
+    background-color: var(--dark-bg-redesigned);
+    color: var(--text-redesigned);
+    border-radius: var(--input-border-radius);
+}
+
+.item {
+    padding: 0 var(--vspace-2);
+    white-space: nowrap;
+}
+
+.active,
+.selected {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+
+    svg {
+        min-width: 1em;
+        height: 1em;
+    }
+}
+
+.disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.label {
+    font: var(--font-s);
+    font-weight: bold;
+    color: var(--primary-color);
+    display: block;
+}

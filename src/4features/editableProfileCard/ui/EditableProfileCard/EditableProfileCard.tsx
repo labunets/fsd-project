@@ -12,7 +12,7 @@ import {
     ReducersList,
 } from '@/6shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { classNames } from '@/6shared/lib/classNames/classNames';
-import { VStack } from '@/6shared/ui/deprecated/Stack';
+import { VStack } from '@/6shared/ui/redesigned/Stack';
 import { ValidateProfileError } from '../../model/consts/consts';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading';

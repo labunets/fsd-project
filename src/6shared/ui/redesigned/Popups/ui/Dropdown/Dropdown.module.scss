@@ -1,0 +1,36 @@
+.Dropdown {
+    position: relative;
+    width: fit-content;
+}
+
+.trigger {
+    color: var(--primary-color);
+}
+
+.items {
+    position: absolute;
+    z-index: 10000;
+    background-color: var(--dark-bg-redesigned);
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    color: var(--text-redesigned);
+    cursor: pointer;
+    padding: var(--vspace-1) var(--vspace-2);
+    white-space: nowrap;
+    width: 100%;
+    border-radius: 0;
+}
+
+.active,
+.selected {
+    background-color: var(--light-bg-redesigned);
+    color: var(--secondary-color);
+
+    svg {
+        min-width: 1em;
+        height: 1em;
+    }
+}

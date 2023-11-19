@@ -6,7 +6,7 @@ import { DropdownDirection } from '@/6shared/types/ui';
 import popupCls from '../../styles/popup.module.scss';
 import cls from './ListBox.module.scss';
 import { mapDirectionClass } from '../../styles/consts';
-import { HStack } from '../../../Stack';
+import { HStack } from '../../../../redesigned/Stack';
 
 export interface ListBoxItem {
     value: string;

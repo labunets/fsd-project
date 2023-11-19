@@ -1,8 +1,8 @@
 import { memo } from 'react';
 import { Text, TextAlign } from '@/6shared/ui/deprecated/Text';
-import { VStack } from '@/6shared/ui/deprecated/Stack';
+import { VStack } from '@/6shared/ui/redesigned/Stack';
 import { ArticleImageBlock } from '../../model/types/article';
-import { AppImage } from '@/6shared/ui/deprecated/AppImage';
+import { AppImage } from '@/6shared/ui/redesigned/AppImage';
 import { Skeleton } from '@/6shared/ui/deprecated/Skeleton';
 
 interface ArticleImageBlockComponentProps {

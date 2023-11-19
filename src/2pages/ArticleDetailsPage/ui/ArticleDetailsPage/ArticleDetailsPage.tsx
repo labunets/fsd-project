@@ -8,7 +8,7 @@ import {
     DynamicModuleLoader,
     ReducersList,
 } from '@/6shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { VStack } from '@/6shared/ui/deprecated/Stack';
+import { VStack } from '@/6shared/ui/redesigned/Stack';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import { articleDetailsPageReducer } from '../../model/slices';

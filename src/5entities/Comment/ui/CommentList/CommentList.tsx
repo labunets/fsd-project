@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { Text } from '@/6shared/ui/deprecated/Text';
-import { VStack } from '@/6shared/ui/deprecated/Stack';
+import { VStack } from '@/6shared/ui/redesigned/Stack';
 import { CommentCard } from '../CommentCard/CommentCard';
 import { Comment } from '../../model/types/comment';
 

@@ -3,7 +3,7 @@ import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { getUserAuthData } from '@/5entities/User';
 import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { HStack } from '@/6shared/ui/deprecated/Stack';
+import { HStack } from '@/6shared/ui/redesigned/Stack';
 import { Button, ButtonTheme } from '@/6shared/ui/deprecated/Button';
 import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';

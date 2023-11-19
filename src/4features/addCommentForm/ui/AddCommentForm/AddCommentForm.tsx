@@ -9,7 +9,7 @@ import {
     ReducersList,
 } from '@/6shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { Text, TextTheme } from '@/6shared/ui/deprecated/Text';
-import { HStack, VStack } from '@/6shared/ui/deprecated/Stack';
+import { HStack, VStack } from '@/6shared/ui/redesigned/Stack';
 import {
     addCommentFormActions,
     addCommentFormReducer,

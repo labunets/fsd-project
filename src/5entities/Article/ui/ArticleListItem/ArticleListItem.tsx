@@ -5,12 +5,12 @@ import EyeIcon from '@/6shared/assets/icons/outline-eye.svg';
 import { Card } from '@/6shared/ui/deprecated/Card';
 import { Avatar, AvatarSize } from '@/6shared/ui/deprecated/Avatar';
 import { AppLink } from '@/6shared/ui/deprecated/AppLink';
-import { HStack, VStack } from '@/6shared/ui/deprecated/Stack';
+import { HStack, VStack } from '@/6shared/ui/redesigned/Stack';
 import { ArticleView } from '../../model/consts/consts';
 import cls from './ArticleListItem.module.scss';
 import { Article } from '../../model/types/article';
 import { getRouteArticleDetails } from '@/6shared/const/router';
-import { AppImage } from '@/6shared/ui/deprecated/AppImage';
+import { AppImage } from '@/6shared/ui/redesigned/AppImage';
 import { Skeleton } from '@/6shared/ui/deprecated/Skeleton';
 
 interface ArticleListItemProps {

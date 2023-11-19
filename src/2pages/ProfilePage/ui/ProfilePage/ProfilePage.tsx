@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { Page } from '@/3widgets/Page';
 import { EditableProfileCard } from '@/4features/editableProfileCard';
-import { VStack } from '@/6shared/ui/deprecated/Stack';
+import { VStack } from '@/6shared/ui/redesigned/Stack';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import { Text, TextSize } from '@/6shared/ui/deprecated/Text';
 

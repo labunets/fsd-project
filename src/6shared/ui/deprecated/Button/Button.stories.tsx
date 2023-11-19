@@ -8,7 +8,7 @@ import { Theme } from '../../../const/theme';
 type Story = StoryObj<typeof Button>;
 
 const meta: Meta<typeof Button> = {
-    title: '6shared/Button',
+    title: 'deprecated/6shared/Button',
     component: Button,
     tags: ['autodocs'],
 };

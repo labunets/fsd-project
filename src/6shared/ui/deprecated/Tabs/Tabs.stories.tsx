@@ -5,7 +5,7 @@ import { Tabs } from './Tabs';
 type Story = StoryObj<typeof Tabs>;
 
 const meta: Meta<typeof Tabs> = {
-    title: '6shared/Tabs',
+    title: 'deprecated/6shared/Tabs',
     component: Tabs,
     tags: ['autodocs'],
 };

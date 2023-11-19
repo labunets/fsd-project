@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Button } from '@/6shared/ui/deprecated/Button';
 import { useCounterActions } from '../model/slice/counterSlice';
 import { useCounterValue } from '../model/selectors/getCounterValue/getCounterValue';
-import { HStack } from '@/6shared/ui/deprecated/Stack';
+import { HStack } from '@/6shared/ui/redesigned/Stack';
 
 export const Counter = () => {
     const dispatch = useDispatch();

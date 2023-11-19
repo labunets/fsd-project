@@ -7,7 +7,7 @@ import { Theme } from '@/6shared/const/theme';
 type Story = StoryObj<typeof Avatar>;
 
 const meta: Meta<typeof Avatar> = {
-    title: '6shared/Avatar',
+    title: 'deprecated/6shared/Avatar',
     component: Avatar,
     tags: ['autodocs'],
     args: {

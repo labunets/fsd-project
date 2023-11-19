@@ -6,10 +6,6 @@
     justify-content: flex-end;
 }
 
-.NavbarRedesigned {
-    padding: 16px;
-}
-
 .links {
     height: 100%;
     margin-right: var(--vspace);
@@ -39,4 +35,13 @@
 
 .actions {
     cursor: pointer;
+}
+
+.NavbarRedesigned {
+    padding: 16px;
+
+    .links,
+    .links a {
+        color: var(--text-redesigned);
+    }
 }

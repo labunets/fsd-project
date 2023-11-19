@@ -16,7 +16,7 @@ import {
 import { Skeleton } from '@/6shared/ui/deprecated/Skeleton';
 import EyeIcon from '@/6shared/assets/icons/outline-eye.svg';
 import CalendarIcon from '@/6shared/assets/icons/outline-calendar.svg';
-import { HStack, VStack } from '@/6shared/ui/deprecated/Stack';
+import { HStack, VStack } from '@/6shared/ui/redesigned/Stack';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
@@ -29,7 +29,7 @@ import {
 } from '../../model/selectors/articleDetails';
 import { ArticleBlock } from '../../model/types/article';
 import { ArticleBlockType } from '../../model/consts/consts';
-import { AppImage } from '@/6shared/ui/deprecated/AppImage';
+import { AppImage } from '@/6shared/ui/redesigned/AppImage';
 import { articleDetailsReducer } from '../../model/slices/articleDetailsSlice';
 
 interface ArticleDetailsProps {

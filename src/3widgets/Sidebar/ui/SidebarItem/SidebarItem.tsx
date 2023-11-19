@@ -8,7 +8,7 @@ import {
 } from '@/6shared/ui/deprecated/AppLink';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import { Text } from '@/6shared/ui/deprecated/Text';
-import { HStack } from '@/6shared/ui/deprecated/Stack';
+import { HStack } from '@/6shared/ui/redesigned/Stack';
 import { SidebarItemTypes } from '../../model/types/sidebar';
 import cls from './SidebarItem.module.scss';
 import { ToggleFeatures } from '@/6shared/lib/features';

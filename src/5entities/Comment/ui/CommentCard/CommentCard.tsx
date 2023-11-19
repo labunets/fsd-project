@@ -3,7 +3,7 @@ import { Avatar, AvatarSize } from '@/6shared/ui/deprecated/Avatar';
 import { Text } from '@/6shared/ui/deprecated/Text';
 import { Skeleton } from '@/6shared/ui/deprecated/Skeleton';
 import { AppLink } from '@/6shared/ui/deprecated/AppLink';
-import { HStack, VStack } from '@/6shared/ui/deprecated/Stack';
+import { HStack, VStack } from '@/6shared/ui/redesigned/Stack';
 import cls from './CommentCard.module.scss';
 import { Comment } from '../../model/types/comment';
 import { getRouteProfile } from '@/6shared/const/router';

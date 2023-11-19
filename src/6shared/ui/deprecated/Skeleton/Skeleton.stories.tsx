@@ -6,7 +6,7 @@ import { Theme } from '@/6shared/const/theme';
 type Story = StoryObj<typeof Skeleton>;
 
 const meta: Meta<typeof Skeleton> = {
-    title: '6shared/Skeleton',
+    title: 'deprecated/6shared/Skeleton',
     component: Skeleton,
     tags: ['autodocs'],
 };

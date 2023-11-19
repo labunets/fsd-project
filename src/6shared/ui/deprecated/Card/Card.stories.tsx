@@ -5,7 +5,7 @@ import { Card } from './Card';
 type Story = StoryObj<typeof Card>;
 
 const meta: Meta<typeof Card> = {
-    title: '6shared/Card',
+    title: 'deprecated/6shared/Card',
     component: Card,
     tags: ['autodocs'],
 };

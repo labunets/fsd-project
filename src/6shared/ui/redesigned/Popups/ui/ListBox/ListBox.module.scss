@@ -5,18 +5,13 @@
 .trigger {
     cursor: pointer;
     color: inherit;
-    padding: 1em calc(1.5 * 1em);
-    border-radius: 1em;
-    line-height: calc(1.25 * 1em) !important;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
     height: fit-content;
     background: none;
-    border-width: 1px;
-    border-style: solid;
-    border-color: inherit;
+    border: none;
 }
 
 .options {
@@ -30,12 +25,13 @@
 .item {
     padding: 0 var(--vspace-2);
     white-space: nowrap;
+    cursor: pointer;
 }
 
 .active,
 .selected {
-    background-color: var(--accent-color);
-    color: var(--secondary-color);
+    background-color: var(--light-bg-redesigned);
+    color: var(--text-redesigned);
 
     svg {
         min-width: 1em;
@@ -53,4 +49,9 @@
     font-weight: bold;
     color: var(--primary-color);
     display: block;
+}
+
+.icon {
+    transform: rotate(90deg);
+    fill: var(--icon-redesigned)
 }

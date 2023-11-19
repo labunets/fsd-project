@@ -56,5 +56,7 @@
   "Rate this article": "Оцініть цю статтю",
   "Feedback": "Відгук",
   "Thanks for your rating!": "Дякуємо за вашу оцінку!",
-  "Select country": "Виберіть країну"
+  "Select country": "Виберіть країну",
+  "asc": "зростання",
+  "desc": "спадання"
 }

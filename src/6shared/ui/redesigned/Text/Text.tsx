@@ -8,6 +8,8 @@ export type TextAlign = 'left' | 'center' | 'right';
 
 export type TextSize = 's' | 'm' | 'l';
 
+type HeaderTagType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+
 interface TextProps {
     className?: string;
     title?: string;
@@ -18,8 +20,6 @@ interface TextProps {
 
     'data-testid'?: string;
 }
-
-type HeaderTagType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 const mapSizeToClass: Record<TextSize, string> = {
     s: 'size_s',
@@ -45,9 +45,8 @@ export const Text = memo((props: TextProps) => {
     } = props;
 
     const HeaderTag = mapSizeToHeaderTag[size];
-    const sizeClass = mapSizeToClass[size];
 
-    const additionalClasses = [className, cls[variant], cls[align], sizeClass];
+    const additionalClasses = [className, cls[variant], cls[align], cls[size]];
 
     return (
         <div className={classNames('', {}, additionalClasses)}>

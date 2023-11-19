@@ -80,13 +80,16 @@
   "You are not allowed to access this page": "You are not allowed to access this page",
   "Your feedback": "Your feedback",
   "add5": "",
+  "asc": "",
   "ascending": "ascending",
   "created": "created",
   "decrement": "decrement",
+  "desc": "",
   "descending": "descending",
   "increment": "increment",
   "order": "order",
   "title": "title",
   "views": "views",
+  "Поиск": "",
   "Статьи не найдены": "Статьи не найдены"
 }

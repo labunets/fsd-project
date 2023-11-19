@@ -3,6 +3,8 @@
 }
 
 .LIST {
+    width: 100%;
+
     .card {
         width: 100%;
         max-height: 200px;
@@ -17,7 +19,8 @@
         }
     }
 
-    .image {
+    .image,
+    .imageWrapper {
         height: 200px;
         width: 300px;
         min-width: 300px;
@@ -80,7 +83,8 @@
         }
     }
 
-    .image {
+    .image,
+    .imageWrapper {
         height: 200px;
         width: 300px;
         border-radius: var(--input-border-radius) var(--input-border-radius) 0 0;

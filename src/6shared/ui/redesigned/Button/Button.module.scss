@@ -49,7 +49,7 @@
 }
 
 .s {
-    font: var(--font-l-redesigned);
+    font: var(--font-s-redesigned);
     text-transform: uppercase;
 
     svg {
@@ -59,7 +59,7 @@
 }
 
 .m {
-    font: var(--font-l-redesigned);
+    font: var(--font-m-redesigned);
 
     svg {
         width: var(--font-size-m);
@@ -98,6 +98,11 @@
     border-width: 1px;
     border-style: solid;
     border-color: inherit;
+}
+
+.filled {
+    background: var(--light-bg-redesigned);
+    border: none;
 }
 
 .fullWidth {

@@ -1,6 +1,7 @@
 .svg {
-    min-height: 24px;
-    min-width: 24px;
+    height: 24px;
+    width: 24px;
+    fill: var(--secondary-color);
 }
 
 .pointer {
@@ -9,4 +10,16 @@
 
 .standard {
     cursor: default;
+}
+
+.ArticleViewSelectorRedesigned {
+    .svg {
+        height: 24px;
+        width: 24px;
+        fill: var(--icon-redesigned);
+    }
+
+    .notSelected {
+        fill: var(--light-bg-redesigned);
+    }
 }

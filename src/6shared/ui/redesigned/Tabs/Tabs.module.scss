@@ -1,0 +1,12 @@
+.buttons {
+    flex-wrap: wrap;
+
+    button {
+        border: none;
+    }
+
+    .active {
+        opacity: 1;
+    }
+}
+

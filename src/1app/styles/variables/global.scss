@@ -82,9 +82,9 @@
     --input-border: 1px solid var(--color-ui-gray-40);
     --input-padding: 0.75em 1em;
     --input-placeholder-opacity: 0.6;
-    --input-default-selected-shadow: 0 3px 5px rgb(95 161 213 / 15%);
-    --input-error-selected-shadow: 0 3px 5px rgb(254 134 104 / 25%);
-    --input-success-selected-shadow: 0 3px 5px rgb(32 129 46 / 15%);
+    --input-default-selected-shadow: inset 0 3px 5px rgb(95 161 213 / 15%);
+    --input-error-selected-shadow: inset 0 3px 5px rgb(254 134 104 / 25%);
+    --input-success-selected-shadow: inset 0 3px 5px rgb(32 129 46 / 15%);
 
     // Avatars
     --avatar-small: 2rem;
@@ -101,5 +101,6 @@
     --font-m-redesigned: var(--font-size-m) / var(--font-line-m) var(--font-family-text-redesigned);
     --font-l-redesigned: var(--font-size-l) / var(--font-line-l) var(--font-family-header-redesigned);
     --font-xl-redesigned: var(--font-size-xl) / var(--font-line-xl) var(--font-family-header-redesigned);
+    --input-border-redesigned: 1px solid var(--icon-redesigned);
 
 }

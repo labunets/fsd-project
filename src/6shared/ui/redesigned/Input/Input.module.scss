@@ -1,41 +1,82 @@
+.label {
+    font: var(--font-s-redesigned);
+    font-weight: bold;
+    color: var(--text-redesigned);
+}
+
 .InputWrapper {
     font: var(--font-m);
     position: relative;
-    display: flex;
-    flex-direction: column;
     width: 100%;
+    border-radius: var(--input-border-radius);
+    border: var(--input-border-redesigned);
+    padding: 8px 16px;
+    color: var(--text-redesigned);
+    background: var(--light-bg-redesigned);
+    border: 1px solid transparent;
+
+    input {
+        border: none;
+        padding: 0;
+        width: 100%;
+        color: var(--text-redesigned);
+        border-radius: 0;
+
+        &::placeholder {
+            color: var(--hint-redesigned);
+        }
+
+        &:focus {
+            background: transparent;
+            box-shadow: none;
+        }
+    }
+
+    .beforeIcon svg,
+    .afterIcon svg {
+        fill: var(--hint-redesigned);
+    }
+
+    .beforeIcon,
+    .afterIcon {
+       display: flex;
+        padding: 0 8px;
+    }
 }
 
-.label {
-    font: var(--font-s);
-    font-weight: bold;
+
+.focused {
+    border: 1px solid var(--icon-redesigned);
+    background: var(--light-bg-redesigned);
+    box-shadow: var(--input-default-selected-shadow);
+
+    .beforeIcon svg,
+    .afterIcon svg {
+        fill: var(--icon-redesigned);
+    }
+}
+
+.disabled {
+    background: var(--bg-color);
     color: var(--primary-color);
+}
+
+.withBeforeIcon {
+    padding-left: 0;
+}
+
+.withAfterIcon {
+    padding-right: 0;
 }
 
 .readonly {
     opacity: 0.7;
 }
 
-input {
-    border-radius: var(--input-border-radius);
-    border: var(--input-border);
-    padding: var(--input-padding);
-    color: var(--primary-color);
-    background: var(--inverted-bg);
 
-    &:focus {
-        border: var(--input-border);
-        background: var(--bg-color-focus);
-        box-shadow: var(--input-default-selected-shadow);
-    }
 
-    &::placeholder {
-        color: var(--primary-color);
-        opacity: var(--input-placeholder-opacity);
-    }
 
-    &:disabled {
-        background: var(--bg-color);
-        color: var(--primary-color);
-    }
-}
+
+
+
+

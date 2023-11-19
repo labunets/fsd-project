@@ -38,8 +38,8 @@ export const Tabs = memo((props: TabsProps) => {
     );
 
     return (
-        <VStack gap="1" className={classNames('', {}, [className])}>
-            {label && <Text text={label} size="s" />}
+        <VStack gap="0" className={classNames('', {}, [className])}>
+            {label && <Text text={label} size="s" bold />}
             <Flex
                 direction={direction}
                 className={cls.buttons}

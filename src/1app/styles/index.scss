@@ -38,3 +38,10 @@ body {
     background-color: var(--inverted-bg-color);    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */
 }
+
+input:focus,
+textarea:focus,
+select:focus,
+a:focus {
+    outline: none;
+}

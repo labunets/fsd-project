@@ -4,11 +4,15 @@ import { Popover } from './Popover';
 type Story = StoryObj<typeof Popover>;
 
 const meta: Meta<typeof Popover> = {
-    title: '6shared/Popovers/Popover',
+    title: 'deprecated/6shared/Popovers/Popover',
     component: Popover,
     tags: ['autodocs'],
     decorators: [
-        (Story) => <div style={{ paddingTop: 150, paddingBottom: 150 }}><Story /></div>,
+        (Story) => (
+            <div style={{ paddingTop: 150, paddingBottom: 150 }}>
+                <Story />
+            </div>
+        ),
     ],
 };
 

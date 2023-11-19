@@ -10,7 +10,7 @@ import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatc
 import { Input } from '@/6shared/ui/deprecated/Input';
 import { SortOrder } from '@/6shared/types/sort';
 import { useDebounce } from '@/6shared/lib/hooks/useDebounce/useDebounce';
-import { HStack, VStack } from '@/6shared/ui/deprecated/Stack';
+import { HStack, VStack } from '@/6shared/ui/redesigned/Stack';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { articlesPageActions } from '../../model/slices/ArticlesPageSlice';
 import {

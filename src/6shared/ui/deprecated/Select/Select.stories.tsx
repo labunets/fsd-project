@@ -6,7 +6,7 @@ import { Theme } from '@/6shared/const/theme';
 type Story = StoryObj<typeof Select>;
 
 const meta: Meta<typeof Select> = {
-    title: '6shared/Select',
+    title: 'deprecated/6shared/Select',
     component: Select,
     tags: ['autodocs'],
     args: {

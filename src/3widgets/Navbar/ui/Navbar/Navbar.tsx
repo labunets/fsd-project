@@ -9,7 +9,7 @@ import { classNames } from '@/6shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from '@/6shared/ui/deprecated/Button';
 import { Text } from '@/6shared/ui/deprecated/Text';
 import { AppLink } from '@/6shared/ui/deprecated/AppLink';
-import { HStack } from '@/6shared/ui/deprecated/Stack';
+import { HStack } from '@/6shared/ui/redesigned/Stack';
 import cls from './Navbar.module.scss';
 import { getRouteArticleCreate } from '@/6shared/const/router';
 import { ToggleFeatures } from '@/6shared/lib/features';
@@ -53,7 +53,10 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                     <header className={classNames(cls.Navbar, {}, [className])}>
                         <div className={cls.links}>
                             <HStack gap="3" className={cls.actions}>
-                                <AppLink to={getRouteArticleCreate()}>
+                                <AppLink
+                                    to={getRouteArticleCreate()}
+                                    className={cls.link}
+                                >
                                     {t('New article')}
                                 </AppLink>
                                 <NotificationButton />

@@ -6,10 +6,6 @@
     justify-content: flex-end;
 }
 
-.NavbarRedesigned {
-    padding: 16px;
-}
-
 .links {
     height: 100%;
     margin-right: var(--vspace);
@@ -19,6 +15,7 @@
     align-items: center;
     padding: 0.5em;
     gap: var(--vspace-1);
+    text-decoration: none;
 
     button {
         margin: 0;
@@ -27,16 +24,24 @@
         svg {
             width: 24px;
             height: 24px;
-            color: var(--secondary-color);
+            fill: var(--secondary-color);
         }
     }
 }
-
-.links a {
-    text-decoration: none;
+.link {
     color: var(--secondary-color);
 }
 
+
 .actions {
     cursor: pointer;
+}
+
+.NavbarRedesigned {
+    padding: 16px;
+
+    .links,
+    .links a {
+        color: var(--text-redesigned);
+    }
 }

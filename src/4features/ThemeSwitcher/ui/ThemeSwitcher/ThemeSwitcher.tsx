@@ -34,7 +34,9 @@ export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
                     square
                     variant="clear"
                     size="l"
-                    className={classNames(cls.ThemeSwitcher, {}, [className])}
+                    className={classNames(cls.ThemeSwitcherRedesigned, {}, [
+                        className,
+                    ])}
                     onClick={onToggleHandler}
                     beforeIcon={<LightIcon />}
                 />

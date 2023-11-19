@@ -6,7 +6,7 @@ import { getArticleDetailsData } from '@/5entities/Article';
 import { Button, ButtonTheme } from '@/6shared/ui/deprecated/Button';
 import ChevronLeftIcon from '@/6shared/assets/icons/chevron-left.svg';
 import { classNames } from '@/6shared/lib/classNames/classNames';
-import { HStack } from '@/6shared/ui/deprecated/Stack';
+import { HStack } from '@/6shared/ui/redesigned/Stack';
 import { getCanEditArticle } from '../../model/selectors/article';
 import cls from './ArticleDetailsPageHeader.module.scss';
 import {

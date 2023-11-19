@@ -5,11 +5,15 @@ import { Dropdown } from './Dropdown';
 type Story = StoryObj<typeof Dropdown>;
 
 const meta: Meta<typeof Dropdown> = {
-    title: '6shared/Popovers/Dropdown',
+    title: 'deprecated/6shared/Popovers/Dropdown',
     component: Dropdown,
     tags: ['autodocs'],
     decorators: [
-        (Story) => <div style={{ paddingTop: 150, paddingBottom: 150 }}><Story /></div>,
+        (Story) => (
+            <div style={{ paddingTop: 150, paddingBottom: 150 }}>
+                <Story />
+            </div>
+        ),
     ],
 };
 

@@ -6,7 +6,7 @@ import { Text, TextAlign, TextTheme } from '@/6shared/ui/deprecated/Text';
 import { Input } from '@/6shared/ui/deprecated/Input';
 import { Loader } from '@/6shared/ui/deprecated/Loader';
 import { Avatar, AvatarSize } from '@/6shared/ui/deprecated/Avatar';
-import { VStack } from '@/6shared/ui/deprecated/Stack';
+import { VStack } from '@/6shared/ui/redesigned/Stack';
 import { Profile } from '../../model/types/profile';
 import cls from './ProfileCard.module.scss';
 

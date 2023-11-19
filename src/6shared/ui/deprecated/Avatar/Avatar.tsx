@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { classNames, Mods } from '@/6shared/lib/classNames/classNames';
 import cls from './Avatar.module.scss';
 import AvatarImg from './avatar.png';
-import { AppImage } from '../AppImage';
+import { AppImage } from '../../redesigned/AppImage';
 import { Skeleton } from '../Skeleton';
 
 export enum AvatarSize {

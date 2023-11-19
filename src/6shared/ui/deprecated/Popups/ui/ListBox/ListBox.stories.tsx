@@ -4,11 +4,15 @@ import { ListBox } from './ListBox';
 type Story = StoryObj<typeof ListBox>;
 
 const meta: Meta<typeof ListBox> = {
-    title: '6shared/Popovers/ListBox',
+    title: 'deprecated/6shared/Popovers/ListBox',
     component: ListBox,
     tags: ['autodocs'],
     decorators: [
-        (Story) => <div style={{ paddingTop: 150, paddingBottom: 150 }}><Story /></div>,
+        (Story) => (
+            <div style={{ paddingTop: 150, paddingBottom: 150 }}>
+                <Story />
+            </div>
+        ),
     ],
 };
 

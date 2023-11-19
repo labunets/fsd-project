@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { memo, useMemo } from 'react';
 import { Select, SelectOption } from '@/6shared/ui/deprecated/Select';
 import { SortOrder } from '@/6shared/types/sort';
-import { HStack } from '@/6shared/ui/deprecated/Stack';
+import { HStack } from '@/6shared/ui/redesigned/Stack';
 import { ArticleSortField } from '@/5entities/Article';
 
 interface ArticleSortSelectorProps {

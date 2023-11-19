@@ -1,0 +1,61 @@
+.primary {
+    color: inherit;
+}
+
+.error {
+    color: var(--color-text-red);
+}
+
+.success {
+    color: var(--color-text-green);
+}
+
+.warning {
+    color: var(--color-text-yellow);
+}
+
+.info {
+    color: var(--color-text-blue);
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.small {
+    .title {
+        font: var(--font-m-redesigned);
+    }
+
+    .text {
+        font: var(--font-s-redesigned);
+    }
+}
+
+.medium {
+    .title {
+        font: var(--font-l-redesigned);
+    }
+
+    .text {
+        font: var(--font-m-redesigned);
+    }
+}
+
+.large {
+    .title {
+        font: var(--font-xl-redesigned);
+    }
+
+    .text {
+        font: var(--font-l-redesigned);
+    }
+}

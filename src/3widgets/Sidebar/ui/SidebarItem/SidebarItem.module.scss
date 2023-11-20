@@ -26,7 +26,7 @@
     justify-content: center;
     width: 100%;
     padding: 8px 24px;
-
+    position: relative;
 
     .icon {
         fill: var(--icon-redesigned);
@@ -42,5 +42,15 @@
 }
 
 .active {
-    border-left: 2px solid var(--accent-redesigned);
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        left: 0;
+        height: 100%;
+        top: 0;
+        background: linear-gradient(90deg, var(--icon-redesigned) 0%, transparent 100%);
+        opacity: 0.5;
+        border-left: 2px solid var(--icon-redesigned);
+    }
 }

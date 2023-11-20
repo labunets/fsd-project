@@ -59,6 +59,7 @@
 .disabled {
     background: var(--bg-color);
     color: var(--primary-color);
+    border: 1px solid transparent;
 }
 
 .withBeforeIcon {
@@ -71,6 +72,22 @@
 
 .readonly {
     opacity: 0.7;
+    box-shadow: none;
+}
+
+.s {
+    height: 32px;
+    font-family: var(--font-s-redesigned);
+}
+
+.m {
+    height: 40px;
+    font-family: var(--font-m-redesigned);
+}
+
+.l {
+    height: 48px;
+    font-family: var(--font-l-redesigned);
 }
 
 

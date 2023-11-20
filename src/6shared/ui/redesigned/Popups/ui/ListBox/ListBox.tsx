@@ -5,7 +5,7 @@ import { DropdownDirection } from '@/6shared/types/ui';
 import popupCls from '../../styles/popup.module.scss';
 import cls from './ListBox.module.scss';
 import { mapDirectionClass } from '../../styles/consts';
-import { HStack } from '../../../../redesigned/Stack';
+import { HStack, VStack } from '../../../../redesigned/Stack';
 import { Button } from '../../../Button';
 import ChevronRightIcon from '@/6shared/assets/icons/chevron-right.svg';
 
@@ -14,6 +14,8 @@ export interface ListBoxItem<T extends string> {
     content: ReactNode;
     disabled?: boolean;
 }
+
+type ListBoxSize = 's' | 'm' | 'l';
 
 interface ListBoxProps<T extends string> {
     items?: ListBoxItem<T>[];
@@ -24,6 +26,7 @@ interface ListBoxProps<T extends string> {
     readonly?: boolean;
     label?: string;
     direction?: DropdownDirection;
+    size?: ListBoxSize;
 }
 
 export function ListBox<T extends string>(props: ListBoxProps<T>) {
@@ -36,6 +39,7 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
         readonly,
         label,
         direction = 'bottom right',
+        size = 'm',
     } = props;
 
     const mods: Mods = {
@@ -59,16 +63,18 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
             onChange={onChange}
             disabled={readonly}
         >
-            <HListbox.Label className={cls.label}>{label}</HListbox.Label>
-            <HListbox.Button className={cls.trigger}>
-                <Button
-                    afterIcon={<ChevronRightIcon className={cls.icon} />}
-                    variant="filled"
-                    size="s"
-                >
-                    {selectedItem?.content ?? defaultValue}
-                </Button>
-            </HListbox.Button>
+            <VStack gap="0">
+                <HListbox.Label className={cls.label}>{label}</HListbox.Label>
+                <HListbox.Button className={cls.trigger}>
+                    <Button
+                        afterIcon={<ChevronRightIcon className={cls.icon} />}
+                        variant="filled"
+                        size={size}
+                    >
+                        {selectedItem?.content ?? defaultValue}
+                    </Button>
+                </HListbox.Button>
+            </VStack>
             <HListbox.Options
                 className={classNames(cls.options, {}, optionsClasses)}
             >

@@ -13,8 +13,10 @@ import { HStack, VStack } from '../Stack';
 
 type HTMLInputProps = Omit<
     InputHTMLAttributes<HTMLInputElement>,
-    'value' | 'onChange' | 'readOnly'
+    'value' | 'onChange' | 'readOnly' | 'size'
 >;
+
+type InputSize = 's' | 'm' | 'l';
 
 interface InputProps extends HTMLInputProps {
     className?: string;
@@ -26,6 +28,7 @@ interface InputProps extends HTMLInputProps {
     readonly?: boolean;
     beforeIcon?: ReactNode;
     afterIcon?: ReactNode;
+    size?: InputSize;
 }
 
 export const Input = memo((props: InputProps) => {
@@ -40,6 +43,7 @@ export const Input = memo((props: InputProps) => {
         readonly,
         beforeIcon,
         afterIcon,
+        size = 'm',
         ...otherProps
     } = props;
     const ref = useRef<HTMLInputElement>(null);
@@ -69,17 +73,28 @@ export const Input = memo((props: InputProps) => {
         [cls.withBeforeIcon]: Boolean(beforeIcon),
         [cls.withAfterIcon]: Boolean(afterIcon),
     };
+    const modsLabel: Mods = {
+        [cls.readonly]: readonly,
+    };
 
     const inputId = `search-${Math.random().toString(36).substring(2, 9)}`;
 
     return (
         <VStack gap="0">
-            <label className={cls.label} htmlFor={inputId}>
-                {label}
-            </label>
+            {label && (
+                <label
+                    className={classNames(cls.label, modsLabel, [])}
+                    htmlFor={inputId}
+                >
+                    {label}
+                </label>
+            )}
             <HStack
                 gap="0"
-                className={classNames(cls.InputWrapper, mods, [className])}
+                className={classNames(cls.InputWrapper, mods, [
+                    className,
+                    cls[size],
+                ])}
             >
                 {beforeIcon && (
                     <div className={cls.beforeIcon}>{beforeIcon}</div>

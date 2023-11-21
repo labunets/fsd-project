@@ -1,0 +1,84 @@
+.LIST {
+    width: 100%;
+
+.img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+    .detailsWrapper {
+        height: 200px;
+        padding-top: var(--vspace-1);
+    }
+
+    .infoWrapper {
+        opacity: 0.5;
+    }
+
+    .title h1 {
+        line-height: 1;
+        margin-bottom: var(--vspace-1);
+    }
+
+    .icon {
+
+        margin-bottom: 0.125em;
+        fill: var(--text-redesigned)
+    }
+
+    .text {
+        height: calc(var(--font-line-s) * 3);
+        overflow: hidden;
+    }
+
+    .tags,
+    .btn {
+        white-space: nowrap;
+    }
+}
+
+.GRID {
+    display: inline-flex;
+    gap: var(--vspace-2);
+
+    .card {
+        padding: 0;
+        cursor: pointer;
+        width: 300px;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .image,
+    .imageWrapper {
+        height: 200px;
+        width: 300px;
+        border-radius: var(--input-border-radius) var(--input-border-radius) 0 0;
+    }
+
+    .detailsWrapper {
+        padding: 0 var(--vspace-1);
+    }
+
+    .infoWrapper {
+        opacity: 0.5;
+    }
+
+    .types {
+        white-space: nowrap;
+    }
+
+    .icon {
+        width: 0.75em;
+        height: 0.75em;
+        margin-bottom: 0.125em;
+        fill: var(--text-redesigned);
+    }
+
+    .views {
+        margin-left: 8px;
+    }
+}

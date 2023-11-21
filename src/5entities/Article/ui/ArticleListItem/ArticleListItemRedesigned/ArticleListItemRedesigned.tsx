@@ -37,7 +37,7 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
 
     const image = (
         <AppImage
-            fallback={<Skeleton height={420} />}
+            fallback={<Skeleton />}
             src={article.img}
             alt={article.title}
             className={cls.img}
@@ -47,10 +47,10 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
     const views = (
         <HStack gap="1" max={false}>
             <EyeIcon className={cls.icon} />
-            <Text text={String(article.views)} size="m" />
+            <Text text={String(article.views)} size="s" />
             <Text
                 text={article.type.join(', ')}
-                size="m"
+                size="s"
                 className={cls.tags}
             />
         </HStack>
@@ -104,9 +104,11 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
                     <VStack gap="2" className={cls.detailsWrapper}>
                         <VStack gap="0">
                             <Text title={article.title} />
-                            <Text text={article.subtitle} />
+                            <Text text={article.subtitle} size="s" />
                         </VStack>
-                        <HStack className={cls.infoWrapper}>{views}</HStack>
+                        <HStack justify="end" className={cls.infoWrapper}>
+                            {views}
+                        </HStack>
                     </VStack>
                 </VStack>
             </Card>

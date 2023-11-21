@@ -10,9 +10,5 @@
     display: flex;
     flex-wrap: wrap;
     gap: var(--vspace-2);
-
-    .card {
-        gap: 10px;
-        height: 360px;
-    }
+    align-items: flex-start;
 }

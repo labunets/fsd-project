@@ -73,6 +73,7 @@ module.exports = {
                     'feature',
                     'variant',
                     'size',
+                    'wrap',
                 ],
             },
         ],
@@ -80,7 +81,8 @@ module.exports = {
             'error',
             {
                 ignoreComments: true,
-                code: 130,
+                ignorePattern: '^import\\s.+\\sfrom\\s.+;$',
+                code: 100,
             },
         ],
         'jsx-a11y/no-static-element-interactions': 'off',
@@ -103,16 +105,15 @@ module.exports = {
             'error',
             {
                 alias: '@',
-                testFilesPatterns: [
-                    '**/*.test.*',
-                    '**/*.story.*',
-                    '**/StoreDecorator.tsx',
-                ],
+                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
             },
         ],
         'react/jsx-max-props-per-line': [
             'error',
-            { maximum: 4, when: 'always' },
+            {
+                maximum: 4,
+                when: 'always',
+            },
         ],
         'react/no-unstable-nested-components': 'warn',
     },

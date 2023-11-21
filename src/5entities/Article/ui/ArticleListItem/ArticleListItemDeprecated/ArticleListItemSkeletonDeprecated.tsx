@@ -1,12 +1,10 @@
 import { memo } from 'react';
 import { classNames } from '@/6shared/lib/classNames/classNames';
-import { Card as DeprecatedCard } from '@/6shared/ui/deprecated/Card';
-import { Card as RedesignedCard } from '@/6shared/ui/redesigned/Card';
-import { Skeleton as DeprecatedSkeleton } from '@/6shared/ui/deprecated/Skeleton';
-import { Skeleton as RedesignedSkeleton } from '@/6shared/ui/redesigned/Skeleton';
-import { ArticleView } from '../../model/consts/consts';
-import cls from './ArticleListItem.module.scss';
-import { toggleFeatures } from '@/6shared/lib/features';
+import { Card } from '@/6shared/ui/deprecated/Card';
+import { Skeleton } from '@/6shared/ui/deprecated/Skeleton';
+import { ArticleView } from '../../../model/consts/consts';
+import cls from './ArticleListItemDeprecated.module.scss';
+import { HStack, VStack } from '@/6shared/ui/redesigned/Stack';
 
 interface ArticleListItemSkeletonProps {
     className?: string;
@@ -17,22 +15,10 @@ export const ArticleListItemSkeleton = memo(
     (props: ArticleListItemSkeletonProps) => {
         const { className, view } = props;
 
-        const Card = toggleFeatures({
-            name: 'isAppRedesigned',
-            on: () => RedesignedCard,
-            off: () => DeprecatedCard,
-        });
-
-        const Skeleton = toggleFeatures({
-            name: 'isAppRedesigned',
-            on: () => RedesignedSkeleton,
-            off: () => DeprecatedSkeleton,
-        });
-
         if (view === ArticleView.LIST) {
             return (
                 <div
-                    className={classNames(cls.ArticleListItem, {}, [
+                    className={classNames(cls.ArticleListItemSkeleton, {}, [
                         className,
                         cls[view],
                     ])}
@@ -84,35 +70,22 @@ export const ArticleListItemSkeleton = memo(
         }
 
         return (
-            <div
-                className={classNames(cls.ArticleListItemSkeleton, {}, [
-                    className,
-                    cls[view],
-                ])}
-            >
+            <div className={classNames('', {}, [className, cls[view]])}>
                 <Card className={cls.card}>
-                    <Skeleton className={cls.imageWrapper} />
-                    <Skeleton width={200} height={16} className={cls.title} />
-                    <div className={cls.infoWrapper}>
-                        <Skeleton
-                            width={70}
-                            height={16}
-                            className={cls.types}
-                        />
-                        <Skeleton width={60} height={16} className={cls.date} />
-                        <div className={cls.viewsWrapper}>
-                            <Skeleton
-                                width={16}
-                                height={16}
-                                className={cls.icon}
-                            />
-                            <Skeleton
-                                width={30}
-                                height={16}
-                                className={cls.views}
-                            />
-                        </div>
-                    </div>
+                    <VStack>
+                        <Skeleton className={cls.imageWrapper} />
+                        <VStack gap="2" justify="between">
+                            <VStack gap="0">
+                                <Skeleton height={38} className={cls.title} />
+                                <Skeleton height={26} />
+                            </VStack>
+                            <HStack>
+                                <Skeleton height={16} />
+                                <Skeleton height={16} />
+                                <Skeleton height={16} />
+                            </HStack>
+                        </VStack>
+                    </VStack>
                 </Card>
             </div>
         );

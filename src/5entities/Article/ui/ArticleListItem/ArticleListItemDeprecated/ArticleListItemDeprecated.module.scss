@@ -58,11 +58,7 @@
         margin-right: 1em;
     }
 
-    .icon {
-        width: 0.75em;
-        height: 0.75em;
-        margin-bottom: 0.125em;
-    }
+
 
     .views {
         margin-left: 8px;
@@ -102,13 +98,16 @@
         white-space: nowrap;
     }
 
-    .icon {
-        width: 0.75em;
-        height: 0.75em;
-        margin-bottom: 0.125em;
-    }
+
 
     .views {
         margin-left: 8px;
     }
+}
+
+.icon {
+    width: 0.75em;
+    height: 0.75em;
+    margin-bottom: 0.125em;
+    fill: var(--primary-color);
 }

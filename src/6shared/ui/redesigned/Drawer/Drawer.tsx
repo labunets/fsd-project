@@ -1,13 +1,11 @@
 import React, { memo, ReactNode, useCallback, useEffect } from 'react';
 import { classNames } from '@/6shared/lib/classNames/classNames';
-import {
-    AnimationProvider,
-    useAnimationLibs,
-} from '@/6shared/lib/components/AnimationProvider';
+import { AnimationProvider, useAnimationLibs } from '@/6shared/lib/components/AnimationProvider';
 import { Overlay } from '../Overlay/Overlay';
 import cls from './Drawer.module.scss';
 import { Portal } from '../Portal/Portal';
 import { useTheme } from '@/6shared/lib/hooks/useTheme/useTheme';
+import { toggleFeatures } from '@/6shared/lib/features';
 
 interface DrawerProps {
     className?: string;
@@ -45,13 +43,7 @@ export const DrawerContent = memo((props: DrawerProps) => {
     };
 
     const bind = Gesture.useDrag(
-        ({
-            last,
-            velocity: [, vy],
-            direction: [, dy],
-            movement: [, my],
-            cancel,
-        }) => {
+        ({ last, velocity: [, vy], direction: [, dy], movement: [, my], cancel }) => {
             if (my < -70) cancel();
 
             if (last) {
@@ -85,6 +77,11 @@ export const DrawerContent = memo((props: DrawerProps) => {
                     className,
                     theme,
                     'app_drawer',
+                    toggleFeatures({
+                        name: 'isAppRedesigned',
+                        on: () => cls.drawerNew,
+                        off: () => cls.drawerOld,
+                    }),
                 ])}
             >
                 <Overlay onClick={close} />

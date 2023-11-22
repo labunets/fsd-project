@@ -8,6 +8,7 @@
     align-items: flex-end;
 }
 
+
 .opened {
     pointer-events: auto;
     opacity: 1;
@@ -25,7 +26,20 @@
     height: calc(100vh + 100px);
     width: 96vw;
     border-radius: 12px 12px 0;
-    background: var(--bg-color);
     touch-action: none;
     padding: 15px;
+}
+
+.drawerNew {
+    color: var(--text-redesigned);
+    .sheet {
+        background: var(--light-bg-redesigned);
+    }
+}
+
+.drawerOld {
+    color: var(--primary-color);
+    .sheet {
+        background: var(--bg-color);
+    }
 }

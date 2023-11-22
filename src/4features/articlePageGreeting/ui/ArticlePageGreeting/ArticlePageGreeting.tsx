@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
-import { Modal } from '@/6shared/ui/deprecated/Modal';
+import { Modal } from '@/6shared/ui/redesigned/Modal';
 import { Text } from '@/6shared/ui/deprecated/Text';
 import { saveJsonSettings, useJsonSettings } from '@/5entities/User';
 import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatch';

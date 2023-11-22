@@ -20,8 +20,8 @@ if (featureState !== 'on' && featureState !== 'off') {
 
 const project = new Project({});
 
-project.addSourceFilesAtPaths('src/**/*.ts');
-project.addSourceFilesAtPaths('src/**/*.tsx');
+project.addSourceFilesAtPaths('@/**/*.ts');
+project.addSourceFilesAtPaths('@/**/*.tsx');
 
 const files = project.getSourceFiles();
 
@@ -29,10 +29,7 @@ function isToggleFunction(node: Node) {
     let isToggleFeatures = false;
 
     node.forEachChild((child) => {
-        if (
-            child.isKind(SyntaxKind.Identifier) &&
-            child.getText() === 'toggleFeatures'
-        ) {
+        if (child.isKind(SyntaxKind.Identifier) && child.getText() === 'toggleFeatures') {
             isToggleFeatures = true;
         }
     });
@@ -47,9 +44,7 @@ function isToggleComponent(node: Node) {
 }
 
 const replaceToggleFunction = (node: Node) => {
-    const objectOptions = node.getFirstDescendantByKind(
-        SyntaxKind.ObjectLiteralExpression,
-    );
+    const objectOptions = node.getFirstDescendantByKind(SyntaxKind.ObjectLiteralExpression);
 
     if (!objectOptions) return;
 
@@ -58,12 +53,8 @@ const replaceToggleFunction = (node: Node) => {
 
     const featureNameProperty = objectOptions.getProperty('name');
 
-    const onFunction = onFunctionProperty?.getFirstDescendantByKind(
-        SyntaxKind.ArrowFunction,
-    );
-    const offFunction = offFunctionProperty?.getFirstDescendantByKind(
-        SyntaxKind.ArrowFunction,
-    );
+    const onFunction = onFunctionProperty?.getFirstDescendantByKind(SyntaxKind.ArrowFunction);
+    const offFunction = offFunctionProperty?.getFirstDescendantByKind(SyntaxKind.ArrowFunction);
     const featureName = featureNameProperty
         ?.getFirstDescendantByKind(SyntaxKind.StringLiteral)
         ?.getText()
@@ -80,10 +71,7 @@ const replaceToggleFunction = (node: Node) => {
     }
 };
 
-const getAttributeNodeByName = (
-    jsxAttributes: JsxAttribute[],
-    name: string,
-) => {
+const getAttributeNodeByName = (jsxAttributes: JsxAttribute[], name: string) => {
     return jsxAttributes.find((node) => node.getName() === name);
 };
 
@@ -133,10 +121,7 @@ files.forEach((sourceFile) => {
             return replaceToggleFunction(node);
         }
 
-        if (
-            node.isKind(SyntaxKind.JsxSelfClosingElement) &&
-            isToggleComponent(node)
-        ) {
+        if (node.isKind(SyntaxKind.JsxSelfClosingElement) && isToggleComponent(node)) {
             return replaceComponent(node);
         }
     });

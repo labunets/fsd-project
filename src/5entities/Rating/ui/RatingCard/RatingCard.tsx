@@ -5,7 +5,7 @@ import { Card } from '@/6shared/ui/deprecated/Card';
 import { HStack, VStack } from '@/6shared/ui/redesigned/Stack';
 import { Text } from '@/6shared/ui/deprecated/Text';
 import { StarRating, StarRatingSize } from '@/6shared/ui/deprecated/StarRating';
-import { Modal } from '@/6shared/ui/deprecated/Modal';
+import { Modal } from '@/6shared/ui/redesigned/Modal';
 import { Input } from '@/6shared/ui/deprecated/Input';
 import { Button, ButtonTheme } from '@/6shared/ui/deprecated/Button';
 import { Drawer } from '@/6shared/ui/redesigned/Drawer';
@@ -21,15 +21,7 @@ interface RatingCardProps {
 }
 
 export const RatingCard = memo((props: RatingCardProps) => {
-    const {
-        className,
-        title,
-        feedbackTitle,
-        hasFeedback,
-        onCancel,
-        onAccept,
-        rate = 0,
-    } = props;
+    const { className, title, feedbackTitle, hasFeedback, onCancel, onAccept, rate = 0 } = props;
     const { t } = useTranslation();
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [starsCount, setStarsCount] = useState(rate);
@@ -73,14 +65,8 @@ export const RatingCard = memo((props: RatingCardProps) => {
     return (
         <Card className={className} max data-testid="RatingCard">
             <VStack align="center">
-                <Text
-                    title={starsCount ? t('Thanks for your rating!') : title}
-                />
-                <StarRating
-                    selectedStars={rate}
-                    size={StarRatingSize.M}
-                    onSelect={onSelectStars}
-                />
+                <Text title={starsCount ? t('Thanks for your rating!') : title} />
+                <StarRating selectedStars={rate} size={StarRatingSize.M} onSelect={onSelectStars} />
                 <BrowserView>
                     <Modal isOpen={isModalOpen} lazy>
                         <VStack align="center">

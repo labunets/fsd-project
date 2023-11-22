@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import cls from './ArticleListItemRedesigned.module.scss';
@@ -12,9 +12,15 @@ import { AppLink } from '@/6shared/ui/redesigned/AppLink';
 import { getRouteArticleDetails } from '@/6shared/const/router';
 import { Card } from '@/6shared/ui/redesigned/Card';
 import { Avatar } from '@/6shared/ui/redesigned/Avatar';
-import { ArticleListItemProps } from '../ArticleListItem';
 import { Button } from '@/6shared/ui/redesigned/Button';
-import { ArticleTextBlock } from '../../../model/types/article';
+import { Article, ArticleTextBlock } from '../../../model/types/article';
+
+export interface ArticleListItemProps {
+    className?: string;
+    article: Article;
+    view: ArticleView;
+    target?: HTMLAttributeAnchorTarget;
+}
 
 export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
     const { className, article, view, target } = props;
@@ -48,11 +54,7 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
         <HStack gap="1" max={false}>
             <EyeIcon className={cls.icon} />
             <Text text={String(article.views)} size="s" />
-            <Text
-                text={article.type.join(', ')}
-                size="s"
-                className={cls.tags}
-            />
+            <Text text={article.type.join(', ')} size="s" className={cls.tags} />
         </HStack>
     );
 

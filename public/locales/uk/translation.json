@@ -63,5 +63,10 @@
   "UI Design": "Дизайн інтерфейсу",
   "New": "Нов.",
   "Old": "Стар.",
-  "Settings": "Налаштування"
+  "Settings": "Налаштування",
+  "Views": "Views",
+  "{{count}} views_zero": "0 переглядів",
+  "{{count}} views_one": "1 перегляд",
+  "{{count}} views_few": "{{count}} переглядів",
+  "{{count}} views_many": "{{count}} переглядів"
 }

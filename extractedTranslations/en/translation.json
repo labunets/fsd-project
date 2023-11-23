@@ -81,6 +81,7 @@
   "Type": "Type",
   "UI Design": "UI Design",
   "Username": "Username",
+  "Views": "Views",
   "Yor feedback": "Yor feedback",
   "You are not allowed to access this page": "You are not allowed to access this page",
   "Your feedback": "Your feedback",
@@ -95,6 +96,8 @@
   "order": "order",
   "title": "title",
   "views": "views",
+  "{{count}} views": "",
+  "{{count}} views_plural": "",
   "Поиск": "",
   "Статьи не найдены": "Статьи не найдены"
 }

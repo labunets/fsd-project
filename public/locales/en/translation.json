@@ -64,5 +64,9 @@
   "UI Design": "UI Design",
   "New": "Нове",
   "Old": "Старе",
-  "Settings": "Settings"
+  "Settings": "Settings",
+  "Views": "Views",
+  "{{count}} views_zero": "0 views",
+  "{{count}} views_one": "1 view",
+  "{{count}} views_other": "{{count}} views"
 }

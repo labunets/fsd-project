@@ -7,7 +7,7 @@ import { Skeleton } from '@/6shared/ui/redesigned/Skeleton';
 import { Text } from '@/6shared/ui/redesigned/Text';
 import { HStack, VStack } from '@/6shared/ui/redesigned/Stack';
 import EyeIcon from '@/6shared/assets/icons/outline-eye.svg';
-import { ArticleBlockType, ArticleView } from '../../../model/consts/consts';
+import { ArticleBlockType, ArticleView } from '../../../model/consts/articleConsts';
 import { AppLink } from '@/6shared/ui/redesigned/AppLink';
 import { getRouteArticleDetails } from '@/6shared/const/router';
 import { Card } from '@/6shared/ui/redesigned/Card';

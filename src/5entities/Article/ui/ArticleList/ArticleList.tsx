@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import { Text, TextSize } from '@/6shared/ui/deprecated/Text';
-import { ArticleView } from '../../model/consts/consts';
+import { ArticleView } from '../../model/consts/articleConsts';
 import { ArticleListItemSkeleton as ArticleListItemSkeletonDeprecated } from '../ArticleListItem/ArticleListItemDeprecated/ArticleListItemSkeletonDeprecated';
 import { ArticleListItemSkeleton as ArticleListItemSkeletonRedesigned } from '../ArticleListItem/ArticleListItemRedesigned/ArticleListItemSkeletonRedesigned';
 import cls from './ArticleList.module.scss';

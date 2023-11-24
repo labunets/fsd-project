@@ -5,7 +5,7 @@ import cls from './ArticleListItemDeprecated.module.scss';
 import { Text, TextSize } from '@/6shared/ui/deprecated/Text';
 import { HStack, VStack } from '@/6shared/ui/redesigned/Stack';
 import EyeIcon from '@/6shared/assets/icons/outline-eye.svg';
-import { ArticleView } from '../../../model/consts/consts';
+import { ArticleView } from '../../../model/consts/articleConsts';
 import { AppLink } from '@/6shared/ui/deprecated/AppLink';
 import { getRouteArticleDetails } from '@/6shared/const/router';
 import { classNames } from '@/6shared/lib/classNames/classNames';

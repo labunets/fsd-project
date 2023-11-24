@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from '@/6shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { ArticleView } from '../../model/consts/consts';
+import { ArticleView } from '../../model/consts/articleConsts';
 import { Article } from '../../model/types/article';
 import { ArticleList } from './ArticleList';
 import { Theme } from '@/6shared/const/theme';
@@ -15,10 +15,7 @@ const article = {
     views: 1022,
     createdAt: '05.10.2023',
     user: { id: '1', username: 'John Doe', avatar: 'https://placehold.co/120?text=JD' },
-    type: [
-        'IT',
-        'SCIENCE',
-    ],
+    type: ['IT', 'SCIENCE'],
     blocks: [],
 } as Article;
 

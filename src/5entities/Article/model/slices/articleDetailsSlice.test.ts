@@ -1,5 +1,5 @@
 import { TestAsyncThunk } from '@/6shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
-import { ArticleBlockType, ArticleType } from '../consts/consts';
+import { ArticleBlockType, ArticleType } from '../consts/articleConsts';
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
 import { articleDetailsReducer } from './articleDetailsSlice';
 import { ArticleDetailsSchema } from '../types/articleDetailsSchema';
@@ -84,10 +84,7 @@ describe('articleDetailsSlice', () => {
             isLoading: false,
         };
         expect(
-            articleDetailsReducer(
-                state as ArticleDetailsSchema,
-                fetchArticleById.pending,
-            ),
+            articleDetailsReducer(state as ArticleDetailsSchema, fetchArticleById.pending),
         ).toEqual({
             isLoading: true,
         });
@@ -102,10 +99,7 @@ describe('articleDetailsSlice', () => {
         const result = await thunk.callThunk('1');
 
         expect(
-            articleDetailsReducer(
-                state as ArticleDetailsSchema,
-                fetchArticleById.fulfilled,
-            ),
+            articleDetailsReducer(state as ArticleDetailsSchema, fetchArticleById.fulfilled),
         ).toEqual({
             isLoading: false,
         });
@@ -127,10 +121,7 @@ describe('articleDetailsSlice', () => {
         const result = await thunk.callThunk('1');
 
         expect(
-            articleDetailsReducer(
-                state as ArticleDetailsSchema,
-                fetchArticleById.rejected,
-            ),
+            articleDetailsReducer(state as ArticleDetailsSchema, fetchArticleById.rejected),
         ).toEqual({
             isLoading: false,
         });

@@ -4,5 +4,6 @@
   "Error occurred while loading article": "Error occurred while loading article",
   "No articles found": "No articles found",
   "Welcome to article page!": "Welcome to article page!",
-  "You can search and read articles here": "You can search and read articles here"
+  "You can search and read articles here": "You can search and read articles here",
+  "Error loading article": "Error loading article"
 }

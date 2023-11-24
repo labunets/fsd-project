@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { StoreDecorator } from '@/6shared/config/storybook/StoreDecorator/StoreDecorator';
-import { ArticleBlockType, ArticleType } from '../../model/consts/consts';
+import { ArticleBlockType, ArticleType } from '../../model/consts/articleConsts';
 import { Article } from '../../model/types/article';
 import { ArticleDetails } from './ArticleDetails';
 
@@ -22,10 +22,7 @@ const article: Article = {
     views: 1022,
     createdAt: '05.10.2023',
     user: { id: '1', username: 'John Doe' },
-    type: [
-        ArticleType.IT,
-        ArticleType.SCIENCE,
-    ],
+    type: [ArticleType.IT, ArticleType.SCIENCE],
     blocks: [
         {
             id: '1',
@@ -89,28 +86,34 @@ const article: Article = {
 };
 
 export const Normal: Story = {
-    args: { },
+    args: {},
 };
-Normal.decorators = [StoreDecorator({
-    articleDetails: {
-        data: article,
-    },
-})];
+Normal.decorators = [
+    StoreDecorator({
+        articleDetails: {
+            data: article,
+        },
+    }),
+];
 
 export const Loading: Story = {
     args: {},
 };
-Loading.decorators = [StoreDecorator({
-    articleDetails: {
-        isLoading: true,
-    },
-})];
+Loading.decorators = [
+    StoreDecorator({
+        articleDetails: {
+            isLoading: true,
+        },
+    }),
+];
 
 export const Error: Story = {
     args: {},
 };
-Error.decorators = [StoreDecorator({
-    articleDetails: {
-        error: 'Error occurred while loading article',
-    },
-})];
+Error.decorators = [
+    StoreDecorator({
+        articleDetails: {
+            error: 'Error occurred while loading article',
+        },
+    }),
+];

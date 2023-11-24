@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 // eslint-disable-next-line rel-path-check/layer-imports
 import { ArticleAdditionalInfo } from '@/3widgets/ArticleAdditionalInfo';
 import { Card } from '@/6shared/ui/redesigned/Card';
-import { getArticleDetailsData } from '../..';
+import { getArticleDetailsData } from '../../model/selectors/articleDetails';
 import cls from './AdditionalInfoContainer.module.scss';
 import { getRouteArticleEdit } from '@/6shared/const/router';
 

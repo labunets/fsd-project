@@ -2,6 +2,7 @@ import { memo, useState } from 'react';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import cls from './StarRating.module.scss';
 import StarIcon from '@/6shared/assets/icons/filled-star.svg';
+import { toggleFeatures } from '@/6shared/lib/features';
 
 export enum StarRatingSize {
     S = 'small',
@@ -18,17 +19,8 @@ interface StarRatingProps {
 
 const stars = [1, 2, 3, 4, 5];
 
-/**
- * Deprecated, using new components from redesigned folder
- * @deprecated
- */
 export const StarRating = memo((props: StarRatingProps) => {
-    const {
-        className,
-        onSelect,
-        size = StarRatingSize.S,
-        selectedStars = 0,
-    } = props;
+    const { className, onSelect, size = StarRatingSize.S, selectedStars = 0 } = props;
     const [currentStarsCount, setCurrentStarsCount] = useState(selectedStars);
     const [isSelected, setIsSelected] = useState(Boolean(selectedStars));
 
@@ -58,14 +50,13 @@ export const StarRating = memo((props: StarRatingProps) => {
                 <StarIcon
                     key={starNumber}
                     className={classNames(
-                        cls.starIcon,
+                        toggleFeatures({
+                            name: 'isAppRedesigned',
+                            on: () => cls.starIconRedesigned,
+                            off: () => cls.starIcon,
+                        }),
                         { [cls.selected]: isSelected },
-                        [
-                            currentStarsCount >= starNumber
-                                ? cls.hovered
-                                : cls.normal,
-                            cls[size],
-                        ],
+                        [currentStarsCount >= starNumber ? cls.hovered : cls.normal, cls[size]],
                     )}
                     onMouseLeave={onLeave}
                     onMouseEnter={onHover(starNumber)}

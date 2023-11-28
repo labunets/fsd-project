@@ -1066,7 +1066,7 @@
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false,
         "isArticlePageWasOpened": true,
-        "theme": "app_light_theme"
+        "theme": "app_yellow_theme"
       },
       "avatar": "https://placehold.co/120?text=Admin"
     },
@@ -1214,6 +1214,27 @@
       "rate": 5,
       "feedback": "ghjdtguhdfghj",
       "id": "WeUWHE4"
+    },
+    {
+      "userId": "1",
+      "articleId": "9",
+      "rate": 3,
+      "feedback": "",
+      "id": "CEjhk3Z"
+    },
+    {
+      "userId": "1",
+      "articleId": "4",
+      "rate": 4,
+      "feedback": "",
+      "id": "Z1MlGcH"
+    },
+    {
+      "userId": "1",
+      "articleId": "12",
+      "rate": 3,
+      "feedback": "",
+      "id": "JD7phqM"
     }
   ],
   "profile-ratings": [

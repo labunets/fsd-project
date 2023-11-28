@@ -28,3 +28,17 @@
 .large {
     width: 24px;
 }
+
+.starIconRedesigned {
+    margin-right: 2px;
+    cursor: pointer;
+    stroke: var(--icon-redesigned);
+
+    &.normal {
+        fill: none;
+    }
+
+    &.hovered {
+        fill: var(--icon-redesigned)
+    }
+}

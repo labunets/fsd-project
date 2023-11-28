@@ -28,6 +28,7 @@
         }
     }
 }
+
 .link {
     color: var(--secondary-color);
 }
@@ -39,9 +40,14 @@
 
 .NavbarRedesigned {
     padding: 16px;
+    background: none;
 
     .links,
     .links a {
+        color: var(--text-redesigned);
+    }
+
+    .link {
         color: var(--text-redesigned);
     }
 }

@@ -8,13 +8,25 @@
     margin: 0 auto;
     padding: 20px;
     text-align: left;
+
+    .input {
+        margin-top: var(--vspace-3);
+        width: 100%;
+    }
+
+    .loginBtn {
+        margin-top: var(--vspace-3);
+    }
 }
 
-.input {
-    margin-top: var(--vspace-3);
-    width: 100%;
-}
 
-.loginBtn {
-    margin-top: var(--vspace-3);
+
+.LoginFormRedesigned {
+    padding: 16px;
+    background: none;
+
+    &.input {
+        color: var(--text-redesigned);
+        margin-top: 0;
+    }
 }

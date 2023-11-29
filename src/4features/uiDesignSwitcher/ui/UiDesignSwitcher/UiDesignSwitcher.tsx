@@ -8,6 +8,7 @@ import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatc
 import { getUserAuthData } from '@/5entities/User';
 import { VStack } from '@/6shared/ui/redesigned/Stack';
 import { Skeleton } from '@/6shared/ui/redesigned/Skeleton';
+import { useForceUpdate } from '@/6shared/lib/render/forceUpdate';
 
 interface UiDesignSwitcherProps {
     className?: string;
@@ -19,6 +20,7 @@ export const UiDesignSwitcher = memo((props: UiDesignSwitcherProps) => {
     const dispatch = useAppDispatch();
     const authData = useSelector(getUserAuthData);
     const [isLoading, setIsLoading] = useState(false);
+    const forceUpdate = useForceUpdate();
 
     const isAppRedesigned = getFeatureFlag('isAppRedesigned');
 
@@ -45,6 +47,7 @@ export const UiDesignSwitcher = memo((props: UiDesignSwitcherProps) => {
                 }),
             ).unwrap();
             setIsLoading(false);
+            forceUpdate();
         }
     };
 

@@ -5,6 +5,7 @@ import { ErrorBoundary } from '@/1app/providers/ErrorBoundary';
 import { StoreProvider } from '@/1app/providers/StoreProvider';
 import '@/6shared/config/i18n/i18n';
 import App from '@/1app/App';
+import { ForceUpdateProvider } from '@/6shared/lib/render/forceUpdate';
 
 const container = document.getElementById('root');
 
@@ -18,9 +19,11 @@ root.render(
     <BrowserRouter>
         <StoreProvider>
             <ErrorBoundary>
-                <ThemeProvider>
-                    <App />
-                </ThemeProvider>
+                <ForceUpdateProvider>
+                    <ThemeProvider>
+                        <App />
+                    </ThemeProvider>
+                </ForceUpdateProvider>
             </ErrorBoundary>
         </StoreProvider>
     </BrowserRouter>,

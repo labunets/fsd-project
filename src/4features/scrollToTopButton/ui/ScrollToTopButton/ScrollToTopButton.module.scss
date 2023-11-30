@@ -1,0 +1,9 @@
+.ScrollToTopButton {
+    transform: rotate(90deg);
+
+    svg {
+        fill: var(--icon-redesigned);
+        width: 24px;
+        height: 24px;
+    }
+}

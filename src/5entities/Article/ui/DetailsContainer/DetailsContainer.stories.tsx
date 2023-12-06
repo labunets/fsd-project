@@ -4,7 +4,7 @@ import { DetailsContainer } from './DetailsContainer';
 type Story = StoryObj<typeof DetailsContainer>;
 
 const meta: Meta<typeof DetailsContainer> = {
-    title: 'DetailsContainer',
+    title: '5entities/DetailsContainer',
     component: DetailsContainer,
     tags: ['autodocs'],
 };

@@ -95,12 +95,11 @@
     --card-shadow: 0 10px 20px rgb(0 0 0 / 4%), 0 2px 6px rgb(0 0 0 / 4%), 0 0 1px rgb(0 0 0 / 4%);
 
     // redesigned
-    --font-family-text-redesigned: 'Nunito Sans', sans-serif;
-    --font-family-header-redesigned: 'Roboto', sans-serif;
+    --font-family-text-redesigned: "Nunito Sans", sans-serif;
+    --font-family-header-redesigned: "Roboto", sans-serif;
     --font-s-redesigned: var(--font-size-s) / var(--font-line-s) var(--font-family-text-redesigned);
     --font-m-redesigned: var(--font-size-m) / var(--font-line-m) var(--font-family-text-redesigned);
     --font-l-redesigned: var(--font-size-l) / var(--font-line-l) var(--font-family-header-redesigned);
     --font-xl-redesigned: var(--font-size-xl) / var(--font-line-xl) var(--font-family-header-redesigned);
     --input-border-redesigned: 1px solid var(--icon-redesigned);
-
 }

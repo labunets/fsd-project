@@ -8,7 +8,6 @@
     align-items: flex-end;
 }
 
-
 .opened {
     pointer-events: auto;
     opacity: 1;
@@ -32,6 +31,7 @@
 
 .drawerNew {
     color: var(--text-redesigned);
+
     .sheet {
         background: var(--light-bg-redesigned);
     }
@@ -39,6 +39,7 @@
 
 .drawerOld {
     color: var(--primary-color);
+
     .sheet {
         background: var(--bg-color);
     }

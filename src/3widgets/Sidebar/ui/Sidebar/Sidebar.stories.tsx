@@ -3,6 +3,7 @@ import { ThemeDecorator } from '@/6shared/config/storybook/ThemeDecorator/ThemeD
 import { StoreDecorator } from '@/6shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Sidebar } from './Sidebar';
 import { Theme } from '@/6shared/const/theme';
+import { FeaturesFlagsDecorator } from '@/6shared/config/storybook/FeaturesFlagsDecorator/FeaturesFlagsDecorator';
 
 type Story = StoryObj<typeof Sidebar>;
 
@@ -22,14 +23,29 @@ Light.decorators = [StoreDecorator({})];
 export const LightAuthed: Story = {
     args: {},
 };
-LightAuthed.decorators = [StoreDecorator({
-    user: {
-        authData: {},
-    },
-})];
+LightAuthed.decorators = [
+    StoreDecorator({
+        user: {
+            authData: {},
+        },
+    }),
+];
+
+export const LightAuthedRedesigned: Story = {
+    args: {},
+};
+LightAuthedRedesigned.decorators = [
+    StoreDecorator({
+        user: {
+            authData: {},
+        },
+    }),
+    FeaturesFlagsDecorator({
+        isAppRedesigned: true,
+    }),
+];
 
 export const Dark: Story = {
     args: {},
 };
-Dark.decorators = [ThemeDecorator(Theme.DARK),
-    StoreDecorator({})];
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];

@@ -4,7 +4,7 @@ import { ProfileCardRedesigned } from './ProfileCardRedesigned';
 type Story = StoryObj<typeof ProfileCardRedesigned>;
 
 const meta: Meta<typeof ProfileCardRedesigned> = {
-    title: 'ProfileCardRedesigned',
+    title: '5entities/ProfileCard',
     component: ProfileCardRedesigned,
     tags: ['autodocs'],
 };

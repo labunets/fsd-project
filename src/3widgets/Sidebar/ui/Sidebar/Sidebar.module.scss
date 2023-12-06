@@ -41,9 +41,10 @@
 .SidebarRedesigned {
     background: var(--light-bg-redesigned);
     width: 220px;
-    height: 100%;
+    height: calc(100vh - var(--navbar-height));
     border-radius: 32px;
     position: relative;
+    padding-top: var(--vspace-1);
 
     .logo {
         padding-top: var(--vspace-3);
@@ -76,9 +77,8 @@
         right: 1em;
         top: 50%;
         transform: rotate(180deg);
-        fill: var(--icon-redesigned)
+        fill: var(--icon-redesigned);
     }
-
 }
 
 .collapsedRedesigned {

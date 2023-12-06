@@ -4,7 +4,7 @@ import { ArticleAdditionalInfo } from './ArticleAdditionalInfo';
 type Story = StoryObj<typeof ArticleAdditionalInfo>;
 
 const meta: Meta<typeof ArticleAdditionalInfo> = {
-    title: 'ArticleAdditionalInfo',
+    title: '3widgets/ArticleAdditionalInfo',
     component: ArticleAdditionalInfo,
     tags: ['autodocs'],
 };

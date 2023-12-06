@@ -1,10 +1,7 @@
 import React, { memo, useCallback } from 'react';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import LightIcon from '@/6shared/assets/icons/brightness-white.svg';
-import {
-    Button as DeprecatedButton,
-    ButtonTheme,
-} from '@/6shared/ui/deprecated/Button';
+import { Button as DeprecatedButton, ButtonTheme } from '@/6shared/ui/deprecated/Button';
 import cls from './ThemeSwitcher.module.scss';
 import { useTheme } from '@/6shared/lib/hooks/useTheme/useTheme';
 import { useAppDispatch } from '@/6shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -34,9 +31,7 @@ export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
                     square
                     variant="clear"
                     size="l"
-                    className={classNames(cls.ThemeSwitcherRedesigned, {}, [
-                        className,
-                    ])}
+                    className={classNames(cls.ThemeSwitcherRedesigned, {}, [className])}
                     onClick={onToggleHandler}
                     beforeIcon={<LightIcon />}
                 />
@@ -44,7 +39,7 @@ export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
             off={
                 <DeprecatedButton
                     theme={ButtonTheme.TERTIARY_INVERTED}
-                    className={classNames(cls.ThemeSwitcher, {}, [className])}
+                    className={classNames('', {}, [className])}
                     onClick={onToggleHandler}
                 >
                     <LightIcon className={cls.svg} />

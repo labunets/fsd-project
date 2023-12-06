@@ -1,9 +1,6 @@
 import { useSelector } from 'react-redux';
 import { memo, useMemo, useState } from 'react';
-import {
-    Button as DeprecatedButton,
-    ButtonTheme,
-} from '@/6shared/ui/deprecated/Button';
+import { Button as DeprecatedButton, ButtonTheme } from '@/6shared/ui/deprecated/Button';
 import { classNames } from '@/6shared/lib/classNames/classNames';
 import ChevronLeftIcon from '@/6shared/assets/icons/chevron-left.svg';
 import ChevronRightIcon from '@/6shared/assets/icons/chevron-right.svg';
@@ -14,7 +11,7 @@ import cls from './Sidebar.module.scss';
 import { ThemeSwitcher } from '@/4features/ThemeSwitcher';
 import { LangSwitcher } from '@/4features/LangSwitcher';
 import { ToggleFeatures } from '@/6shared/lib/features';
-import { AppLogo } from '@/6shared/ui/redesigned/AppLogo';
+// import { AppLogo } from '@/6shared/ui/redesigned/AppLogo';
 import { Button } from '@/6shared/ui/redesigned/Button';
 
 interface SidebarProps {
@@ -37,11 +34,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
     const itemsList = useMemo(
         () =>
             sidebarItemsList.map((item) => (
-                <SidebarItem
-                    item={item}
-                    collapsed={collapsed}
-                    key={item.path}
-                />
+                <SidebarItem item={item} collapsed={collapsed} key={item.path} />
             )),
         [sidebarItemsList, collapsed],
     );
@@ -58,7 +51,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                         [],
                     )}
                 >
-                    <AppLogo className={cls.logo} size={collapsed ? 50 : 100} />
+                    {/* <AppLogo className={cls.logo} size={collapsed ? 50 : 100} /> */}
                     <VStack
                         role="navigation"
                         gap="1"
@@ -76,11 +69,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                         onClick={onToggle}
                         beforeIcon={<ChevronRightIcon />}
                     />
-                    <HStack
-                        gap={collapsed ? '1' : '2'}
-                        justify="center"
-                        className={cls.switchers}
-                    >
+                    <HStack gap={collapsed ? '1' : '2'} justify="center" className={cls.switchers}>
                         <ThemeSwitcher />
                         <LangSwitcher className={cls.lang} />
                     </HStack>
@@ -89,11 +78,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
             off={
                 <aside
                     data-testid="sidebar"
-                    className={classNames(
-                        cls.Sidebar,
-                        { [cls.collapsed]: collapsed },
-                        [],
-                    )}
+                    className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [])}
                 >
                     <VStack
                         role="navigation"
@@ -112,11 +97,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                             theme={ButtonTheme.TERTIARY_INVERTED}
                             onClick={onToggle}
                         >
-                            {collapsed ? (
-                                <ChevronRightIcon />
-                            ) : (
-                                <ChevronLeftIcon />
-                            )}
+                            {collapsed ? <ChevronRightIcon /> : <ChevronLeftIcon />}
                         </DeprecatedButton>
                     </HStack>
                 </aside>

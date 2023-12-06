@@ -1063,8 +1063,7 @@
         "isAppRedesigned": true
       },
       "jsonSettings": {
-        "isArticlePageWasOpened": true,
-        "theme": "app_dark_theme"
+        "isArticlePageWasOpened": true
       },
       "avatar": "https://placehold.co/120?text=Admin"
     },

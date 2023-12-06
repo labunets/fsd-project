@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 import { ArticleAdditionalInfo } from '@/3widgets/ArticleAdditionalInfo';
 import { Card } from '@/6shared/ui/redesigned/Card';
 import { getArticleDetailsData } from '../../model/selectors/articleDetails';
-import cls from './AdditionalInfoContainer.module.scss';
 import { getRouteArticleEdit } from '@/6shared/const/router';
 
 export const AdditionalInfoContainer = memo(() => {
@@ -24,7 +23,7 @@ export const AdditionalInfoContainer = memo(() => {
     }
 
     return (
-        <Card className={cls.card} max>
+        <Card max>
             <ArticleAdditionalInfo
                 onEdit={onEditArticle}
                 author={article.user}

@@ -66,15 +66,10 @@ export const ProfileCardRedesigned = memo((props: ProfileCardProps) => {
 
     return (
         <Card max data-testid="ProfileCard">
-            {data?.avatar && (
-                <HStack gap="3" max justify="center">
-                    <Avatar
-                        src={data?.avatar}
-                        size="l"
-                        alt={`${data?.firstname} ${data?.lastname}`}
-                    />
-                </HStack>
-            )}
+            <HStack gap="3" max justify="center">
+                <Avatar src={data?.avatar} size="l" alt={`${data?.firstname} ${data?.lastname}`} />
+            </HStack>
+
             <HStack gap="3" max align="start">
                 <VStack gap="1" max>
                     <Input

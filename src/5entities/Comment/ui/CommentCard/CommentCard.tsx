@@ -34,9 +34,9 @@ export const CommentCard = memo((props: CommentCardProps) => {
             <VStack data-testid="CommentCard.Loading">
                 <HStack>
                     <Skeleton className={cls.avatar} width={32} height={32} border="50%" />
-                    <Skeleton className={cls.username} width={100} height={16} />
+                    <Skeleton className={cls.username} width={100} height={24} />
                 </HStack>
-                <Skeleton className={cls.text} width="100%" height={32} />
+                <Skeleton className={cls.text} width="100%" height={16} />
             </VStack>
         );
     }

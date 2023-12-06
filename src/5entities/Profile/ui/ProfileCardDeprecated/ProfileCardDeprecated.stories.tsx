@@ -8,7 +8,7 @@ import { Theme } from '@/6shared/const/theme';
 type Story = StoryObj<typeof ProfileCardDeprecated>;
 
 const meta: Meta<typeof ProfileCardDeprecated> = {
-    title: '5entities/ProfileCard',
+    title: 'deprecated/5entities/ProfileCard',
     component: ProfileCardDeprecated,
     tags: ['autodocs'],
     args: {},

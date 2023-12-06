@@ -4,6 +4,8 @@ import { Country } from '@/5entities/Country';
 import { ThemeDecorator } from '@/6shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { ProfileCard } from './ProfileCard';
 import { Theme } from '@/6shared/const/theme';
+import { FeaturesFlagsDecorator } from '@/6shared/config/storybook/FeaturesFlagsDecorator/FeaturesFlagsDecorator';
+import { NewDesignDecorator } from '@/6shared/config/storybook/NewDesignDecorator/NewDesignDecorator';
 
 type Story = StoryObj<typeof ProfileCard>;
 
@@ -16,19 +18,29 @@ const meta: Meta<typeof ProfileCard> = {
 
 export default meta;
 
-export const Light: Story = {
-    args: {
-        data: {
-            firstname: 'Den',
-            lastname: 'Lab',
-            username: 'denlab',
-            age: 25,
-            currency: Currency.UAH,
-            country: Country.UA,
-            city: 'Kyiv',
-        },
+const normalArgs = {
+    data: {
+        firstname: 'Den',
+        lastname: 'Lab',
+        username: 'denlab',
+        age: 25,
+        currency: Currency.UAH,
+        country: Country.UA,
+        city: 'Kyiv',
     },
 };
+
+export const Light: Story = {
+    args: normalArgs,
+};
+
+export const LightRedesigned: Story = {
+    args: normalArgs,
+};
+LightRedesigned.decorators = [
+    FeaturesFlagsDecorator({ isAppRedesigned: true }),
+    NewDesignDecorator,
+];
 
 export const LightError: Story = {
     args: {
@@ -55,6 +67,4 @@ export const Dark: Story = {
         },
     },
 };
-Dark.decorators = [
-    ThemeDecorator(Theme.DARK),
-];
+Dark.decorators = [ThemeDecorator(Theme.DARK)];

@@ -50,21 +50,14 @@ export function ListBox(props: ListBoxProps) {
     return (
         <HListbox
             as="div"
-            className={classNames(cls.ListBox, mods, [
-                className,
-                popupCls.popup,
-            ])}
+            className={classNames(cls.ListBox, mods, [className, popupCls.popup])}
             value={value}
             onChange={onChange}
             disabled={readonly}
         >
             <HListbox.Label className={cls.label}>{label}</HListbox.Label>
-            <HListbox.Button className={cls.trigger}>
-                {value ?? defaultValue}
-            </HListbox.Button>
-            <HListbox.Options
-                className={classNames(cls.options, {}, optionsClasses)}
-            >
+            <HListbox.Button className={cls.trigger}>{value ?? defaultValue}</HListbox.Button>
+            <HListbox.Options className={classNames(cls.options, {}, optionsClasses)}>
                 {items?.map((item) => (
                     <HListbox.Option
                         key={item.value}
